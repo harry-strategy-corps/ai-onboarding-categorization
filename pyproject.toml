@@ -1,0 +1,13 @@
+[project]
+name = "ai-onboarding-categorization"
+version = "0.1.0"
+description = "LLM-powered product and transaction categorization for automated FI onboarding on CheckingIQ (Databricks AI Functions)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas",
+    "ipykernel"
+]
+
+[project.urls]
+"Linear Project" = "https://linear.app/strategycorps/project/ciq-leverage-databricks-llm-capabilities-for-initial-fi-categorization-bcd8c02f129d/overview"

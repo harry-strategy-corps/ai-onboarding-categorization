@@ -1,0 +1,44 @@
+Transaction Category Mapping,,,
+"When a new FI signs up to use Checking/MonetizeIQ they'll need to send us their transaction & fee code lists. 
+Upon receipt of same, we'll need to plug them into our AI tool, along with our Transaction category mapping template, and ask the tool to pre-map the new clients transaction and fee codes into two main categories (Non-fee item transactions & Fee item transactions) then into sub-categories for mapping and scoring purposes",,,
+"1) AI should group the FIs transaction codes first into Non-fee item transactions and Fee item transactions
+2) Then AI should  categrorize them into the appropriate sub-categories as defined below 
+3) Upon completion, the FI user should be instructed to review and update the lists as needed to ensure proper mapping for reporting and scoring purposes.
+4) When new codes are added, the system will put them into the Unclassidied category and send on an exception report reminding the FI user to classify for future scoring and reporting ",,,
+Used to differentiate fee and non-fee (account activity) transactions ,"Used for Non-interest income calculations and reporting (e.g., include/exclude from scoring) ","Used for customer scoring and offer monitoring (e.g., has direct deposit)","Used for detailed scoring and offer monitoring (e.g., has direct deposit)"
+Category 1,Category 2,Category 3,Category 4
+Non-Fee (Account Activity) Transactions ,,,
+Include in customer scoring,NSF/OD,,
+,Money movement,,
+,,ACH activity,
+,,ATM activity,
+,,Check activity,
+,,Internal transfer / payment activities ,
+,,Deposits ,
+,,Withdrawals,
+,,Wire activity ,
+,,Debit card activities,
+Do not include in customer scoring ,Account operations,,
+,,Closing activity,
+,,Fraud & stop payment activity,
+,,Memo posting activity,
+,,Interest activity ,
+,,Govt. & Tax activity,
+,,Integration activity ,
+,,Operational,
+,Miscellaneous,,
+,Unclassified,,
+Category 1,Category 2,Category 3,Category 4
+Fee Item Transactions ,Non-interest income reporting categories,,
+,NSF/OD,,
+,All others,,
+,,Money movement,
+,,,ACH activity
+,,,ATM transactions 
+,,,Wire activity
+,,,Transfers / payments
+,,Account operations,
+,,,Miscellaneous
+,Service Charges,,
+,Interchange,,
+,Unclassified ,,

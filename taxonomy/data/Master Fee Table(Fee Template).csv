@@ -1,0 +1,450 @@
+﻿External Transaction Description ,External Transaction Code ,Fee Item Description ,Internal Fee Item Code ,Credit / Debit ,Scoring Category 1,Scoring Category 2,Scoring Category 3,Scoring Category 4
+Fee Item Transactions - Used for Fee charging and Non-interest Income Revenue Reporting ,,,,,Used to differentiate fee and non-fee transactions ,"Used for Non-interest income calculations and reporting (e.g., include/exclude from scoring) ","Used for detailed scoring and offers monitoring (e.g., has direct deposit)","Used for more detailed transaction monitoring e.g., has direct deposit "
+NSF / OD,,,,,,,,
+Continuous Overdraft Charge,,Continuous Overdraft Charge,,Debit ,Fee item,NSF /OD,N/A,N/A
+Insufficient Funds Charge,,Insufficient Funds Charge,,Debit ,Fee item,NSF /OD,N/A,N/A
+Insufficient Funds Charge,,Insufficient Funds Charge,,Debit ,Fee item,NSF /OD,N/A,N/A
+Non-Sufficient Funds Fee - Items Returned,,Non-Sufficient Funds Fee - Items Returned,,Debit ,Fee item,NSF /OD,N/A,N/A
+Overdraft fee waiver ,,Overdraft Fee Reversal ,,Credit ,Fee item,NSF /OD,N/A,N/A
+Overdraft Interest Charge,,Overdraft Interest Charge,,Debit ,Fee item,NSF /OD,N/A,N/A
+Overdraft Item Charge,,Overdraft Item Charge,,Debit ,Fee item,NSF /OD,N/A,N/A
+Overdraft/NSF fee ,,Overdraft Fee ,,Debit ,Fee item,NSF /OD,N/A,N/A
+Refund NSF Paid Fee-STD/YTD,,Refund NSF Paid Fee-STD/YTD,,Debit ,Fee item,NSF /OD,N/A,N/A
+Refund NSF Paid Item Fee- STD,,Refund NSF Paid Item Fee- STD,,Debit ,Fee item,NSF /OD,N/A,N/A
+Refund NSF Paid Item Fee-YTD,,Refund NSF Paid Item Fee-YTD,,Debit ,Fee item,NSF /OD,N/A,N/A
+Refund NSF Return Fee-STD/YTD,,Refund NSF Return Fee-STD/YTD,,Debit ,Fee item,NSF /OD,N/A,N/A
+Refund NSF Return Item Fee-STD,,Refund NSF Return Item Fee-STD,,Debit ,Fee item,NSF /OD,N/A,N/A
+Refund NSF Return Item Fee-YTD,,Refund NSF Return Item Fee-YTD,,Debit ,Fee item,NSF /OD,N/A,N/A
+Refund OD Accrual Fee-STD,,Refund OD Accrual Fee-STD,,Debit ,Fee item,NSF /OD,N/A,N/A
+Refund OD Accrual Fee-STD/YTD,,Refund OD Accrual Fee-STD/YTD,,Debit ,Fee item,NSF /OD,N/A,N/A
+Refund OD Accrual Fee-YTD,,Refund OD Accrual Fee-YTD,,Debit ,Fee item,NSF /OD,N/A,N/A
+Uncollected Funds Charge,,Uncollected Funds Charge,,Debit ,Fee item,NSF /OD,N/A,N/A
+Returned/bounced check ,,Return Check ,,Debit ,Fee item,NSF /OD,N/A,N/A
+Returned check fee ,,Return Item Fee ,,Debit ,Fee item,NSF /OD,N/A,N/A
+Returned check penalty ,,Return Check Fee ,,Debit ,Fee item,NSF /OD,N/A,N/A
+Reverse NSF Item Charge,,Reverse NSF Item Charge,,Debit ,Fee item,NSF /OD,N/A,N/A
+Reverse NSF Item Charge,,Reverse NSF Item Charge,,Debit ,Fee item,NSF /OD,N/A,N/A
+Reverse OD Item Charge,,Reverse OD Item Charge,,Debit ,Fee item,NSF /OD,N/A,N/A
+All Others,,,,,,,,
+Money Movement,,,,,,,,
+ACH,,,,,,,,
+ACH Chargeback Fee,,ACH Chargeback Fee,,Debit ,Fee item,All others ,Money Movement,ACH
+ATM,,,,,,,,
+ATM fee refund ,,ATM Fee Reimbursement ,,Credit ,Fee item,All others ,Money Movement,ATM
+ATM Service Charge,,ATM Service Charge,,Debit ,Fee item,All others ,Money Movement,ATM
+ATM Service Charge,,ATM Service Charge,,Debit ,Fee item,All others ,Money Movement,ATM
+ATM Service Charge Reversal,,ATM Service Charge Reversal,,Credit ,Fee item,All others ,Money Movement,ATM
+ATM Service Charge Reversal,,ATM Service Charge Reversal,,Credit,Fee item,All others ,Money Movement,ATM
+ATM Transaction Charge,,ATM Fee ,,Debit ,Fee item,All others ,Money Movement,ATM
+ATM transaction fee ,,ATM Fee ,,Debit ,Fee item,All others ,Money Movement,ATM
+Balance inquiry fee at foreign ATM ,,Balance inquiry fee at foreign ATM ,,Debit ,Fee item,All others ,Money Movement,ATM
+Bonus/Annual ATM Surcharge Rfd,,Bonus/Annual ATM Surcharge Rfd,,Credit,Fee item,All others ,Money Movement,ATM
+R360 ATM Surcharge Adjustment,,R360 ATM Surcharge Adjustment,,Credit,Fee item,All others ,Money Movement,ATM
+R360 ATM Surcharge Refund,,R360 ATM Surcharge Refund,,Credit,Fee item,All others ,Money Movement,ATM
+Withdrawal at non-BankPlus ATM,,Withdrawal at non-BankPlus ATM,,Debit ,Fee item,All others ,Money Movement,ATM
+Bonus/Annual Reward ATM Adjust,,Bonus/Annual Reward ATM Adjust,,Credit,Fee item,All others ,Money Movement,ATM
+Bonus/Annual Rwd Fee Adjust Db,,Bonus/Annual Rwd Fee Adjust Db,,Credit,Fee item,All others ,Money Movement,ATM
+Bonus/Annual Rwd Refund Adj Cr,,Bonus/Annual Rwd Refund Adj Cr,,Credit,Fee item,All others ,Money Movement,ATM
+Wire ,,,,,,,,
+Foreign Wire Fee- Incoming,,Foreign Wire Fee- Incoming,,Debit ,Fee item,All others ,Money Movement,Wire
+Foreign Wire Fee- Incoming Reversal,,Foreign Wire Fee- Incoming,,Debit ,Fee item,All others ,Money Movement,Wire
+Foreign Wire Fee- Outgoing,,Foreign Wire Fee- Outgoing,,Debit ,Fee item,All others ,Money Movement,Wire
+Foreign Wire Fee- Outgoing Reversal,,Foreign Wire Fee- Outgoing,,Debit ,Fee item,All others ,Money Movement,Wire
+Wire Transfer Fee,,Wire Transfer Fee,,Debit ,Fee item,All others ,Money Movement,Wire
+Wire Transfer Fee Reversal,,Wire Transfer Fee,,Debit ,Fee item,All others ,Money Movement,Wire
+Transfers / Payments ,,,,,,,,
+FX transaction fee ,,Currency Exchange Fee ,,Debit ,Fee item,All others ,Money Movement,Transfers / Payments
+Voice Response Transaction Fee,,Voice Response Transaction Fee,,Debit ,Fee item,All others ,Money Movement,Transfers / Payments
+Redeposit Fee,,Redeposit Fee,,Debit ,Fee item,All others ,Money Movement,Transfers / Payments
+Telephone Transfer Fee,,Telephone Transfer Fee,,Debit ,Fee item,All others ,Money Movement,Transfers / Payments
+Account Operations  ,,,,,,,,
+Bank check issuance ,,Cashier's Check ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Certified check fee ,,Certified Check ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Chargeback Fee,,Chargeback Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Chargeback Item Fee,,Chargeback Item Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Check image fee ,,Check Copy Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Check order fee ,,Check Printing Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Check order processing ,,Check Printing ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Check stop payment fee ,,Stop Payment Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Close Account Fee,,Close Account Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Closing entry - service charge,,Closing entry - service charge,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Collection Item Fee ,,Collection Item Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Counter Check Fee,,Counter Check Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Credit Back Fee,,Credit Back Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Dormant Fee in Service Charge,,Dormant Fee in Service Charge,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Escheated Account Fee ,,Escheated Account Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Excess MMD transaction charge,,Excess transaction charge,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Fax Per Page,,Fax Per Page,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Foreign Currency Exchange Fee,,Foreign Currency Exchange Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Friends of Childrens Hospital Debit Card Fee,,Debit Card Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Image Fee,,Image Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Int Bnking Bill Pay cycle fee,,Int Bnking Bill Pay cycle fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Int Bnking Bill Pay enroll fee,,Int Bnking Bill Pay enroll fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Int Bnking Bill Pay item fee,,Int Bnking Bill Pay item fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Int Bnking E-mail alert fee,,Int Bnking E-mail alert fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Int Bnking text alert fee,,Int Bnking text alert fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Lost Debit Card Fee,,Lost Debit Card Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+MMD third party Excess Charge,,MMD third party Excess Charge,,Debit ,Fee Item,All others ,Account Operations ,N/A
+MMD total item Serv. Charge,,MMD total item Serv. Charge,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Monthly Dormant Fee ,,Monthly Dormant Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Multiple Statement Copy Fee,,Multiple Statement Copy Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Multiple Statement Cycle Fee,,Multiple Statement Cycle Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Notary Fee (where available) ,,Notary Fee (where available) ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Paper Statement Charge,,Paper Statement Charge,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Paper statement fee ,,Statement Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Account research fee ,,Research Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Research Per Hour ,,Research Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Research Per Page,,Research Fee ,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Reverse UCF Item Charge,,Reverse UCF Item Charge,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Reverse UCF Item Charge,,Reverse UCF Item Charge,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Rewards Service Charge Refund,,Rewards Service Charge Refund,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Safe Deposit Box Drilling Fee,,Safe Deposit Box Drilling Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Safe Deposit Box Late Fee,,Safe Deposit Box Late Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Safe Deposit Box Re-Key Fee,,Safe Deposit Box Re-Key Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Sales Tax on Service Charge,,,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Return Mail Processing Fee,,Return Mail Processing Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Stop Payment Charge,,Stop Payment Charge,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Bad Address Fee,,Bad Address Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Bonus/Annual Fee Adjustment Cr,,Bonus/Annual Fee Adjustment Cr,,Credit,Fee Item,All others ,Account Operations ,N/A
+Bonus/Annual Fee Refund,,Bonus/Annual Fee Refund,,Credit,Fee Item,All others ,Account Operations ,N/A
+Fee Code,,,,Credit,Fee Item,All others ,Account Operations ,N/A
+HB Transaction Fee,,HB Transaction Fee,,Debit ,Fee Item,All others ,Account Operations ,N/A
+Miscellaneous (Business),,,,,,,,
+Account Analysis Bill Fee,,Account Analysis Bill Fee,,Debit,Fee Item,All others ,Account Operations,Miscellaneous
+Account Analysis Charge,,Account Analysis Charge,,Debit,Fee Item,All others ,Account Operations,Miscellaneous
+Account Reconciliation ,,Account Reconciliation ,,Debit ,Fee Item,All others ,Account Operations,Miscellaneous
+ACH Block,,ACH Block,,,Fee Item,All others ,Account Operations,Miscellaneous
+Daily Uncollected Balance Fee commercial accounts only ,,Daily Uncollected Balance Fee ,,,Fee Item,All others ,Account Operations,Miscellaneous
+Check verification service ,,Positive Pay ,,Debit ,Fee Item,All others ,Account Operations,Miscellaneous
+Sweep Transaction Charge,,Sweep Transaction Charge,,Debit ,Fee Item,All others ,Account Operations,Miscellaneous
+Trading commission ,,Brokerage Commission ,,Debit ,Fee Item,All others ,Account Operations,Miscellaneous
+Transit Fee in Service Charge,,Transit Fee in Service Charge,,Debit ,Fee Item,All others ,Account Operations,Miscellaneous
+R360 Non-Qualification Fee,,R360 Non-Qualification Fee,,Debit ,Fee Item,All others ,Account Operations,Miscellaneous
+R360 Service Charge Refund Adj,,R360 Service Charge Refund Adj,,Credit,Fee Item,All others ,Account Operations,Miscellaneous
+Securities custody fee ,,Custody Fee ,,Debit ,Fee Item,All others ,Account Operations,Miscellaneous
+Service Charges,,,,,,,,
+Base Fee in Service Charge,,Base Fee in Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Box rental fee ,,Safe Deposit Box Fee ,,Debit ,Fee Item,Service Charges,N/A,N/A
+Credit Fee in Service Charge,,Credit Fee in Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Debit Fee in Service Charge,,Debit Fee in Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Fee reversal/waiver ,,Service Charge Reversal ,,Credit ,Fee Item,Service Charges,N/A,N/A
+Int Bnking Service Charge,,Int Bnking Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Item Charges in Service Charge,,Item Charges in Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Item Fee in Service Charge,,Item Fee in Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Local Fee in Service Charge,,Local Fee in Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Monthly service charge ,,Service Charge ,,Debit ,Fee Item,Service Charges,N/A,N/A
+Other service charges ,,Other service charges ,,Debit ,Fee Item,Service Charges,N/A,N/A
+Per Item Service Charge,,Per Item Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+On Us Fee in Service Charge,,On Us Fee in Service Charge,,,Fee Item,Service Charges,N/A,N/A
+Safe Deposit Box Annual Rental Fee,,Safe Deposit Box Annual Rental Fee,,Debit ,Fee Item,Service Charges,N/A,N/A
+Service Charge,,Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Service Charge,,Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Account Service Fee,,Account Service Fee,,Debit ,Fee Item,Service Charges,N/A,N/A
+Annual account fee ,,Annual Fee ,,Debit ,Fee Item,Service Charges,N/A,N/A
+R360 Fee Adjustment Credit,,R360 Fee Adjustment Credit,,Credit,Fee Item,Service Charges,N/A,N/A
+R360 Fee Adjustment Debit,,R360 Fee Adjustment Debit,,Debit ,Fee Item,Service Charges,N/A,N/A
+R360 Fee Refund,,R360 Fee Refund,,Credit,Fee Item,Service Charges,N/A,N/A
+R360 Fee Refund Adjustment,,R360 Fee Refund Adjustment,,Credit,Fee Item,Service Charges,N/A,N/A
+Balance Credit in Service Chg,,Balance Credit in Service Chg,,Credit,Fee Item,Service Charges,N/A,N/A
+Balance Fee in Service Charge,,Balance Fee in Service Charge,,Debit ,Fee Item,Service Charges,N/A,N/A
+Bank Admin Fee in Service Chg,,Bank Admin Fee in Service Chg,,Debit ,Fee Item,Service Charges,N/A,N/A
+Minimum Fee Debit to S/C,,Minimum Fee Debit to S/C,,Debit ,Fee Item,Service Charges,N/A,N/A
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+CD Transactions - Do not include in customer scoring ,,,,,,,,
+ACH Credit,663,,,,Non-fee item,Account Operations ,N/A,N/A
+ACH Debit,683,,,,Non-fee item,Account Operations ,N/A,N/A
+Automatic Transfer from DDA,641,,,,Non-fee item,Account Operations ,N/A,N/A
+Automatic Transfer from G/L,650,,,,Non-fee item,Account Operations ,N/A,N/A
+Automatic Transfer from Loan,647,,,,Non-fee item,Account Operations ,N/A,N/A
+Automatic Transfer from ODP,648,,,,Non-fee item,Account Operations ,N/A,N/A
+Automatic Transfer from Savings,642,,,,Non-fee item,Account Operations ,N/A,N/A
+Automatic Transfer to DDA,645,,,,Non-fee item,Account Operations ,N/A,N/A
+Automatic Transfer to Savings,646,,,,Non-fee item,Account Operations ,N/A,N/A
+Balancing Transaction from CDBAL,826,,,,Non-fee item,Account Operations ,N/A,N/A
+Balancing Transaction from CDBAL,828,,,,Non-fee item,Account Operations ,N/A,N/A
+CD Interest Payment,670,,,,Non-fee item,Account Operations ,N/A,N/A
+Closing balance adjustment credit,681,,,,Non-fee item,Account Operations ,N/A,N/A
+Closing balance adjustment debit,680,,,,Non-fee item,Account Operations ,N/A,N/A
+Closing Redemption - CD Only,60,,,,Non-fee item,Account Operations ,N/A,N/A
+Closing Redemption Renewal - CD Only,62,,,,Non-fee item,Account Operations ,N/A,N/A
+Credit closing interest for Death Dist.,684,,,,Non-fee item,Account Operations ,N/A,N/A
+Credit Interest to Balance/Raise YTD,305,,,,Non-fee item,Account Operations ,N/A,N/A
+Death Contribution,686,,,,Non-fee item,Account Operations ,N/A,N/A
+Death Distribution Transfer,687,,,,Non-fee item,Account Operations ,N/A,N/A
+Death Transfer,688,,,,Non-fee item,Account Operations ,N/A,N/A
+Debit Closing,979,,,,Non-fee item,Account Operations ,N/A,N/A
+Decrease Accured Interest,350,,,,Non-fee item,Account Operations ,N/A,N/A
+Decrease Federal Withholding,370,,,,Non-fee item,Account Operations ,N/A,N/A
+Decrease Penalty Paid YTD,360,,,,Non-fee item,Account Operations ,N/A,N/A
+Decrease YTD Interest Paid,330,,,,Non-fee item,Account Operations ,N/A,N/A
+Deposit from CD withdrawal,640,,,,Non-fee item,Account Operations ,N/A,N/A
+EDU - Distribution from Education IRA,153,,,,Non-fee item,Account Operations ,N/A,N/A
+EDU - Reverse Distribution from EDU IRA,253,,,,Non-fee item,Account Operations ,N/A,N/A
+FDICLBIDM Insurance Determination Credit,690,,,,Non-fee item,Account Operations ,N/A,N/A
+FDICLBIDM Insurance Determination Debit,691,,,,Non-fee item,Account Operations ,N/A,N/A
+Fed Withholding Balance Reduction,325,,,,Non-fee item,Account Operations ,N/A,N/A
+Fed Withholding Balance Reduction,623,,,,Non-fee item,Account Operations ,N/A,N/A
+Federal Interest Withheld,675,,,,Non-fee item,Account Operations ,N/A,N/A
+Generated Int Credit for Backdated Trans,750,,,,Non-fee item,Account Operations ,N/A,N/A
+Generated Int Debit for Backdated Trans,751,,,,Non-fee item,Account Operations ,N/A,N/A
+Increase Accured Interest,300,,,,Non-fee item,Account Operations ,N/A,N/A
+Increase Federal Withholding,320,,,,Non-fee item,Account Operations ,N/A,N/A
+Increase Penalty Paid YTD,310,,,,Non-fee item,Account Operations ,N/A,N/A
+Increase Penalty Paid YTD,629,,,,Non-fee item,Account Operations ,N/A,N/A
+Increase YTD Interest Paid,380,,,,Non-fee item,Account Operations ,N/A,N/A
+Initial Deposit - New Money- CD Only,10,,,,Non-fee item,Account Operations ,N/A,N/A
+Initial Deposit - Reinvestment- CD Only,15,,,,Non-fee item,Account Operations ,N/A,N/A
+Interest Added Back,671,,,,Non-fee item,Account Operations ,N/A,N/A
+Interest Paid by ACH Deposit,674,,,,Non-fee item,Account Operations ,N/A,N/A
+Interest Paid by Check,672,,,,Non-fee item,Account Operations ,N/A,N/A
+Interest Paid by Deposit,673,,,,Non-fee item,Account Operations ,N/A,N/A
+Interest Rate Change,651,,,,Non-fee item,Account Operations ,N/A,N/A
+Interest Withdrawal,70,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Death Distribution,180,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Direct Rollover to IRA,165,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Disability Distribution,185,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Early Distribution,170,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Normal Distribution,150,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Reverse Current Year Contribution,200,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Reverse Death Distribution,280,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Reverse Direct Rollover to IRA,265,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Reverse Disability Distribution,285,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Reverse Early Distribution,270,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Reverse Normal Distribution,250,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Reverse Previous Year Contribution,205,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Reverse Rollover Contribution,220,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Reverse Transfer Distribution,260,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Rollover Contribution,120,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA - Transfer Distribution,160,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Auto Prior Year Distribution,658,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Death Distribution,685,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Distribution,657,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Excess Contribution Withdrawal,633,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Reverse Recharacterization Deposit,342,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Reverse Rollover Conversion Dep,343,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Reverse Transfer-External Source,340,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Reverse Transfer-Internal Source,341,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Rollover Withdrawal,631,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Transfer Withdrawal,632,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA Withdrawal for Current Year,630,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA/EDU/RTH - Current Year Contribution,100,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA/EDU/RTH - Previous Year Contribution,105,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Early Dist to Reinvest in Roth IRA,175,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Early Distribution Exception Applies,177,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Normal Dist to Reinvest in Roth IRA,155,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Remove Excess Contrib-Current Year,195,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Remove Excess Contrib-Prior Year,196,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Remove Excess Earnings-Current Year,197,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Remove Excess Earnings-Prior Year,198,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Rev Removal of Excess Earnings CY,297,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Reverse Early Distrib With Exception,277,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Reverse Remove Excess Cont-Prior Yr,296,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Reverse Remove Excess Contrib-CurrYr,295,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Reverse Transfer from External Srce,230,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Reverse Transfer from Internal Acct,235,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Transfer Deposit from External Srce,130,,,,Non-fee item,Account Operations ,N/A,N/A
+IRA-Transfer Deposit from Internal Acct,135,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Accrual Adjustment Decrease,941,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Accrual Adjustment Increase,940,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Credit,920,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Debit,980,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Decrease Federal Interest Withheld,974,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Decrease Penalty Paid YTD,930,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Decrease State Interest Withheld,977,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Federal Interest Withheld,975,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Increase Penalty Paid YTD,929,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Penalty Balance Reduction,926,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo State Interest Withheld,976,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Withdrawal Balance Reduction,925,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Withdrawal Fee,927,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo Withdrawal Interest Credit,928,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo YTD Interest Decrease,950,,,,Non-fee item,Account Operations ,N/A,N/A
+Memo YTD Interest Increase,951,,,,Non-fee item,Account Operations ,N/A,N/A
+Partial Redemption - CD Only,50,,,,Non-fee item,Account Operations ,N/A,N/A
+Penalty Balance Reduction,626,,,,Non-fee item,Account Operations ,N/A,N/A
+Premature Int Distribution by ACH Dep,874,,,,Non-fee item,Account Operations ,N/A,N/A
+Premature Int Distribution by Check,872,,,,Non-fee item,Account Operations ,N/A,N/A
+Premature Int Distribution by Deposit,873,,,,Non-fee item,Account Operations ,N/A,N/A
+Principal Balance Increase - CD Only,20,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Accrued Credits,733,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Accrued Debits,703,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Balance Credits,731,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Balance Debits,701,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Closing Credits,732,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Closing Debits,702,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Fed Withholding Credits,736,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Fed Withholding Debits,706,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Penalty Credits,734,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged Penalty Debits,704,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged State Withholding Credits,735,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged State Withholding Debits,705,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged YTD Interest Credits,737,,,,Non-fee item,Account Operations ,N/A,N/A
+Purged YTD Interest Debits,707,,,,Non-fee item,Account Operations ,N/A,N/A
+Recharacterization Deposit,140,,,,Non-fee item,Account Operations ,N/A,N/A
+Recharacterization Withdrawal-Current Yr,190,,,,Non-fee item,Account Operations ,N/A,N/A
+Recharacterization Withdrawal-Prior Yr,189,,,,Non-fee item,Account Operations ,N/A,N/A
+Rev IRA-Remove Excess Earnings-Prior Yr,298,,,,Non-fee item,Account Operations ,N/A,N/A
+Reverse CD Deposit,49,,,,Non-fee item,Account Operations ,N/A,N/A
+Reverse CD Withdrawal,99,,,,Non-fee item,Account Operations ,N/A,N/A
+Reverse Recharacterization Deposit,240,,,,Non-fee item,Account Operations ,N/A,N/A
+Reverse Recharacterization W/D-CurrentYr,290,,,,Non-fee item,Account Operations ,N/A,N/A
+Reverse Rollover Conversion Deposit,245,,,,Non-fee item,Account Operations ,N/A,N/A
+Rollover Conversion Deposit,145,,,,Non-fee item,Account Operations ,N/A,N/A
+"Roth - Distribution, Exception Applies",193,,,,Non-fee item,Account Operations ,N/A,N/A
+Roth - Early Distribution,191,,,,Non-fee item,Account Operations ,N/A,N/A
+Roth - Qualified Distribution,192,,,,Non-fee item,Account Operations ,N/A,N/A
+Roth - Reverse Early Distribution,291,,,,Non-fee item,Account Operations ,N/A,N/A
+Roth - Reverse Qualified Distribution,292,,,,Non-fee item,Account Operations ,N/A,N/A
+"Roth-Reverse Distribution, with Exceptn",293,,,,Non-fee item,Account Operations ,N/A,N/A
+SEP-Employee Current Year Contribution,110,,,,Non-fee item,Account Operations ,N/A,N/A
+SEP-Employee Prior Year Contribution,115,,,,Non-fee item,Account Operations ,N/A,N/A
+SEP-Employer Current Year Contribution,111,,,,Non-fee item,Account Operations ,N/A,N/A
+SEP-Employer Prior Year Contribution,116,,,,Non-fee item,Account Operations ,N/A,N/A
+SEP-Reverse Employee Current Yr Contrib,210,,,,Non-fee item,Account Operations ,N/A,N/A
+SEP-Reverse Employee Prior Yr Contribut,215,,,,Non-fee item,Account Operations ,N/A,N/A
+SEP-Reverse Employer Current Yr Contrib,211,,,,Non-fee item,Account Operations ,N/A,N/A
+SEP-Reverse Employer Prior Yr Contributn,216,,,,Non-fee item,Account Operations ,N/A,N/A
+Service Fee,679,,,,Non-fee item,Account Operations ,N/A,N/A
+Simple IRA - Early Distribution,199,,,,Non-fee item,Account Operations ,N/A,N/A
+Simple IRA - Reverse Early Distribution,299,,,,Non-fee item,Account Operations ,N/A,N/A
+State Interest Withheld,676,,,,Non-fee item,Account Operations ,N/A,N/A
+State Withholding Balance Reduction,624,,,,Non-fee item,Account Operations ,N/A,N/A
+Withdrawal Balance Reduction,625,,,,Non-fee item,Account Operations ,N/A,N/A
+Withdrawal Closing Entry,620,,,,Non-fee item,Account Operations ,N/A,N/A
+Withdrawal Fee,627,,,,Non-fee item,Account Operations ,N/A,N/A
+Withdrawal Interest Credit,628,,,,Non-fee item,Account Operations ,N/A,N/A
+Withholding - Federal,677,,,,Non-fee item,Account Operations ,N/A,N/A
+Withholding - State,678,,,,Non-fee item,Account Operations ,N/A,N/A
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,

@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Raw data files (large CSVs, not committed)
+data/*.csv
+data/**/*.csv
+
+# Keep taxonomy ground truth files
+!taxonomy/data/*.csv
+
+# OS files
+.DS_Store
