@@ -13,8 +13,5 @@ wheels/
 data/*.csv
 data/**/*.csv
 
-# Keep taxonomy ground truth files
-!taxonomy/data/*.csv
-
 # OS files
 .DS_Store
