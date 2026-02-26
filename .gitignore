@@ -13,5 +13,8 @@ wheels/
 data/*.csv
 data/**/*.csv
 
+# Taxonomy data files
+taxonomy/data/*.csv
+
 # OS files
 .DS_Store
