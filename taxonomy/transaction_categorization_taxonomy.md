@@ -30,15 +30,15 @@ The taxonomy has **4 active levels** (Level 5 — Merchant Category — is desco
 
 | Level | Purpose | Example |
 |-------|---------|---------|
-| **Level 1 (Category 1)** | Differentiates fee vs non-fee transactions | "Non-Fee Item" vs "Fee Item" |
-| **Level 2 (Category 2)** | Non-interest income calculations and reporting; include/exclude from scoring | "Money Movement", "NSF/OD", "Service Charges" |
+| **Level 1 (Category 1)** | Differentiates fee vs non-fee transactions | "Non-fee item" vs "Fee item" |
+| **Level 2 (Category 2)** | Non-interest income calculations and reporting; include/exclude from scoring | "Money movement", "NSF/OD", "Service Charges" |
 | **Level 3 (Category 3)** | Detailed scoring and offers monitoring | "ACH", "ATM", "Check", "Wire" |
 | **Level 4 (Category 4)** | Channel / subtype granularity | "Direct Deposit", "3rd party (foreign)", "POS" |
 
 The taxonomy splits into **two independent classification trees** (blocks):
 
-- **Block A — Non-Fee (Account Activity) Transactions** — the actual banking activities
-- **Block B — Fee Item Transactions** — fee-charging events that generate non-interest income
+- **Block A — Non-fee item (Account Activity) Transactions** — the actual banking activities
+- **Block B — Fee item Transactions** — fee-charging events that generate non-interest income
 
 ---
 
@@ -57,14 +57,14 @@ In the core banking system these are **independent items with separate transacti
 
 ---
 
-## Block A — Non-Fee (Account Activity) Transactions
+## Block A — Non-fee item (Account Activity) Transactions
 
 These are the actual banking activities performed by or on behalf of the customer. They are used for customer scoring, offer monitoring, and activity reporting.
 
 ### Scoring Rule
 
-- **Include in customer scoring:** NSF/OD, Money Movement (and all children)
-- **Do NOT include in customer scoring:** Account Operations (and all children), Miscellaneous, Unclassified
+- **Include in customer scoring:** NSF/OD, Money movement (and all children)
+- **Do NOT include in customer scoring:** Account operations (and all children), Misc, Unclassified
 
 ---
 
@@ -83,7 +83,7 @@ These are the actual banking activities performed by or on behalf of the custome
 
 ---
 
-### Level 2: Money Movement
+### Level 2: Money movement
 
 > Transfers, withdrawals, deposits — all forms of money moving in/out of accounts
 
@@ -125,9 +125,9 @@ These are the actual banking activities performed by or on behalf of the custome
 - Check clearing/payment
 - Official Check
 - Contract Collection Check
-- Miscellaneous check activity
+- Misc check activity
 
-#### Level 3: Internal Transfer / Payment
+#### Level 3: Transfers & Payments
 
 > Account-to-account transfers, loan payments, bill pay, P2P
 
@@ -207,7 +207,7 @@ These are the actual banking activities performed by or on behalf of the custome
 
 ---
 
-### Level 2: Account Operations
+### Level 2: Account operations
 
 > Internal bank operations — NOT included in customer scoring
 
@@ -240,8 +240,6 @@ These are the actual banking activities performed by or on behalf of the custome
 
 #### Level 3: Interest
 
-> Interest accruals, payments, adjustments, and withholdings
-
 **Common transaction names:**
 - Interest Deposit / Interest earned / Interest charged
 - CD Interest
@@ -256,8 +254,6 @@ These are the actual banking activities performed by or on behalf of the custome
 - Print Interest Check
 
 #### Level 3: Govt. & Tax
-
-> Government withholdings, garnishments, and tax-related entries
 
 **Common transaction names:**
 - Federal withholding / State withholding
@@ -285,8 +281,6 @@ These are the actual banking activities performed by or on behalf of the custome
 
 #### Level 3: Operational
 
-> Administrative corrections, encoding errors, and system adjustments
-
 **Common transaction names:**
 - Encoding Error Credit/Debit Adjustment
 - Correction to previous deposit
@@ -298,7 +292,7 @@ These are the actual banking activities performed by or on behalf of the custome
 
 ---
 
-### Level 2: Miscellaneous
+### Level 2: Misc
 
 > Business banking, custom accounts, cash management, investment sweeps, and other specialized transactions that don't fit standard categories. Not included in customer scoring.
 
@@ -334,7 +328,7 @@ These are the actual banking activities performed by or on behalf of the custome
 
 ---
 
-## Block B — Fee Item Transactions
+## Block B — Fee item Transactions
 
 Fee-charging transactions that generate **non-interest income** for the FI. These are the fee counterparts to Block A activities.
 
@@ -353,10 +347,10 @@ Block B has one extra nesting level compared to Block A for the "All Others" buc
 
 ```
 Block A: Level 1 → Level 2      → Level 3 → Level 4
-         Non-Fee → Money Movement → ACH     → Direct Deposit
+         Non-fee item → Money movement → ACH     → Direct Deposit
 
 Block B: Level 1 → Level 2      → Level 3         → Level 4
-         Fee Item → All Others   → Money Movement  → ACH
+         Fee item → All Others   → Money movement  → ACH
 ```
 
 This shift is intentional — "All Others" is a Level 2 grouping for fee reporting, and the sub-categories beneath it mirror Block A's structure one level deeper.
@@ -385,7 +379,7 @@ This shift is intentional — "All Others" is a Level 2 grouping for fee reporti
 
 > All fees that are NOT NSF/OD, Service Charges, or Interchange. Grouped here because they don't individually generate significant revenue.
 
-#### Level 3: Money Movement
+#### Level 3: Money movement
 
 > Fees charged for money-moving activities
 
@@ -413,7 +407,7 @@ This shift is intentional — "All Others" is a Level 2 grouping for fee reporti
 - Foreign Wire Fee (Incoming / Outgoing)
 - Wire transfer charge
 
-##### Level 4: Transfers / Payments
+##### Level 4: Transfers & Payments
 
 **Common transaction names:**
 - FX transaction fee / Currency Exchange Fee
@@ -421,11 +415,11 @@ This shift is intentional — "All Others" is a Level 2 grouping for fee reporti
 - Redeposit Fee
 - Telephone Transfer Fee
 
-#### Level 3: Account Operations
+#### Level 3: Account operations
 
-> Miscellaneous operational fees
+> Misc operational fees
 
-##### Level 4: Miscellaneous
+##### Level 4: Misc
 
 **Common transaction names (general account operations fees):**
 - Chargeback Fee / Chargeback Item Fee
@@ -503,27 +497,29 @@ This shift is intentional — "All Others" is a Level 2 grouping for fee reporti
 
 ## CD Transactions
 
-CD (Certificate of Deposit) transactions exist in the ground truth data but are mapped to **Account Operations** at Level 2 and are **not included in customer scoring**. These cover IRA operations, CD interest, CD closing/redemption, memo entries, and other CD-specific accounting.
+CD (Certificate of Deposit) transactions exist in the ground truth data but are mapped to **Account operations** at Level 2 and are **not included in customer scoring**. These cover IRA operations, CD interest, CD closing/redemption, memo entries, and other CD-specific accounting.
 
-The model should classify CD-related transaction codes under **Block A > Account Operations** with no further Level 3/4 breakdown (N/A).
+The model should classify CD-related transaction codes under **Block A > Account operations** with no further Level 3/4 breakdown (N/A).
 
 ---
 
 ## Classification Rules for the AI Model
 
-1. **First classify into Block A (Non-Fee) or Block B (Fee Item)** based on the transaction description. Fee items typically contain words like "fee", "charge", "surcharge", "penalty", "service charge", "reversal" (of a fee).
+1. **First classify into Block A (Non-fee item) or Block B (Fee item)** based on the transaction description. Fee items typically contain words like "fee", "charge", "surcharge", "penalty", "service charge", "reversal" (of a fee).
 
 2. **Then classify down the hierarchy** (Level 2 → Level 3 → Level 4) within the assigned block.
 
-3. **If the transaction code naming convention does not match any provided category names, map to Unclassified** in the appropriate block. Do not guess.
+3. **Refunds/Reversals of fees:** Any transaction that is a "Refund" or "Reversal" of a fee (e.g., "NSF Fee Refund" or "Refund NSF/OD Fee") must be classified under **Block A > Money movement > Deposits**, as this is money returned to the customer's account.
 
-4. **Each transaction code maps to exactly one path** in the taxonomy tree. There is no multi-label classification.
+4. **If the transaction code naming convention does not match any provided category names, map to Unclassified** in the appropriate block. Do not guess.
 
-5. **Block A and Block B are independent trees.** The same semantic concept (e.g., "ACH") can appear in both blocks at different hierarchy levels. The block assignment determines which tree to traverse.
+5. **Each transaction code maps to exactly one path** in the taxonomy tree. There is no multi-label classification.
 
-6. **`include_in_scoring`** only applies to Block A:
-   - `true` for NSF/OD and Money Movement (all children)
-   - `false` for Account Operations, Miscellaneous, Unclassified
+6. **Block A and Block B are independent trees.** The same semantic concept (e.g., "ACH") can appear in both blocks at different hierarchy levels. The block assignment determines which tree to traverse.
+
+7. **`include_in_scoring`** only applies to Block A:
+   - `true` for NSF/OD and Money movement (all children)
+   - `false` for Account operations, Misc, Unclassified
    - Block B does not have scoring rules — its purpose is fee income reporting
 
 ---
@@ -532,11 +528,11 @@ The model should classify CD-related transaction codes under **Block A > Account
 
 For each transaction code, the model should produce:
 
-| Field | Description | Example (Non-Fee) | Example (Fee) |
+| Field | Description | Example (Non-fee item) | Example (Fee item) |
 |-------|-------------|-------------------|---------------|
-| `category_1` (Level 1) | Block assignment | Non-Fee Item | Fee Item |
-| `category_2` (Level 2) | Primary category | Money Movement | All Others |
-| `category_3` (Level 3) | Sub-category | ACH | Money Movement |
+| `category_1` (Level 1) | Block assignment | Non-fee item | Fee item |
+| `category_2` (Level 2) | Primary category | Money movement | All others |
+| `category_3` (Level 3) | Sub-category | ACH | Money movement |
 | `category_4` (Level 4) | Detail | Direct Deposit | ACH |
 | `include_in_scoring` | Scoring flag (Block A only) | true | N/A |
 | `credit_debit` | Transaction direction | Credit | Debit |
