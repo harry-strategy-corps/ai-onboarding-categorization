@@ -217,10 +217,6 @@ A full list of ambiguities is maintained in [`taxonomy/transaction_categorizatio
 
 | File | Format | Purpose |
 |------|--------|---------|
-| `taxonomy/product_categorization_taxonomy.json` | JSON | Machine-readable product taxonomy — ready for LLM prompt context |
-| `taxonomy/product_categorization_taxonomy.md` | Markdown | Human-readable product taxonomy with full hierarchy, examples, and classification rules |
-| `taxonomy/transaction_categorization_taxonomy.json` | JSON | Machine-readable transaction taxonomy — ready for LLM prompt context |
-| `taxonomy/transaction_categorization_taxonomy.md` | Markdown | Human-readable transaction taxonomy with full hierarchy, examples, and classification rules |
-| `taxonomy/data/Master Fee Table(Master).csv` | CSV | Ground truth mapping: 431 transaction codes → 4-level categories |
-| `taxonomy/transaction_categorization_ambiguities.md` | Markdown | Documented ambiguities and open questions |
-| `taxonomy/bankplus_transaction_data_analysis.md` | Markdown | Analysis of raw data vs. taxonomy coverage |
+| `data/taxonomy/product_categorization_taxonomy.md` | Markdown | Product taxonomy with full hierarchy, examples, and classification rules — used as LLM prompt context |
+| `data/taxonomy/transaction_categorization_taxonomy.md` | Markdown | Transaction taxonomy with full hierarchy, examples, and classification rules — used as LLM prompt context |
+| `data/bank-plus-data/source-of-truth/Master Fee Table(Master).csv` | CSV | Ground truth mapping: 431 transaction codes → 4-level categories |

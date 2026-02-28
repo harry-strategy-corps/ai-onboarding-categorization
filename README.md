@@ -41,65 +41,67 @@ Bank Plus is the first FI used to develop and validate the models. We have:
 
 ```
 ai-onboarding-categorization/
-├── README.md                          # This file
-├── pyproject.toml                     # Python project configuration
-├── main.py                           # Entry point (placeholder)
+├── README.md
+├── pyproject.toml
+├── main.py
 │
-├── docs/                             # Project documentation
+├── docs/
 │   ├── architecture.md               # System context, integration with CheckingIQ
 │   ├── data_dictionary.md            # Schema reference for all raw data files
 │   ├── taxonomy_overview.md          # Categorization taxonomy reference
 │   └── contributing.md               # How to work in this repository
 │
-├── data/                             # Raw Bank Plus data (CSV, not committed)
-│   ├── CheckingIQ_Deposit_ALL_*.csv
-│   ├── CheckingIQ_Loan_13Month_All_*.csv
-│   ├── CheckingIQ_CD_All_*.csv
-│   ├── CheckingIQ_NON_POS_Daily_*.csv
-│   ├── CheckingIQ_POS_Daily_*.csv
-│   ├── CheckingIQ_CI_All_*.csv
-│   ├── CheckingIQ_Relationship_All_*.csv
-│   ├── CheckingIQ_OnlineBanking_Daily_*.csv
-│   └── analysis/                     # Data exploration notes
-│       └── bankplus_raw_data_inventory.md
+├── data/
+│   ├── bank-plus-data/
+│   │   ├── raw/                      # Raw CSVs from Bank Plus (13 files)
+│   │   └── source-of-truth/          # Master Fee Table (ground truth)
+│   │       ├── Master Fee Table(Master).csv
+│   │       ├── Master Fee Table(Category Mapping).csv
+│   │       ├── Master Fee Table(Fee Template).csv
+│   │       └── Master Fee Table(Scoring).csv
+│   ├── results/                      # Deprecated — results stored in Unity Catalog
+│   └── taxonomy/                     # Taxonomy documentation (md only)
+│       ├── product_categorization_taxonomy.md
+│       └── transaction_categorization_taxonomy.md
 │
-├── taxonomy/                         # Categorization taxonomy artifacts
-│   ├── product_categorization_taxonomy.json
-│   ├── product_categorization_taxonomy.md
-│   ├── transaction_categorization_taxonomy.json
-│   ├── transaction_categorization_taxonomy.md
-│   ├── transaction_categorization_ambiguities.md
-│   ├── bankplus_transaction_data_analysis.md
-│   └── data/
-│       └── Master Fee Table(Master).csv
+├── notebooks/
+│   ├── 01_prepare_data.ipynb         # GT + catalog + layers → Unity Catalog
+│   ├── 02_map_client_schema.ipynb    # AI column mapping prototype
+│   ├── 03_categorize_transactions.ipynb  # Batch ai_query → Unity Catalog
+│   └── 04_evaluate_accuracy.ipynb    # Eval + cross-version → Unity Catalog
 │
-└── plans/                            # Sprint plans and phase documentation
-    └── phase1_exploration_setup_plan.md
+└── docs/plans/                       # Sprint plans
 ```
 
 ---
 
 ## Phased Approach
 
-### Phase 1 — Exploration & Setup (current)
+### Phase 1 — Exploration & Setup
 
 Establish data access, understand both taxonomies, obtain ground truth mappings, enable Azure Private Link, and evaluate Databricks AI Functions.
 
 **Key deliverables:**
 - Raw data access confirmed in Databricks
-- Transaction and Product taxonomies structured as JSON + Markdown for LLM prompt context
+- Transaction and Product taxonomies structured as Markdown for LLM prompt context
 - Manual mapping ground truth loaded and coverage analyzed
-- `ai_query` vs `ai_classify` evaluated with recommendation
+- `ai_query` selected as primary AI Function (multi-level hierarchy requires full prompt control)
 
 **Linear ticket:** [CIQENG-981](https://linear.app/strategycorps/issue/CIQENG-981)
 
-### Phase 2 — Product Suggestion Model
+### Phase 2 — Transaction Suggestion Model (current)
 
-Design prompts with full taxonomy context + few-shot examples, process all ~80 DDA codes and ~60 loan codes, write suggestions to staging tables, validate against manual mappings (target ≥ 80% accuracy).
+Batch-classify all transaction codes using `ai_query()` with `responseFormat` for structured JSON output. Evaluate against the Master Fee Table ground truth (431 codes). Target ≥ 80% volume-weighted exact match accuracy.
 
-### Phase 3 — Transaction Suggestion Model
+**Notebook pipeline:**
+1. `01_prepare_data` — Normalize ground truth, build transaction catalog, assign test layers
+2. `02_map_client_schema` — Prototype AI-based column mapping for new FI onboarding
+3. `03_categorize_transactions` — Batch `ai_query()` with token/cost tracking
+4. `04_evaluate_accuracy` — Per-layer accuracy, cross-version comparison
 
-Same pattern for transaction codes using the Master Fee Table as ground truth.
+### Phase 3 — Product Suggestion Model
+
+Same pattern for product codes (~80 DDA + ~60 loan codes) using product taxonomy.
 
 ---
 

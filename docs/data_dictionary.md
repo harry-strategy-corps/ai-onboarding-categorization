@@ -263,7 +263,7 @@ Online banking enrollment and login activity.
 
 ## Ground Truth Reference
 
-### Master Fee Table (`taxonomy/data/Master Fee Table(Master).csv`)
+### Master Fee Table (`data/bank-plus-data/source-of-truth/Master Fee Table(Master).csv`)
 
 This is the manually-created mapping sheet (from Mike Young) that serves as ground truth for transaction categorization. It maps Bank Plus external transaction codes to the 4-level categorization hierarchy.
 

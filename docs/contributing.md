@@ -24,13 +24,13 @@ uv sync
 ```
 ai-onboarding-categorization/
 ├── docs/                    # Project documentation (architecture, data dictionary, taxonomy)
-├── data/                    # Raw Bank Plus CSV files (NOT committed to git)
-│   └── analysis/            # Data exploration notes
-├── taxonomy/                # Categorization taxonomy artifacts
-│   ├── *.json               # Machine-readable taxonomy structures
-│   ├── *.md                 # Analysis and ambiguity documentation
-│   └── data/                # Ground truth mapping files
-├── plans/                   # Sprint plans and phase documentation
+├── data/
+│   ├── bank-plus-data/
+│   │   ├── raw/             # Raw CSVs from Bank Plus (NOT committed to git)
+│   │   └── source-of-truth/ # Master Fee Table ground truth files
+│   ├── results/             # Deprecated — results stored in Unity Catalog
+│   └── taxonomy/            # Taxonomy documentation (md files only)
+├── notebooks/               # Databricks notebooks (01–04)
 ├── main.py                  # Entry point
 └── pyproject.toml           # Project configuration
 ```
@@ -39,15 +39,15 @@ ai-onboarding-categorization/
 
 ### Data Files
 
-- Raw CSVs go in `data/`. They are listed in `.gitignore` and must not be committed.
-- Ground truth mapping files (like the Master Fee Table) go in `taxonomy/data/`.
-- Analysis outputs and exploration notes go in `data/analysis/` or `taxonomy/` depending on whether they describe raw data or taxonomy artifacts.
+- Raw CSVs go in `data/bank-plus-data/raw/`. They are listed in `.gitignore` and must not be committed.
+- Ground truth mapping files (like the Master Fee Table) go in `data/bank-plus-data/source-of-truth/`.
+- Taxonomy documentation (markdown) goes in `data/taxonomy/`.
+- All pipeline results are persisted to Unity Catalog, not locally.
 
 ### Documentation
 
 - High-level project documentation goes in `docs/`.
-- Task-specific analysis and working notes go alongside the artifacts they describe (e.g., `taxonomy/transaction_categorization_ambiguities.md`).
-- Sprint plans go in `plans/`.
+- Sprint plans go in `docs/plans/`.
 
 ### Naming
 
@@ -68,7 +68,7 @@ ai-onboarding-categorization/
 | System architecture | [`docs/architecture.md`](architecture.md) | How this project fits into CheckingIQ |
 | Data dictionary | [`docs/data_dictionary.md`](data_dictionary.md) | Schema for all raw data files |
 | Taxonomy reference | [`docs/taxonomy_overview.md`](taxonomy_overview.md) | Product and transaction categorization hierarchies |
-| Phase 1 plan | [`plans/phase1_exploration_setup_plan.md`](../plans/phase1_exploration_setup_plan.md) | Current sprint plan with tasks and contacts |
+| Phase 1 plan | [`docs/plans/`](plans/) | Sprint plans and phase documentation |
 
 ## Working with Data
 
@@ -82,16 +82,15 @@ ai-onboarding-categorization/
 ### Adding New Taxonomy Artifacts
 
 1. Extract the taxonomy from its Notion source page
-2. Create a structured JSON file in `taxonomy/` for machine-readable use
-3. Document any ambiguities in a corresponding `*_ambiguities.md` file
-4. Update `docs/taxonomy_overview.md` with the new taxonomy reference
+2. Create a markdown file in `data/taxonomy/` for LLM prompt context
+3. Update `docs/taxonomy_overview.md` with the new taxonomy reference
 
 ### Adding Ground Truth Mappings
 
 1. Obtain the mapping file from Sid (products) or Mike (transactions/fees)
-2. Place the file in `taxonomy/data/`
-3. Run a coverage analysis: how many raw codes are covered by the mapping?
-4. Document gaps and discrepancies in the analysis files
+2. Place the file in `data/bank-plus-data/source-of-truth/`
+3. Run notebook `01_prepare_data` to normalize and load into Unity Catalog
+4. Run notebook `04_evaluate_accuracy` to check coverage against existing predictions
 
 ## Tracking Work
 

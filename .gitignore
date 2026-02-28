@@ -10,13 +10,16 @@ wheels/
 .venv
 
 # Raw data files (large CSVs, not committed)
-data/*.csv
 data/**/*.csv
-
-# Taxonomy data files
-taxonomy/data/*.csv
 
 # OS files
 .DS_Store
 
-results/
+# Results (stored in Unity Catalog, not locally)
+data/results/
+
+# Environment
+.env
+
+# Plans (local only)
+docs/plans/
