@@ -18,3 +18,5 @@ taxonomy/data/*.csv
 
 # OS files
 .DS_Store
+
+results/
