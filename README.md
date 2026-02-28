@@ -64,7 +64,10 @@ ai-onboarding-categorization/
 │       └── bankplus_raw_data_inventory.md
 │
 ├── taxonomy/                         # Categorization taxonomy artifacts
+│   ├── product_categorization_taxonomy.json
+│   ├── product_categorization_taxonomy.md
 │   ├── transaction_categorization_taxonomy.json
+│   ├── transaction_categorization_taxonomy.md
 │   ├── transaction_categorization_ambiguities.md
 │   ├── bankplus_transaction_data_analysis.md
 │   └── data/
@@ -84,7 +87,7 @@ Establish data access, understand both taxonomies, obtain ground truth mappings,
 
 **Key deliverables:**
 - Raw data access confirmed in Databricks
-- Transaction and Product taxonomies structured as JSON for LLM prompt context
+- Transaction and Product taxonomies structured as JSON + Markdown for LLM prompt context
 - Manual mapping ground truth loaded and coverage analyzed
 - `ai_query` vs `ai_classify` evaluated with recommendation
 
