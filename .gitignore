@@ -10,7 +10,7 @@ wheels/
 .venv
 
 # Raw data files (large CSVs, not committed)
-data/**/*.csv
+*.csv
 
 # OS files
 .DS_Store
