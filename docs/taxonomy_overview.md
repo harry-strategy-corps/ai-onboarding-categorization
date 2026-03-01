@@ -186,7 +186,7 @@ The transaction categorization depends on the **product context**:
 - Some transaction codes in the Master Fee Table have **multiple mappings** — the correct one depends on whether the account is a DDA, Savings, CD, or Loan.
 
 ```
-Raw Transaction → TRANCD + EFHDS1/EFHDS2 + Account's ACTYPE
+Raw Transaction → transaction_code + description_1/description_2 + Account's ACTYPE
                        │
                        ▼
               Transaction Taxonomy

@@ -117,7 +117,7 @@ All pipeline data is persisted to Unity Catalog under `ciq-bp_dummy-dev`.`defaul
 | Table | Written By | Description |
 |-------|-----------|-------------|
 | `ground_truth_normalized` | 01_prepare_data | 431 cleaned GT mappings from Master Fee Table |
-| `transaction_code_catalog` | 01_prepare_data | ~62 unique TRANCD codes with layer assignment and volume |
+| `transaction_code_catalog` | 01_prepare_data | ~62 unique transaction codes with layer assignment and volume |
 | `client_column_mappings` | 02_map_client_schema | AI-proposed column name mappings per client |
 | `classification_results` | 03_categorize_transactions | LLM predictions with layer, prompt_version, cost metadata |
 | `evaluation_results` | 04_evaluate_accuracy | Per-code match results, failure types, accuracy metrics |
