@@ -8,7 +8,7 @@
 | **Platform** | CheckingIQ (Azure Databricks, Medallion Architecture) |
 | **Test Client** | Bank Plus (Jack Henry SilverLake core) |
 | **Owner** | Harrison Hoyos |
-| **Status** | Phase 1 — Exploration & Setup |
+| **Status** | Phase 3 — Product Suggestion Model |
 
 ---
 
@@ -32,7 +32,8 @@ The output is a set of **staged suggestion tables** with proposed mappings and c
 Bank Plus is the first FI used to develop and validate the models. We have:
 
 - **Raw data** — 13 CSV files from the Jack Henry SilverLake core system (deposits, loans, CDs, transactions, relationships, customer information)
-- **Ground truth** — A Master Fee Table with 431 transaction codes already mapped to the 4-level categorization hierarchy
+- **Transaction ground truth** — A Master Fee Table with 431 transaction codes already mapped to the 4-level categorization hierarchy
+- **Product ground truth** — Product Catalog with ~86 deposit codes and ~63 loan codes mapped to the 5-level product taxonomy (from [BankPlus Legend Glossaries](https://www.notion.so/BankPlus-Legend-Glossaries-2f6ee9c7060580abb3a2c0bd9c3dca09))
 - **Glossary** — The [BankPlus Legend Glossaries](https://www.notion.so/BankPlus-Legend-Glossaries-2f6ee9c7060580abb3a2c0bd9c3dca09) in Notion, containing the full product catalog, loan types, purpose codes, class codes, and branch information
 
 ---
@@ -54,21 +55,29 @@ ai-onboarding-categorization/
 ├── data/
 │   ├── bank-plus-data/
 │   │   ├── raw/                      # Raw CSVs from Bank Plus (13 files)
-│   │   └── source-of-truth/          # Master Fee Table (ground truth)
-│   │       ├── Master Fee Table(Master).csv
+│   │   └── source-of-truth/
+│   │       ├── Master Fee Table(Master).csv        # Transaction GT
 │   │       ├── Master Fee Table(Category Mapping).csv
 │   │       ├── Master Fee Table(Fee Template).csv
-│   │       └── Master Fee Table(Scoring).csv
+│   │       ├── Master Fee Table(Scoring).csv
+│   │       └── products/                           # Product GT
+│   │           ├── Product catalog(Deposits).csv
+│   │           ├── Product catalog(DDA Types).csv
+│   │           ├── Product catalog(Loans).csv
+│   │           └── Product catalog(Loan Types).csv
 │   ├── results/                      # Deprecated — results stored in Unity Catalog
 │   └── taxonomy/                     # Taxonomy documentation (md only)
 │       ├── product_categorization_taxonomy.md
 │       └── transaction_categorization_taxonomy.md
 │
 ├── notebooks/
-│   ├── 01_prepare_data.ipynb         # GT + catalog + layers → Unity Catalog
-│   ├── 02_map_client_schema.ipynb    # AI column mapping prototype
-│   ├── 03_categorize_transactions.ipynb  # Batch ai_query → Unity Catalog
-│   └── 04_evaluate_accuracy.ipynb    # Eval + cross-version → Unity Catalog
+│   ├── 01_prepare_data.ipynb              # Transaction GT + catalog + layers → UC
+│   ├── 02_categorize_transactions.ipynb   # Batch ai_query for transactions → UC
+│   ├── 03_evaluate_accuracy.ipynb         # Transaction eval + cross-version → UC
+│   └── products/                          # Product categorization pipeline
+│       ├── 01_prepare_product_data.ipynb       # Product GT + catalog + layers → UC
+│       ├── 02_categorize_products.ipynb        # Batch ai_query for products → UC
+│       └── 03_evaluate_product_accuracy.ipynb  # Product eval + cross-version → UC
 │
 └── docs/plans/                       # Sprint plans
 ```
@@ -89,19 +98,23 @@ Establish data access, understand both taxonomies, obtain ground truth mappings,
 
 **Linear ticket:** [CIQENG-981](https://linear.app/strategycorps/issue/CIQENG-981)
 
-### Phase 2 — Transaction Suggestion Model (current)
+### Phase 2 — Transaction Suggestion Model (complete)
 
 Batch-classify all transaction codes using `ai_query()` with `responseFormat` for structured JSON output. Evaluate against the Master Fee Table ground truth (431 codes). Target ≥ 80% volume-weighted exact match accuracy.
 
 **Notebook pipeline:**
 1. `01_prepare_data` — Normalize ground truth, build transaction catalog, assign test layers
-2. `02_map_client_schema` — Prototype AI-based column mapping for new FI onboarding
-3. `03_categorize_transactions` — Batch `ai_query()` with token/cost tracking
-4. `04_evaluate_accuracy` — Per-layer accuracy, cross-version comparison
+2. `02_categorize_transactions` — Batch `ai_query()` with token/cost tracking
+3. `03_evaluate_accuracy` — Per-layer accuracy, cross-version comparison
 
-### Phase 3 — Product Suggestion Model
+### Phase 3 — Product Suggestion Model (current)
 
-Same pattern for product codes (~80 DDA + ~60 loan codes) using product taxonomy.
+Same pattern applied to product codes (~86 deposit + ~63 loan + CD codes) using the 5-level product taxonomy. Ground truth from the BankPlus Product Catalog (Deposits + Loans sheets). CD codes have no GT and are classified as Layer 3 (Unknown).
+
+**Notebook pipeline** (`notebooks/products/`):
+1. `01_prepare_product_data` — Parse hierarchical GT CSVs, build product catalog from raw data, assign layers
+2. `02_categorize_products` — Batch `ai_query()` with product taxonomy, token/cost tracking
+3. `03_evaluate_product_accuracy` — Per-level accuracy (L1-L5), account-weighted, cross-version comparison
 
 ---
 
