@@ -1,0 +1,13 @@
+2026-03-09 15:52:36,852 - MainThread - sqlmesh.core.config.connection - ERROR - Failed to import the engine library (connection.py:82)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/config/connection.py", line 77, in validate
+    importlib.import_module(import_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'databricks'
+2026-03-09 15:52:36,854 - MainThread - root - INFO - Shutting down the event dispatcher (dispatcher.py:159)

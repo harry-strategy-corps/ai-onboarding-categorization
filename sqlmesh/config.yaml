@@ -1,0 +1,27 @@
+project: ai_onboarding_categorization
+
+gateways:
+  local:
+    connection:
+      type: spark
+    state_connection:
+      type: duckdb
+      database: ":memory:"
+  databricks_dev:
+    connection:
+      type: databricks
+      server_hostname: "{{ env_var('DATABRICKS_SERVER_HOSTNAME', 'dummy') }}"
+      http_path: "{{ env_var('DATABRICKS_HTTP_PATH', 'dummy') }}"
+      access_token: "{{ env_var('DATABRICKS_ACCESS_TOKEN', 'dummy') }}"
+      catalog: "ciq-bp_dummy-dev"
+
+default_gateway: local
+
+variables:
+  tenant_catalog: "ciq-bp_dummy-dev"
+  bronze_schema: "raw"
+  silver_schema: "silver"
+  staging_schema: "staging"
+
+model_defaults:
+  dialect: databricks
