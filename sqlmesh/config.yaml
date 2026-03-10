@@ -20,8 +20,9 @@ default_gateway: local
 variables:
   tenant_catalog: "ciq-bp_dummy-dev"
   bronze_schema: "raw"
-  silver_schema: "silver"
   staging_schema: "staging"
+  silver_schema: "silver"
+  suggestions_schema: "suggestions"
 
 model_defaults:
   dialect: databricks

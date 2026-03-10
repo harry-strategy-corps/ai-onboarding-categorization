@@ -11,3 +11,6 @@ dependencies = [
 
 [project.urls]
 "Linear Project" = "https://linear.app/strategycorps/project/ciq-leverage-databricks-llm-capabilities-for-initial-fi-categorization-bcd8c02f129d/overview"
+
+[tool.pytest.ini_options]
+pythonpath = ["sqlmesh"]
