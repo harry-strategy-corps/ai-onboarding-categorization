@@ -1,0 +1,300 @@
+2026-03-09 18:53:06,048 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,049 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,050 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,052 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,053 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,054 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,054 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,055 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,060 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,062 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,067 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,076 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,080 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,082 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,131 - MainThread - sqlmesh.core.console - WARNING - The duckdb state connection is configured for single threaded mode but the warehouse connection is configured for multi threaded mode with 4 concurrent tasks. This can cause SQLMesh to hang. Overriding the duckdb state connection config to use multi threaded mode. (console.py:2335)
+2026-03-09 18:53:06,133 - MainThread - sqlmesh.core.config.connection - INFO - Creating new DuckDB adapter for in-memory database (connection.py:498)
+2026-03-09 18:53:06,191 - MainThread - sqlmesh.core.console - WARNING - The duckdb engine is not recommended for storing SQLMesh state in production deployments. Please see https://sqlmesh.readthedocs.io/en/stable/guides/configuration/#state-connection for a list of recommended engines and more information. (console.py:2335)
+2026-03-09 18:53:06,203 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0000_baseline' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0000_baseline.py'> (migrator.py:185)
+2026-03-09 18:53:06,213 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0061_mysql_fix_blob_text_type' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0061_mysql_fix_blob_text_type.py'> (migrator.py:185)
+2026-03-09 18:53:06,213 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0062_add_model_gateway' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0062_add_model_gateway.py'> (migrator.py:185)
+2026-03-09 18:53:06,213 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0063_change_signals' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0063_change_signals.py'> (migrator.py:185)
+2026-03-09 18:53:06,213 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0064_join_when_matched_strings' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0064_join_when_matched_strings.py'> (migrator.py:185)
+2026-03-09 18:53:06,213 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0065_add_model_optimize' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0065_add_model_optimize.py'> (migrator.py:185)
+2026-03-09 18:53:06,213 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0066_add_auto_restatements' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0066_add_auto_restatements.py'> (migrator.py:185)
+2026-03-09 18:53:06,215 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0067_add_tsql_date_full_precision' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0067_add_tsql_date_full_precision.py'> (migrator.py:185)
+2026-03-09 18:53:06,215 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0068_include_unrendered_query_in_metadata_hash' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0068_include_unrendered_query_in_metadata_hash.py'> (migrator.py:185)
+2026-03-09 18:53:06,215 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0069_update_dev_table_suffix' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0069_update_dev_table_suffix.py'> (migrator.py:185)
+2026-03-09 18:53:06,215 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0070_include_grains_in_metadata_hash' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0070_include_grains_in_metadata_hash.py'> (migrator.py:185)
+2026-03-09 18:53:06,215 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0071_add_dev_version_to_intervals' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0071_add_dev_version_to_intervals.py'> (migrator.py:185)
+2026-03-09 18:53:06,215 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0072_add_environment_statements' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0072_add_environment_statements.py'> (migrator.py:185)
+2026-03-09 18:53:06,216 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0073_remove_symbolic_disable_restatement' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0073_remove_symbolic_disable_restatement.py'> (migrator.py:185)
+2026-03-09 18:53:06,216 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0074_add_partition_by_time_column_property' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0074_add_partition_by_time_column_property.py'> (migrator.py:185)
+2026-03-09 18:53:06,216 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0075_remove_validate_query' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0075_remove_validate_query.py'> (migrator.py:185)
+2026-03-09 18:53:06,216 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0076_add_cron_tz' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0076_add_cron_tz.py'> (migrator.py:185)
+2026-03-09 18:53:06,216 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0077_fix_column_type_hash_calculation' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0077_fix_column_type_hash_calculation.py'> (migrator.py:185)
+2026-03-09 18:53:06,216 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0078_warn_if_non_migratable_python_env' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0078_warn_if_non_migratable_python_env.py'> (migrator.py:185)
+2026-03-09 18:53:06,216 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0079_add_gateway_managed_property' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0079_add_gateway_managed_property.py'> (migrator.py:185)
+2026-03-09 18:53:06,216 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0080_add_batch_size_to_scd_type_2_models' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0080_add_batch_size_to_scd_type_2_models.py'> (migrator.py:185)
+2026-03-09 18:53:06,216 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0081_update_partitioned_by' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0081_update_partitioned_by.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0082_warn_if_incorrectly_duplicated_statements' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0082_warn_if_incorrectly_duplicated_statements.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0083_use_sql_for_scd_time_data_type_data_hash' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0083_use_sql_for_scd_time_data_type_data_hash.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0084_normalize_quote_when_matched_and_merge_filter' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0084_normalize_quote_when_matched_and_merge_filter.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0085_deterministic_repr' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0085_deterministic_repr.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0086_check_deterministic_bug' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0086_check_deterministic_bug.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0087_normalize_blueprint_variables' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0087_normalize_blueprint_variables.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0088_warn_about_variable_python_env_diffs' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0088_warn_about_variable_python_env_diffs.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0089_add_virtual_environment_mode' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0089_add_virtual_environment_mode.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0090_add_forward_only_column' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0090_add_forward_only_column.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0091_on_additive_change' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0091_on_additive_change.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0092_warn_about_dbt_data_type_diff' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0092_warn_about_dbt_data_type_diff.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0093_use_raw_sql_in_fingerprint' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0093_use_raw_sql_in_fingerprint.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0094_add_dev_version_and_fingerprint_columns' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0094_add_dev_version_and_fingerprint_columns.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0095_warn_about_dbt_raw_sql_diff' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0095_warn_about_dbt_raw_sql_diff.py'> (migrator.py:185)
+2026-03-09 18:53:06,217 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0096_remove_plan_dags_table' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0096_remove_plan_dags_table.py'> (migrator.py:185)
+2026-03-09 18:53:06,218 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0097_add_dbt_name_in_node' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0097_add_dbt_name_in_node.py'> (migrator.py:185)
+2026-03-09 18:53:06,218 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0098_add_dbt_node_info_in_node' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0098_add_dbt_node_info_in_node.py'> (migrator.py:185)
+2026-03-09 18:53:06,218 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0099_add_last_altered_to_intervals' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0099_add_last_altered_to_intervals.py'> (migrator.py:185)
+2026-03-09 18:53:06,218 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0100_add_grants_and_grants_target_layer' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0100_add_grants_and_grants_target_layer.py'> (migrator.py:185)
+2026-03-09 18:53:06,219 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Fetching environments (migrator.py:207)
+2026-03-09 18:53:06,219 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Migrating snapshot rows... (migrator.py:224)
+2026-03-09 18:53:06,220 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - No changes to snapshots detected (migrator.py:217)
+2026-03-09 18:53:06,231 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,232 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,233 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,234 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,234 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,235 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,236 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,237 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,237 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,239 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,240 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,241 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,242 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,242 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,276 - Thread-1 - py4j.clientserver - INFO - Error while sending or receiving. (clientserver.py:529)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+2026-03-09 18:53:06,278 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,279 - Thread-1 - root - INFO - Exception while sending command. (java_gateway.py:1056)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 530, in send_command
+    raise Py4JNetworkError(
+        "Error while sending", e, proto.ERROR_ON_SEND)
+py4j.protocol.Py4JNetworkError: Error while sending
+2026-03-09 18:53:06,281 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,487 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,487 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,488 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,489 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,490 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,491 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,492 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,493 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,494 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,495 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,495 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,496 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,497 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,498 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:06,631 - MainThread - sqlmesh.core.plan.evaluator - INFO - Evaluating plan stage CreateSnapshotRecordsStage (evaluator.py:123)
+2026-03-09 18:53:06,644 - MainThread - sqlmesh.core.plan.evaluator - INFO - Evaluating plan stage PhysicalLayerSchemaCreationStage (evaluator.py:123)
+2026-03-09 18:53:06,645 - ThreadPoolExecutor-1_0 - sqlmesh.core.snapshot.evaluator - INFO - Creating schema 'spark_catalog.sqlmesh__ai_categorization' (evaluator.py:1449)
+2026-03-09 18:53:06,645 - ThreadPoolExecutor-1_0 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ CREATE SCHEMA IF NOT EXISTS `spark_catalog`.`sqlmesh__ai_categorization` (base.py:2626)
+2026-03-09 18:53:07,283 - Thread-1 - py4j.clientserver - INFO - Error while sending or receiving. (clientserver.py:529)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+2026-03-09 18:53:07,283 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:07,283 - Thread-1 - root - INFO - Exception while sending command. (java_gateway.py:1056)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 530, in send_command
+    raise Py4JNetworkError(
+        "Error while sending", e, proto.ERROR_ON_SEND)
+py4j.protocol.Py4JNetworkError: Error while sending
+2026-03-09 18:53:07,284 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:08,061 - Dummy-6 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:08,061 - MainThread - sqlmesh.core.plan.evaluator - INFO - Evaluating plan stage BackfillStage (evaluator.py:123)
+2026-03-09 18:53:08,065 - ThreadPoolExecutor-2_0 - sqlmesh.core.snapshot.evaluator - INFO - Listing data objects in schema spark_catalog.sqlmesh__ai_categorization (evaluator.py:1616)
+2026-03-09 18:53:08,065 - ThreadPoolExecutor-2_0 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ SHOW TABLE EXTENDED IN spark_catalog.sqlmesh__ai_categorization LIKE 'ai_categorization__ai_product_suggestions__4054074815|ai_categorization__seed_raw_score_loans__38963444|ai_categorization__product_classification_suggestions__1690217780|ai_categorization__seed_raw_score_deposits__1532615325|ai_categorization__seed_bankplus_product_catalog__4155955684' (base.py:2626)
+2026-03-09 18:53:08,425 - Dummy-8 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:08,426 - ThreadPoolExecutor-3_0 - sqlmesh.core.snapshot.evaluator - INFO - Evaluating snapshot SnapshotId<"spark_catalog"."ai_categorization"."seed_bankplus_product_catalog": 1009601787> (evaluator.py:711)
+2026-03-09 18:53:08,426 - ThreadPoolExecutor-3_1 - sqlmesh.core.snapshot.evaluator - INFO - Evaluating snapshot SnapshotId<"spark_catalog"."ai_categorization"."seed_raw_score_deposits": 2942296649> (evaluator.py:711)
+2026-03-09 18:53:08,426 - ThreadPoolExecutor-3_0 - sqlmesh.core.snapshot.evaluator - INFO - Creating table 'spark_catalog.sqlmesh__ai_categorization.ai_categorization__seed_bankplus_product_catalog__4155955684' (evaluator.py:2042)
+2026-03-09 18:53:08,427 - ThreadPoolExecutor-3_2 - sqlmesh.core.snapshot.evaluator - INFO - Evaluating snapshot SnapshotId<"spark_catalog"."ai_categorization"."seed_raw_score_loans": 2421808298> (evaluator.py:711)
+2026-03-09 18:53:08,427 - ThreadPoolExecutor-3_1 - sqlmesh.core.snapshot.evaluator - INFO - Creating table 'spark_catalog.sqlmesh__ai_categorization.ai_categorization__seed_raw_score_deposits__1532615325' (evaluator.py:2042)
+2026-03-09 18:53:08,428 - ThreadPoolExecutor-3_0 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ CREATE TABLE IF NOT EXISTS `spark_catalog`.`sqlmesh__ai_categorization`.`ai_categorization__seed_bankplus_product_catalog__4155955684` (`product_code` STRING, `product_description` STRING, `product_domain` STRING, `source_table` STRING, `purpose_code` STRING, `purpose_description` STRING, `loan_type_desc` STRING, `account_count` INT) (base.py:2626)
+2026-03-09 18:53:08,428 - ThreadPoolExecutor-3_2 - sqlmesh.core.snapshot.evaluator - INFO - Creating table 'spark_catalog.sqlmesh__ai_categorization.ai_categorization__seed_raw_score_loans__38963444' (evaluator.py:2042)
+2026-03-09 18:53:08,428 - ThreadPoolExecutor-3_1 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ CREATE TABLE IF NOT EXISTS `spark_catalog`.`sqlmesh__ai_categorization`.`ai_categorization__seed_raw_score_deposits__1532615325` (`actype` STRING, `sccode` STRING, `status` INT, `acctno` STRING, `ddpscod` STRING) (base.py:2626)
+2026-03-09 18:53:08,429 - ThreadPoolExecutor-3_2 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ CREATE TABLE IF NOT EXISTS `spark_catalog`.`sqlmesh__ai_categorization`.`ai_categorization__seed_raw_score_loans__38963444` (`actype` STRING, `purcod` INT, `purposedescription` STRING, `type` STRING, `loantypedesc` STRING, `status` INT, `acctno` STRING) (base.py:2626)
+2026-03-09 18:53:08,563 - ThreadPoolExecutor-3_2 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ SHOW TABLE EXTENDED IN spark_catalog.sqlmesh__ai_categorization LIKE 'ai_categorization__seed_raw_score_loans__38963444' (base.py:2626)
+2026-03-09 18:53:08,565 - ThreadPoolExecutor-3_1 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ SHOW TABLE EXTENDED IN spark_catalog.sqlmesh__ai_categorization LIKE 'ai_categorization__seed_raw_score_deposits__1532615325' (base.py:2626)
+2026-03-09 18:53:08,570 - ThreadPoolExecutor-3_0 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ SHOW TABLE EXTENDED IN spark_catalog.sqlmesh__ai_categorization LIKE 'ai_categorization__seed_bankplus_product_catalog__4155955684' (base.py:2626)
+2026-03-09 18:53:08,711 - ThreadPoolExecutor-3_0 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ INSERT OVERWRITE TABLE `spark_catalog`.`sqlmesh__ai_categorization`.`ai_categorization__seed_bankplus_product_catalog__4155955684` (`product_code`, `product_description`, `product_domain`, `source_table`, `purpose_code`, `purpose_description`, `loan_type_desc`, `account_count`) SELECT `product_code`, `product_description`, `product_domain`, `source_table`, `purpose_code`, `purpose_description`, `loan_type_desc`, `account_count` FROM global_temp.`temp_ai_categorization__seed_bankplus_product_catalog__4155955684_um7adrv8` (base.py:2626)
+2026-03-09 18:53:08,711 - ThreadPoolExecutor-3_1 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ INSERT OVERWRITE TABLE `spark_catalog`.`sqlmesh__ai_categorization`.`ai_categorization__seed_raw_score_deposits__1532615325` (`actype`, `sccode`, `status`, `acctno`, `ddpscod`) SELECT `actype`, `sccode`, `status`, `acctno`, `ddpscod` FROM global_temp.`temp_ai_categorization__seed_raw_score_deposits__1532615325_4wdu8mmz` (base.py:2626)
+2026-03-09 18:53:08,711 - ThreadPoolExecutor-3_2 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ INSERT OVERWRITE TABLE `spark_catalog`.`sqlmesh__ai_categorization`.`ai_categorization__seed_raw_score_loans__38963444` (`actype`, `purcod`, `purposedescription`, `type`, `loantypedesc`, `status`, `acctno`) SELECT `actype`, `purcod`, `purposedescription`, `type`, `loantypedesc`, `status`, `acctno` FROM global_temp.`temp_ai_categorization__seed_raw_score_loans__38963444_aci5nl17` (base.py:2626)
+2026-03-09 18:53:10,420 - ThreadPoolExecutor-3_0 - sqlmesh.core.state_sync.db.facade - INFO - Adding interval (2026-03-08 00:00:00, 2026-03-09 00:00:00) for snapshot SnapshotId<"spark_catalog"."ai_categorization"."seed_bankplus_product_catalog": 1009601787> (facade.py:637)
+2026-03-09 18:53:10,420 - ThreadPoolExecutor-3_0 - sqlmesh.core.state_sync.db.interval - INFO - Pushing intervals for snapshot SnapshotId<"spark_catalog"."ai_categorization"."seed_bankplus_product_catalog": 1009601787> (interval.py:215)
+2026-03-09 18:53:10,427 - ThreadPoolExecutor-3_3 - sqlmesh.core.snapshot.evaluator - INFO - Evaluating snapshot SnapshotId<"spark_catalog"."ai_categorization"."product_classification_suggestions": 4164843043> (evaluator.py:711)
+2026-03-09 18:53:10,428 - ThreadPoolExecutor-3_3 - sqlmesh.core.snapshot.evaluator - INFO - Creating table 'spark_catalog.sqlmesh__ai_categorization.ai_categorization__product_classification_suggestions__1690217780' (evaluator.py:2042)
+2026-03-09 18:53:10,429 - ThreadPoolExecutor-3_3 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ CREATE TABLE IF NOT EXISTS `spark_catalog`.`sqlmesh__ai_categorization`.`ai_categorization__product_classification_suggestions__1690217780` (`prod_product_type_id` STRING, `prod_line_of_business` STRING, `prod_product_category` STRING, `prod_product_type` STRING, `prod_product_name` STRING, `prod_product_code` STRING, `prod_status` STRING, `prod_core_system_mapping` STRING, `prod_balance_requires_abs` BOOLEAN, `prod_created_date` STRING, `prod_modified_date` STRING, `processing_timestamp` STRING, `review_status` STRING, `confidence` DOUBLE, `ai_model` STRING, `prompt_version` STRING, `product_domain` STRING, `source_table` STRING, `account_count` INT) (base.py:2626)
+2026-03-09 18:53:10,644 - ThreadPoolExecutor-3_2 - sqlmesh.core.state_sync.db.facade - INFO - Adding interval (2026-03-08 00:00:00, 2026-03-09 00:00:00) for snapshot SnapshotId<"spark_catalog"."ai_categorization"."seed_raw_score_loans": 2421808298> (facade.py:637)
+2026-03-09 18:53:10,645 - ThreadPoolExecutor-3_2 - sqlmesh.core.state_sync.db.interval - INFO - Pushing intervals for snapshot SnapshotId<"spark_catalog"."ai_categorization"."seed_raw_score_loans": 2421808298> (interval.py:215)
+2026-03-09 18:53:10,681 - ThreadPoolExecutor-3_1 - sqlmesh.core.state_sync.db.facade - INFO - Adding interval (2026-03-08 00:00:00, 2026-03-09 00:00:00) for snapshot SnapshotId<"spark_catalog"."ai_categorization"."seed_raw_score_deposits": 2942296649> (facade.py:637)
+2026-03-09 18:53:10,681 - ThreadPoolExecutor-3_1 - sqlmesh.core.state_sync.db.interval - INFO - Pushing intervals for snapshot SnapshotId<"spark_catalog"."ai_categorization"."seed_raw_score_deposits": 2942296649> (interval.py:215)
+2026-03-09 18:53:10,753 - ThreadPoolExecutor-3_3 - sqlmesh.core.snapshot.evaluator - INFO - Inserting data for snapshot SnapshotId<"spark_catalog"."ai_categorization"."product_classification_suggestions": 4164843043> (evaluator.py:952)
+2026-03-09 18:53:10,764 - ThreadPoolExecutor-3_3 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ SELECT * FROM `spark_catalog`.`sqlmesh__ai_categorization`.`ai_categorization__seed_bankplus_product_catalog__4155955684` (base.py:2626)
+2026-03-09 18:53:11,517 - ThreadPoolExecutor-3_3 - sqlmesh.core.snapshot.evaluator - INFO - Inserting batch (2026-03-08 00:00:00, 2026-03-09 00:00:00) into spark_catalog.sqlmesh__ai_categorization.ai_categorization__product_classification_suggestions__1690217780' (evaluator.py:984)
+2026-03-09 18:53:11,517 - ThreadPoolExecutor-3_3 - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: b4e914a0f9e447edb24511b6622538cb */ SHOW TABLE EXTENDED IN spark_catalog.sqlmesh__ai_categorization LIKE 'ai_categorization__product_classification_suggestions__1690217780' (base.py:2626)
+2026-03-09 18:53:11,538 - Dummy-9 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:11,538 - Dummy-10 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:11,538 - Dummy-11 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:11,538 - Dummy-12 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-09 18:53:11,541 - MainThread - sqlmesh.core.scheduler - INFO - SKIPPED snapshot "spark_catalog"."ai_categorization"."ai_product_suggestions"
+ (scheduler.py:613)
+2026-03-09 18:53:11,541 - MainThread - sqlmesh.core.scheduler - INFO - Execution failed for node EvaluateNode(snapshot_name='"spark_catalog"."ai_categorization"."product_classification_suggestions"', interval=(1772928000000, 1773014400000), batch_index=0) (scheduler.py:618)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/utils/concurrency.py", line 69, in _process_node
+    self.fn(node)
+    ~~~~~~~^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/scheduler.py", line 554, in run_node
+    audit_results = self.evaluate(
+        snapshot=snapshot,
+    ...<9 lines>...
+        selected_models=selected_models,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/scheduler.py", line 229, in evaluate
+    wap_id = self.snapshot_evaluator.evaluate(
+        snapshot,
+    ...<9 lines>...
+        **kwargs,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 186, in evaluate
+    result = self._evaluate_snapshot(
+        start=start,
+    ...<9 lines>...
+        **kwargs,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 821, in _evaluate_snapshot
+    self._render_and_insert_snapshot(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        start=start,
+        ^^^^^^^^^^^^
+    ...<10 lines>...
+        batch_index=batch_index,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 1041, in _render_and_insert_snapshot
+    apply(query_or_df, index)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 990, in apply
+    evaluation_strategy.insert(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        table_name=target_table_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        is_snapshot_deployable=is_snapshot_deployable,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 2418, in insert
+    self._replace_query_for_model(model, table_name, query_or_df, render_kwargs, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 2155, in _replace_query_for_model
+    self.adapter.replace_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        name,
+        ^^^^^
+    ...<10 lines>...
+        source_columns=source_columns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/shared.py", line 318, in internal_wrapper
+    return func(*list_args, **kwargs)
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/base.py", line 488, in replace_query
+    source_queries, target_columns_to_types = self._get_source_queries_and_columns_to_types(
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        query_or_df,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        source_columns=source_columns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/base.py", line 370, in _get_source_queries_and_columns_to_types
+    source_queries = self._get_source_queries(
+        query_or_df,
+    ...<3 lines>...
+        source_columns=source_columns,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/base.py", line 317, in _get_source_queries
+    return self._df_to_source_queries(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        query_or_df,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        source_columns=source_columns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/spark.py", line 284, in _df_to_source_queries
+    df = self._ensure_pyspark_df(df, target_columns_to_types, source_columns=source_columns)
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/spark.py", line 304, in _ensure_pyspark_df
+    raise SQLMeshError(
+        "Ensure PySpark DF can only be run on a PySpark or Pandas DataFrame"
+    )
+sqlmesh.utils.errors.SQLMeshError: Ensure PySpark DF can only be run on a PySpark or Pandas DataFrame
+
+The above exception was the direct cause of the following exception:
+
+sqlmesh.utils.concurrency.NodeExecutionFailedError: Execution failed for node EvaluateNode(snapshot_name='"spark_catalog"."ai_categorization"."product_classification_suggestions"', interval=(1772928000000, 1773014400000), batch_index=0)
+2026-03-09 18:53:11,545 - MainThread - sqlmesh.core.context - INFO - Plan application failed. (context.py:1798)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/context.py", line 1790, in apply
+    self._apply(plan, circuit_breaker)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/context.py", line 2583, in _apply
+    self._scheduler.create_plan_evaluator(self).evaluate(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        plan.to_evaluatable(), circuit_breaker=circuit_breaker
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/plan/evaluator.py", line 105, in evaluate
+    self._evaluate_stages(plan_stages, plan)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/plan/evaluator.py", line 125, in _evaluate_stages
+    handler(stage, plan)
+    ~~~~~~~^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/plan/evaluator.py", line 264, in visit_backfill_stage
+    raise PlanError("Plan application failed.")
+sqlmesh.utils.errors.PlanError: Plan application failed.
+2026-03-09 18:53:11,547 - MainThread - root - INFO - Shutting down the event dispatcher (dispatcher.py:159)

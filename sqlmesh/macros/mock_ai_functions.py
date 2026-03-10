@@ -1,17 +1,14 @@
 """
 Mock AI Functions for Local Spark Development
 
-Based on research, there are three integration points for mock UDFs:
+Integration points for mock UDFs:
 
 1. **Python Models** (primary): Within a Python model's `execute()` function,
    access `context.spark` to register UDFs before running queries. Call
    `register_mock_ai_udfs(spark)` at the top of any Python model that uses
    ai_query() or ai_mask().
 
-2. **sqlmesh test (conftest-style)**: For YAML unit tests, register mocks in
-   the test's Spark session setup. See tests/ for examples.
-
-3. **Production (Databricks)**: ai_query() and ai_mask() are native Databricks
+2. **Production (Databricks)**: ai_query() and ai_mask() are native Databricks
    SQL functions — no registration needed. The gateway detection helper
    `is_local_gateway()` prevents mock registration on Databricks.
 
@@ -30,7 +27,7 @@ Usage in a Python model:
 
 import json
 import os
-from pyspark.sql.types import StringType, ArrayType
+from pyspark.sql.types import StringType
 
 
 def is_local_gateway() -> bool:
@@ -38,61 +35,172 @@ def is_local_gateway() -> bool:
     return os.environ.get("CIQ_ENVIRONMENT_GATEWAY", "local") == "local"
 
 
+# Ground-truth classifications derived from Bank Plus notebook results and
+# manual review. Keys use Silver column names directly (PROD_*) so mock
+# output matches what the real LLM returns with responseFormat.
+#
+# Format: { "code": { "lob", "cat", "type", "name", "code", "confidence" } }
+#   lob  → PROD_line_of_business   (L1)
+#   cat  → PROD_product_category   (L2 Silver)
+#   type → PROD_product_type       (L3 Silver)
+#   name → PROD_product_name       (L4)
+#   code → PROD_product_code       (L5)
+
 MOCK_DEPOSIT_CLASSIFICATIONS = {
-    "01": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "Personal Checking", "code": None},
-    "02": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "Student Checking", "code": None},
-    "07": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "Investment Checking", "code": None},
-    "09": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "Personal Money Market", "code": None},
-    "10": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "Employee Investment", "code": None},
-    "50": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "PrimePlus Club", "code": None},
-    "C3": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "ValuePlus Checking", "code": None},
-    "C4": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "Carefree Checking", "code": None},
-    "CO": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "Checking (Closed)", "code": None},
-    "D3": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "Carefree Checking GF", "code": None},
-    "D8": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY MM Diamond", "code": None},
-    "S1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "Personal Savings", "code": None},
-    "B1": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "Business Checking", "code": None},
-    "B3": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "Business Checking Plus", "code": None},
-    "P1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "Platinum Checking", "code": None},
-    "P2": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY MM Turquoise", "code": None},
-    "T1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "Personal Savings CP $250", "code": None},
-    "T3": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "Employee Savings", "code": None},
-    "S5": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "Christmas Club", "code": None},
-    "H1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY Hybrid Investment", "code": None},
-    "F1": {"lob": "WEALTH MANAGEMENT", "cat": "DEPOSITS", "type": "CHECKING", "name": "Fiduciary Business Int CK", "code": None},
-    "F2": {"lob": "WEALTH MANAGEMENT", "cat": "DEPOSITS", "type": "CHECKING", "name": "Fiduciary Personal Int CK", "code": None},
-    "F3": {"lob": "WEALTH MANAGEMENT", "cat": "DEPOSITS", "type": "SAVINGS", "name": "Fiduciary Savings", "code": None},
-    "F4": {"lob": "WEALTH MANAGEMENT", "cat": "DEPOSITS", "type": "SAVINGS", "name": "UTMA Savings", "code": "UGMA/UTMA"},
-    "08": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "Inactive Checking", "code": None},
+    "01": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "PERSONAL CHECKING", "code": None, "conf": 0.95},
+    "02": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "STUDENT CHECKING", "code": None, "conf": 0.94},
+    "04": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "PUBLIC FUNDS OTHER", "code": None, "conf": 0.75},
+    "07": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "INVESTMENTPLUS CK", "code": None, "conf": 0.88},
+    "08": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "BUSINESS MONEY MKT", "code": None, "conf": 0.93},
+    "09": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "PERSONAL MM", "code": None, "conf": 0.94},
+    "10": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "EMPLOYEE INVESTMENT", "code": None, "conf": 0.82},
+    "11": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "NISSAN CHECKING", "code": "AFFINITY", "conf": 0.89},
+    "12": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "NISSAN INVESTMENT CK", "code": "AFFINITY", "conf": 0.87},
+    "13": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "HSA - FAMILY", "code": "HSA", "conf": 0.96},
+    "14": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "HSA - INDIVIDUAL", "code": "HSA", "conf": 0.96},
+    "15": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "OFFICIAL CHECKS", "code": None, "conf": 0.70},
+    "16": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "BANKPLUS/ BANCPLUS", "code": None, "conf": 0.85},
+    "21": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "FREE BUSINESS CKING", "code": None, "conf": 0.92},
+    "23": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "MSB CHECKING", "code": None, "conf": 0.88},
+    "25": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "MS IOLTA CHECKING", "code": "IOLTA", "conf": 0.94},
+    "26": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "BUSINESS INTEREST CK", "code": None, "conf": 0.90},
+    "28": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "ATM CHECKING", "code": None, "conf": 0.87},
+    "29": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "MS LOTTERY BUS CKG", "code": None, "conf": 0.85},
+    "30": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "LA IOLTA CHECKING", "code": "IOLTA", "conf": 0.94},
+    "31": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "WMG MMDA INTEREST CK", "code": None, "conf": 0.86},
+    "32": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "WMG MMDA RETIREMENT", "code": None, "conf": 0.89},
+    "36": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "PUBLIC FUNDS INT CK", "code": None, "conf": 0.88},
+    "38": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "PF MONEY MARKET", "code": None, "conf": 0.87},
+    "39": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "AL IOLTA CHECKING", "code": "IOLTA", "conf": 0.94},
+    "41": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "LA LOTTERY BUS CKG", "code": None, "conf": 0.85},
+    "50": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "PRIMEPLUS CLUB", "code": None, "conf": 0.90},
+    "76": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "CREDITPLUS CHECKING", "code": None, "conf": 0.88},
+    "89": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "PUBLIC FUNDS SPECIAL", "code": None, "conf": 0.82},
+    "B1": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "LEGACY BUSINESS CK", "code": None, "conf": 0.89},
+    "B2": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "BUSINESS BASICS CK", "code": None, "conf": 0.90},
+    "B3": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "BUSINESS PREMIER CK", "code": None, "conf": 0.91},
+    "B4": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "BUSINESS ELITE CK", "code": None, "conf": 0.90},
+    "B5": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "COMMERCIAL ANALYSIS", "code": None, "conf": 0.88},
+    "C1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "HIGH YIELD CHECKING", "code": None, "conf": 0.90},
+    "C3": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "VALUEPLUS CHECKING", "code": None, "conf": 0.92},
+    "C4": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "CAREFREE CHECKING", "code": None, "conf": 0.93},
+    "C5": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "VALUEPLUS INTEREST", "code": None, "conf": 0.91},
+    "C6": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "VALUEPLUS STUDENT CK", "code": None, "conf": 0.90},
+    "C7": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY MM PLUS", "code": None, "conf": 0.92},
+    "C8": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY BUS MM PLUS", "code": None, "conf": 0.91},
+    "C9": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "CONTINENTAL TIRE CK", "code": "AFFINITY", "conf": 0.88},
+    "D1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "CT INVESTMENT CK", "code": None, "conf": 0.85},
+    "D3": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "CAREFREE CHK GF", "code": None, "conf": 0.91},
+    "D4": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "PREMIER MM", "code": None, "conf": 0.92},
+    "D5": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "PREMIER BUSINESS MM", "code": None, "conf": 0.91},
+    "D6": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY MM EMERALD", "code": None, "conf": 0.91},
+    "D7": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY BUS MM EMERALD", "code": None, "conf": 0.90},
+    "D8": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY MM DIAMOND", "code": None, "conf": 0.93},
+    "D9": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY BUS MM DIAMOND", "code": None, "conf": 0.92},
+    "E2": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "TUITION MONEY MGR", "code": None, "conf": 0.85},
+    "E3": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "BANKPLUS TUITION", "code": None, "conf": 0.86},
+    "F1": {"lob": "WEALTH MANAGEMENT", "cat": "DEPOSITS", "type": "CHECKING", "name": "FIDUCIARY BUS INT CK", "code": None, "conf": 0.88},
+    "F2": {"lob": "WEALTH MANAGEMENT", "cat": "DEPOSITS", "type": "CHECKING", "name": "FIDUCIARY PER INT CK", "code": None, "conf": 0.89},
+    "F3": {"lob": "WEALTH MANAGEMENT", "cat": "DEPOSITS", "type": "SAVINGS", "name": "FIDUCIARY SAVINGS", "code": None, "conf": 0.90},
+    "F4": {"lob": "WEALTH MANAGEMENT", "cat": "DEPOSITS", "type": "SAVINGS", "name": "UTMA SAVINGS", "code": "UGMA/UTMA", "conf": 0.92},
+    "H1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY HYBRID INVESTMENT", "code": None, "conf": 0.88},
+    "H2": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "BUS HY HYBRID INVEST", "code": None, "conf": 0.87},
+    "H3": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY HYBRID INVESTMENT", "code": None, "conf": 0.88},
+    "H4": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "BUS HY HYBRID INVEST", "code": None, "conf": 0.87},
+    "IC": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "INSURED CASH SW CK", "code": None, "conf": 0.86},
+    "P1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "PLATINUM CHECKING", "code": None, "conf": 0.91},
+    "P2": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY MM TURQUOISE", "code": None, "conf": 0.92},
+    "P3": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "MONEY MARKET", "name": "HY BUS MM TURQUOISE", "code": None, "conf": 0.91},
+    "P4": {"lob": "BUSINESS", "cat": "DEPOSITS", "type": "CHECKING", "name": "DEBTOR IN POSSESSION", "code": None, "conf": 0.80},
+    "S1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "PERSONAL SAVINGS", "code": None, "conf": 0.95},
+    "S3": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "CHRISTMAS CLUB - CK", "code": None, "conf": 0.85},
+    "S4": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "EMPLOYEE CHRISTMAS", "code": None, "conf": 0.86},
+    "S5": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "CHRISTMAS CLUB", "code": None, "conf": 0.87},
+    "S6": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "NISSAN CHRISTMAS CLU", "code": "AFFINITY", "conf": 0.85},
+    "S9": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "COURT ORDERED SAVING", "code": None, "conf": 0.88},
+    "T1": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "PER SAV FOR CP $250", "code": None, "conf": 0.89},
+    "T2": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "PER SAV FOR CP $500", "code": None, "conf": 0.89},
+    "T3": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "EMPLOYEE SAVINGS", "code": None, "conf": 0.90},
+    "T4": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "SAVINGS", "name": "SECURED CC SAVINGS", "code": None, "conf": 0.87},
+    "CO": {"lob": "RETAIL", "cat": "DEPOSITS", "type": "CHECKING", "name": "CHARGEOFF CKIG BKWAY", "code": None, "conf": 0.80},
 }
 
 MOCK_LOAN_CLASSIFICATIONS = {
-    "P1": {"lob": "RETAIL", "cat": "LOANS", "type": "PERSONAL", "name": "Individual Fixed", "code": None},
-    "R1": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "Residential RE Fixed", "code": None},
-    "B1": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "Business Loan Fixed", "code": None},
-    "A1": {"lob": "BUSINESS", "cat": "LOANS", "type": "AGRICULTURAL", "name": "AG RE Fixed", "code": None},
-    "BC": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL REAL ESTATE", "name": "CRE Fixed", "code": None},
-    "C7": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "PLOC Platinum", "code": None},
-    "HA": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "HELOC Pr Platinum", "code": None},
-    "B2": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "Business Loan Var", "code": None},
-    "R9": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "Mortgage Ctr RE 1st", "code": None},
-    "C4": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "PLOC Gold", "code": None},
-    "A5": {"lob": "BUSINESS", "cat": "LOANS", "type": "AGRICULTURAL", "name": "AG Fixed", "code": None},
-    "BD": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL REAL ESTATE", "name": "CRE Var", "code": None},
-    "B9": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "NF NR Fixed", "code": None},
-    "BG": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "Taxable Loan SCM", "code": None},
-    "O1": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "Overdraft Protection", "code": None},
-    "P0": {"lob": "RETAIL", "cat": "LOANS", "type": "PERSONAL", "name": "Credit Builder", "code": None},
-    "L1": {"lob": "BUSINESS", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "LOC Fixed", "code": None},
-    "L2": {"lob": "BUSINESS", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "LOC Var", "code": None},
+    "A1": {"lob": "BUSINESS", "cat": "LOANS", "type": "AGRICULTURAL", "name": "AG RE - FIXED", "code": "FIXED", "conf": 0.93},
+    "A2": {"lob": "BUSINESS", "cat": "LOANS", "type": "AGRICULTURAL", "name": "AG RE - VAR", "code": "VARIABLE", "conf": 0.92},
+    "A5": {"lob": "BUSINESS", "cat": "LOANS", "type": "AGRICULTURAL", "name": "AG - FIXED", "code": "FIXED", "conf": 0.93},
+    "A6": {"lob": "BUSINESS", "cat": "LOANS", "type": "AGRICULTURAL", "name": "AG - VAR", "code": "VARIABLE", "conf": 0.92},
+    "B0": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "NF NR VAR", "code": "VARIABLE", "conf": 0.85},
+    "B1": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "BL - FIXED", "code": "FIXED", "conf": 0.90},
+    "B2": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "BL - VAR", "code": "VARIABLE", "conf": 0.90},
+    "B5": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "MFR - FIXED", "code": "FIXED", "conf": 0.88},
+    "B6": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "MFR - VAR", "code": "VARIABLE", "conf": 0.88},
+    "B9": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "NF NR FIXED", "code": "FIXED", "conf": 0.87},
+    "BC": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL REAL ESTATE", "name": "CRE - FIXED", "code": "FIXED", "conf": 0.92},
+    "BD": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL REAL ESTATE", "name": "CRE - VAR", "code": "VARIABLE", "conf": 0.91},
+    "BG": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "TAXABLE LOAN SCM", "code": None, "conf": 0.83},
+    "BH": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "NON TAXABLE LN SCM", "code": None, "conf": 0.83},
+    "BJ": {"lob": "RETAIL", "cat": "LOANS", "type": "PERSONAL", "name": "NON DEP FI VAR", "code": None, "conf": 0.80},
+    "BN": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "P OR C SEC FIXED", "code": "FIXED", "conf": 0.82},
+    "BO": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "P OR C SEC VAR", "code": "VARIABLE", "conf": 0.82},
+    "BR": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "OTH NCL FIXED", "code": "FIXED", "conf": 0.78},
+    "BV": {"lob": "WEALTH MANAGEMENT", "cat": "LOANS", "type": "COMMERCIAL", "name": "COMM WEALTH MGMT VAR", "code": None, "conf": 0.80},
+    "BW": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "DEFICIENCY NOTES", "code": None, "conf": 0.82},
+    "C0": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "PLOC PLATINUMPLUS", "code": None, "conf": 0.92},
+    "C1": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "PLOC SILVER", "code": None, "conf": 0.91},
+    "C4": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "PLOC GOLD", "code": None, "conf": 0.91},
+    "C7": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "PLOC PLATINUM", "code": None, "conf": 0.92},
+    "CC": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "PLOC MEDICAL RES", "code": None, "conf": 0.88},
+    "CG": {"lob": "WEALTH MANAGEMENT", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "CONS WEALTH MGMT", "code": None, "conf": 0.82},
+    "CI": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "AL PLOC SPECIAL", "code": None, "conf": 0.86},
+    "CJ": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "LA PLOC SPECIAL", "code": None, "conf": 0.86},
+    "D1": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "1-4 FRC FIXED", "code": "FIXED", "conf": 0.90},
+    "D2": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "1-4 FRC VAR", "code": "VARIABLE", "conf": 0.90},
+    "D5": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL REAL ESTATE", "name": "OTH CLD FIXED", "code": "FIXED", "conf": 0.88},
+    "D6": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL REAL ESTATE", "name": "OTH CLD VAR", "code": "VARIABLE", "conf": 0.88},
+    "D9": {"lob": "BUSINESS", "cat": "LOANS", "type": "COMMERCIAL", "name": "OAKHURST LOANS FIXED", "code": "FIXED", "conf": 0.80},
+    "H1": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "HELOC SILVER", "code": None, "conf": 0.93},
+    "H3": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "HELOC PR SILVER", "code": None, "conf": 0.93},
+    "H5": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "HELOC GOLD", "code": None, "conf": 0.93},
+    "H7": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "HELOC PR GOLD", "code": None, "conf": 0.92},
+    "H9": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "HELOC PLATINUM", "code": None, "conf": 0.93},
+    "HA": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "HELOC PR PLATINUM", "code": None, "conf": 0.92},
+    "HC": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "HELOC PLAT+", "code": None, "conf": 0.93},
+    "HE": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "HELOC PR PLAT+", "code": None, "conf": 0.92},
+    "HG": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "BP PTR NO PR", "code": None, "conf": 0.88},
+    "HI": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "BP PTR PR", "code": None, "conf": 0.88},
+    "HK": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "MS HELOC 365 INT", "code": None, "conf": 0.91},
+    "HL": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "AL HELOC 365 INT", "code": None, "conf": 0.90},
+    "HM": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "LA HELOC 365 INT", "code": None, "conf": 0.90},
+    "HN": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "MS HELOC 365 SPECIAL", "code": None, "conf": 0.90},
+    "HO": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "LA HELOC 365 SPECIAL", "code": None, "conf": 0.89},
+    "HQ": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "FBT HELOC IM1.9", "code": None, "conf": 0.88},
+    "HR": {"lob": "RETAIL", "cat": "LOANS", "type": "HOME EQUITY", "name": "FBT HELOC IM2.9", "code": None, "conf": 0.88},
+    "L1": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "LOC - FIXED", "code": "FIXED", "conf": 0.90},
+    "L2": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "LOC - VAR", "code": "VARIABLE", "conf": 0.90},
+    "O1": {"lob": "RETAIL", "cat": "LOANS", "type": "LINE OF CREDIT", "name": "ODP", "code": None, "conf": 0.88},
+    "P0": {"lob": "RETAIL", "cat": "LOANS", "type": "PERSONAL", "name": "CREDITBUILDER", "code": None, "conf": 0.90},
+    "P1": {"lob": "RETAIL", "cat": "LOANS", "type": "PERSONAL", "name": "IND FIXED", "code": "FIXED", "conf": 0.91},
+    "P2": {"lob": "RETAIL", "cat": "LOANS", "type": "PERSONAL", "name": "IND VAR", "code": "VARIABLE", "conf": 0.88},
+    "P5": {"lob": "RETAIL", "cat": "LOANS", "type": "AUTO", "name": "IND AUTO FIXED", "code": "FIXED", "conf": 0.93},
+    "P9": {"lob": "RETAIL", "cat": "LOANS", "type": "PERSONAL", "name": "CREDITPLUS", "code": None, "conf": 0.88},
+    "PB": {"lob": "RETAIL", "cat": "LOANS", "type": "PERSONAL", "name": "CONT TIRE CREDIT BLD", "code": None, "conf": 0.82},
+    "R1": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "RES RE - FIXED", "code": "FIXED", "conf": 0.94},
+    "R2": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "RES RE - VAR", "code": "VARIABLE", "conf": 0.93},
+    "R5": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "RES RE JR LIEN FIXED", "code": "FIXED", "conf": 0.92},
+    "R6": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "RES RE JR LIEN VAR", "code": "VARIABLE", "conf": 0.91},
+    "R7": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "MORTGAGE CTR RE VAR", "code": "VARIABLE", "conf": 0.88},
+    "R9": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "MORTGAGE CTR RE 1ST", "code": None, "conf": 0.90},
+    "RA": {"lob": "RETAIL", "cat": "LOANS", "type": "MORTGAGE", "name": "CONSUMER ARM RE VAR", "code": "ARM", "conf": 0.89},
 }
 
 _DEFAULT_CLASSIFICATION = {
     "lob": "RETAIL",
     "cat": "DEPOSITS",
     "type": "CHECKING",
-    "name": "Unknown Product",
+    "name": "UNKNOWN PRODUCT",
     "code": None,
+    "conf": 0.50,
 }
 
 
@@ -108,7 +216,7 @@ def _build_classification_response(product_code: str, domain: str = "DEPOSIT") -
         "PROD_product_type": entry["type"],
         "PROD_product_name": entry["name"],
         "PROD_product_code": entry["code"],
-        "confidence": 0.95 if product_code in lookup else 0.50,
+        "confidence": entry["conf"],
     }
 
 
@@ -116,39 +224,44 @@ def mock_ai_query_fn(model: str, prompt: str) -> str:
     """
     Mock implementation of Databricks ai_query().
 
-    Parses the prompt to extract product codes and returns deterministic
-    classifications. When the prompt content can't be parsed, returns a
-    single default classification.
+    Parses the user prompt section (after "Classify these N product codes:")
+    to extract product codes and domains, then returns deterministic
+    classifications from the ground-truth lookup tables.
     """
     import re
 
     classifications = []
-    code_pattern = re.compile(r"product_code=(\w+)")
-    domain_pattern = re.compile(r"DOMAIN=(DEPOSIT|LOAN)")
 
-    matches = code_pattern.findall(prompt)
-    domains = domain_pattern.findall(prompt)
-
-    if matches:
-        for i, code in enumerate(matches):
-            domain = domains[i] if i < len(domains) else "DEPOSIT"
-            classifications.append(_build_classification_response(code, domain))
+    # Only parse the user prompt section — skip the system prompt which
+    # contains few-shot examples with product_code= patterns.
+    user_section_match = re.search(r"Classify these \d+ product codes:", prompt)
+    if user_section_match:
+        user_section = prompt[user_section_match.start():]
     else:
+        user_section = prompt
+
+    lines = user_section.split("\n")
+    for line in lines:
+        if not line.strip().startswith("- "):
+            continue
+        code_match = re.search(r"product_code=(\S+?)(?:,|\s|$)", line)
+        domain_match = re.search(r"DOMAIN=(DEPOSIT|LOAN)", line)
+        if code_match:
+            code = code_match.group(1).strip()
+            domain = domain_match.group(1) if domain_match else "DEPOSIT"
+            classifications.append(_build_classification_response(code, domain))
+
+    if not classifications:
         classifications.append(_build_classification_response("MOCK", "DEPOSIT"))
 
     return json.dumps({"classifications": classifications})
 
 
 def mock_ai_mask_fn(text: str, labels: str = None) -> str:
-    """
-    Mock implementation of Databricks ai_mask().
-
-    Returns the text with PII-like content replaced by [MASKED].
-    For local testing this is a passthrough with a marker.
-    """
+    """Mock implementation of Databricks ai_mask(). Returns [MASKED] placeholder."""
     if text is None:
         return None
-    return f"[MASKED]"
+    return "[MASKED]"
 
 
 def register_mock_ai_udfs(spark) -> None:
