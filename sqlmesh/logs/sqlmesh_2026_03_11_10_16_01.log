@@ -1,0 +1,3 @@
+2026-03-11 10:16:01,584 - MainThread - sqlmesh.core.config.connection - INFO - Creating new DuckDB adapter for data files: {'databricks_state.db'} (connection.py:496)
+2026-03-11 10:16:01,650 - MainThread - sqlmesh.core.console - WARNING - The duckdb engine is not recommended for storing SQLMesh state in production deployments. Please see https://sqlmesh.readthedocs.io/en/stable/guides/configuration/#state-connection for a list of recommended engines and more information. (console.py:2335)
+2026-03-11 10:16:01,675 - MainThread - root - INFO - Shutting down the event dispatcher (dispatcher.py:159)

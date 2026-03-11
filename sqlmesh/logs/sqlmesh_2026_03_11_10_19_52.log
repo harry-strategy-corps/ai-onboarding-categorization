@@ -1,0 +1,170 @@
+2026-03-11 10:19:54,371 - MainThread - sqlmesh.core.config.connection - INFO - Creating new DuckDB adapter for data files: {'databricks_state.db'} (connection.py:496)
+2026-03-11 10:19:54,383 - MainThread - sqlmesh.core.console - WARNING - The duckdb engine is not recommended for storing SQLMesh state in production deployments. Please see https://sqlmesh.readthedocs.io/en/stable/guides/configuration/#state-connection for a list of recommended engines and more information. (console.py:2335)
+2026-03-11 10:19:54,397 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,398 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,398 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,400 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,401 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,401 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,402 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,402 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,403 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,403 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,404 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,405 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,406 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,406 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:54,764 - MainThread - sqlmesh.core.plan.evaluator - INFO - Evaluating plan stage CreateSnapshotRecordsStage (evaluator.py:123)
+2026-03-11 10:19:54,775 - MainThread - sqlmesh.core.plan.evaluator - INFO - Evaluating plan stage PhysicalLayerSchemaCreationStage (evaluator.py:123)
+2026-03-11 10:19:54,776 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Creating schema '"ciq-bp_dummy-dev".sqlmesh__suggestions' (evaluator.py:1449)
+2026-03-11 10:19:54,776 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 15114a2205424912afdfd6761740892e */ CREATE SCHEMA IF NOT EXISTS `ciq-bp_dummy-dev`.`sqlmesh__suggestions` (base.py:2626)
+2026-03-11 10:19:54,819 - MainThread - databricks.sql.session - WARNING - [WARN] Parameter '_user_agent_entry' is deprecated; use 'user_agent_entry' instead. This parameter will be removed in the upcoming releases. (session.py:55)
+2026-03-11 10:19:55,026 - Thread-1 - py4j.clientserver - INFO - Error while sending or receiving. (clientserver.py:529)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+2026-03-11 10:19:55,027 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:55,027 - Thread-1 - root - INFO - Exception while sending command. (java_gateway.py:1056)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 530, in send_command
+    raise Py4JNetworkError(
+        "Error while sending", e, proto.ERROR_ON_SEND)
+py4j.protocol.Py4JNetworkError: Error while sending
+2026-03-11 10:19:55,028 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:55,377 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:19:55,378 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:19:55,378 - MainThread - databricks.sql.session - INFO - Successfully opened session 01f11d5d-c242-1da2-9f57-9fd57e640629 (session.py:143)
+2026-03-11 10:19:55,757 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for GET request (retry.py:355)
+2026-03-11 10:19:56,557 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:19:56,557 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:19:56,558 - MainThread - sqlmesh.core.plan.evaluator - INFO - Evaluating plan stage BackfillStage (evaluator.py:123)
+2026-03-11 10:19:56,563 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Listing data objects in schema "ciq-bp_dummy-dev".sqlmesh__suggestions (evaluator.py:1616)
+2026-03-11 10:19:56,564 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 15114a2205424912afdfd6761740892e */ SELECT `table_name` AS `name`, `table_schema` AS `schema`, `table_catalog` AS `catalog`, CASE `table_type` WHEN 'VIEW' THEN 'view' WHEN 'MATERIALIZED_VIEW' THEN 'materialized_view' ELSE 'table' END AS `type` FROM `system`.`information_schema`.`tables` WHERE (`table_catalog` = 'ciq-bp_dummy-dev' AND `table_schema` = 'sqlmesh__suggestions') AND `table_name` IN ('suggestions__product_mapping__3859965742') (base.py:2626)
+2026-03-11 10:19:59,467 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:19:59,468 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:19:59,477 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Evaluating snapshot SnapshotId<"ciq-bp_dummy-dev"."suggestions"."product_mapping": 1876779804> (evaluator.py:711)
+2026-03-11 10:19:59,478 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 15114a2205424912afdfd6761740892e */ USE CATALOG `ciq-bp_dummy-dev` (base.py:2626)
+2026-03-11 10:19:59,834 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:19:59,835 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:19:59,840 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Creating table '"ciq-bp_dummy-dev".sqlmesh__suggestions.suggestions__product_mapping__3859965742' (evaluator.py:2042)
+2026-03-11 10:19:59,841 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 15114a2205424912afdfd6761740892e */ SELECT CURRENT_CATALOG() (base.py:2626)
+2026-03-11 10:20:00,212 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:20:00,212 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:20:00,221 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 15114a2205424912afdfd6761740892e */ CREATE TABLE IF NOT EXISTS `ciq-bp_dummy-dev`.`sqlmesh__suggestions`.`suggestions__product_mapping__3859965742` (`prod_product_type_id` STRING, `prod_line_of_business` STRING, `prod_product_category` STRING, `prod_product_type` STRING, `prod_product_name` STRING, `prod_product_code` STRING, `prod_status` STRING, `prod_core_system_mapping` STRING, `prod_balance_requires_abs` BOOLEAN, `prod_created_date` TIMESTAMP, `prod_modified_date` TIMESTAMP, `processing_timestamp` TIMESTAMP, `review_status` STRING, `confidence` DECIMAL(10, 6), `ai_model` STRING, `prompt_version` STRING, `description_samples` STRING, `volume` BIGINT) COMMENT 'AI-generated product code classification suggestions using Claude via ai_query(). Reads ProductInstanceReference and ProductInstanceDescription from silver.account_history, builds a product catalog, and classifies into the StrategyCorp product taxonomy aligned with product_type_configuration_master.' (base.py:2626)
+2026-03-11 10:20:01,834 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:20:01,835 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:20:01,838 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Inserting data for snapshot SnapshotId<"ciq-bp_dummy-dev"."suggestions"."product_mapping": 1876779804> (evaluator.py:952)
+2026-03-11 10:20:01,848 - MainThread - sqlmesh.core.scheduler - INFO - Execution failed for node EvaluateNode(snapshot_name='"ciq-bp_dummy-dev"."suggestions"."product_mapping"', interval=(1751241600000, 1773187200000), batch_index=0) (scheduler.py:618)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/model/definition.py", line 1931, in render
+    df_or_iter = env[self.entrypoint](
+        context=context.with_variables(variables, blueprint_variables=blueprint_variables),
+        **kwargs,
+    )
+  File "<string>", line 4, in execute
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/context.py", line 187, in spark
+    return self.engine_adapter.spark
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/databricks.py", line 145, in spark
+    raise SQLMeshError(
+    ...<3 lines>...
+    )
+sqlmesh.utils.errors.SQLMeshError: SparkSession is not available. Either run from a Databricks Notebook or install `databricks-connect` and configure it to connect to your Databricks cluster.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/utils/concurrency.py", line 234, in sequential_apply_to_dag
+    fn(node)
+    ~~^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/scheduler.py", line 554, in run_node
+    audit_results = self.evaluate(
+        snapshot=snapshot,
+    ...<9 lines>...
+        selected_models=selected_models,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/scheduler.py", line 229, in evaluate
+    wap_id = self.snapshot_evaluator.evaluate(
+        snapshot,
+    ...<9 lines>...
+        **kwargs,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 186, in evaluate
+    result = self._evaluate_snapshot(
+        start=start,
+    ...<9 lines>...
+        **kwargs,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 821, in _evaluate_snapshot
+    self._render_and_insert_snapshot(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        start=start,
+        ^^^^^^^^^^^^
+    ...<10 lines>...
+        batch_index=batch_index,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 1040, in _render_and_insert_snapshot
+    for index, query_or_df in enumerate(queries_or_dfs):
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/model/definition.py", line 1942, in render
+    raise PythonModelEvalError(format_evaluated_code_exception(e, self.python_env))
+sqlmesh.utils.errors.PythonModelEvalError:   File 'models/suggestions/product_mapping.py' (or imported file), line 4, in execute
+    def execute(context: ExecutionContext, start: datetime, end: datetime,
+        execution_time: datetime, **kwargs: t.Any):
+        logger = logging.getLogger(__name__)
+        spark = context.spark
+    File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/context.py", line 187, in spark
+    return self.engine_adapter.spark
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/databricks.py", line 145, in spark
+    raise SQLMeshError(
+    ...<3 lines>...
+    )
+
+      sqlmesh.utils.errors.SQLMeshError: SparkSession is not available. Either run from a Databricks Notebook or install `databricks-connect` and configure it to connect to your Databricks cluster.
+
+
+The above exception was the direct cause of the following exception:
+
+sqlmesh.utils.concurrency.NodeExecutionFailedError: Execution failed for node EvaluateNode(snapshot_name='"ciq-bp_dummy-dev"."suggestions"."product_mapping"', interval=(1751241600000, 1773187200000), batch_index=0)
+2026-03-11 10:20:01,857 - MainThread - sqlmesh.core.context - INFO - Plan application failed. (context.py:1798)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/context.py", line 1790, in apply
+    self._apply(plan, circuit_breaker)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/context.py", line 2583, in _apply
+    self._scheduler.create_plan_evaluator(self).evaluate(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        plan.to_evaluatable(), circuit_breaker=circuit_breaker
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/plan/evaluator.py", line 105, in evaluate
+    self._evaluate_stages(plan_stages, plan)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/plan/evaluator.py", line 125, in _evaluate_stages
+    handler(stage, plan)
+    ~~~~~~~^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/plan/evaluator.py", line 264, in visit_backfill_stage
+    raise PlanError("Plan application failed.")
+sqlmesh.utils.errors.PlanError: Plan application failed.
+2026-03-11 10:20:01,858 - MainThread - databricks.sql.session - INFO - Closing session 01f11d5d-c242-1da2-9f57-9fd57e640629 (session.py:194)
+2026-03-11 10:20:02,031 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:20:02,031 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:20:02,427 - ThreadPoolExecutor-1_0 - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:20:02,431 - MainThread - root - INFO - Shutting down the event dispatcher (dispatcher.py:159)

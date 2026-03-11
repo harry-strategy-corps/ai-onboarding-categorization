@@ -1,0 +1,49 @@
+2026-03-11 10:19:37,491 - MainThread - sqlmesh.core.config.connection - INFO - Creating new DuckDB adapter for data files: {'databricks_state.db'} (connection.py:496)
+2026-03-11 10:19:37,565 - MainThread - sqlmesh.core.console - WARNING - The duckdb engine is not recommended for storing SQLMesh state in production deployments. Please see https://sqlmesh.readthedocs.io/en/stable/guides/configuration/#state-connection for a list of recommended engines and more information. (console.py:2335)
+2026-03-11 10:19:37,592 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,592 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,594 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,595 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,596 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,597 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,598 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,600 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,601 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,602 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,603 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,604 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,605 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,607 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,674 - Thread-1 - py4j.clientserver - INFO - Error while sending or receiving. (clientserver.py:529)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+2026-03-11 10:19:37,676 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,676 - Thread-1 - root - INFO - Exception while sending command. (java_gateway.py:1056)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 530, in send_command
+    raise Py4JNetworkError(
+        "Error while sending", e, proto.ERROR_ON_SEND)
+py4j.protocol.Py4JNetworkError: Error while sending
+2026-03-11 10:19:37,678 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:19:37,978 - MainThread - databricks.sql.session - WARNING - [WARN] Parameter '_user_agent_entry' is deprecated; use 'user_agent_entry' instead. This parameter will be removed in the upcoming releases. (session.py:55)
+2026-03-11 10:19:38,497 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:19:38,497 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:19:38,498 - MainThread - databricks.sql.session - INFO - Successfully opened session 01f11d5d-b82f-1d9d-907c-f2493b22699b (session.py:143)
+2026-03-11 10:19:38,888 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for GET request (retry.py:355)
+2026-03-11 10:19:39,297 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:19:39,297 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:19:39,305 - MainThread - sqlmesh.core.config.connection - INFO - Using existing DuckDB adapter due to overlapping data file: databricks_state.db (connection.py:486)
+2026-03-11 10:19:39,314 - MainThread - root - INFO - Shutting down the event dispatcher (dispatcher.py:159)

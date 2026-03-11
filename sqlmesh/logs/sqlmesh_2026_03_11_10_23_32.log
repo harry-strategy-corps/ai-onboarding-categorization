@@ -1,0 +1,2680 @@
+2026-03-11 10:23:35,474 - MainThread - sqlmesh.core.config.connection - INFO - Creating new DuckDB adapter for data files: {'databricks_state.db'} (connection.py:496)
+2026-03-11 10:23:35,486 - MainThread - sqlmesh.core.console - WARNING - The duckdb engine is not recommended for storing SQLMesh state in production deployments. Please see https://sqlmesh.readthedocs.io/en/stable/guides/configuration/#state-connection for a list of recommended engines and more information. (console.py:2335)
+2026-03-11 10:23:35,495 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0000_baseline' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0000_baseline.py'> (migrator.py:185)
+2026-03-11 10:23:35,501 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0061_mysql_fix_blob_text_type' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0061_mysql_fix_blob_text_type.py'> (migrator.py:185)
+2026-03-11 10:23:35,501 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0062_add_model_gateway' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0062_add_model_gateway.py'> (migrator.py:185)
+2026-03-11 10:23:35,501 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0063_change_signals' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0063_change_signals.py'> (migrator.py:185)
+2026-03-11 10:23:35,501 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0064_join_when_matched_strings' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0064_join_when_matched_strings.py'> (migrator.py:185)
+2026-03-11 10:23:35,501 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0065_add_model_optimize' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0065_add_model_optimize.py'> (migrator.py:185)
+2026-03-11 10:23:35,501 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0066_add_auto_restatements' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0066_add_auto_restatements.py'> (migrator.py:185)
+2026-03-11 10:23:35,503 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0067_add_tsql_date_full_precision' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0067_add_tsql_date_full_precision.py'> (migrator.py:185)
+2026-03-11 10:23:35,503 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0068_include_unrendered_query_in_metadata_hash' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0068_include_unrendered_query_in_metadata_hash.py'> (migrator.py:185)
+2026-03-11 10:23:35,503 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0069_update_dev_table_suffix' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0069_update_dev_table_suffix.py'> (migrator.py:185)
+2026-03-11 10:23:35,503 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0070_include_grains_in_metadata_hash' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0070_include_grains_in_metadata_hash.py'> (migrator.py:185)
+2026-03-11 10:23:35,503 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0071_add_dev_version_to_intervals' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0071_add_dev_version_to_intervals.py'> (migrator.py:185)
+2026-03-11 10:23:35,503 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0072_add_environment_statements' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0072_add_environment_statements.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0073_remove_symbolic_disable_restatement' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0073_remove_symbolic_disable_restatement.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0074_add_partition_by_time_column_property' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0074_add_partition_by_time_column_property.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0075_remove_validate_query' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0075_remove_validate_query.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0076_add_cron_tz' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0076_add_cron_tz.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0077_fix_column_type_hash_calculation' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0077_fix_column_type_hash_calculation.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0078_warn_if_non_migratable_python_env' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0078_warn_if_non_migratable_python_env.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0079_add_gateway_managed_property' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0079_add_gateway_managed_property.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0080_add_batch_size_to_scd_type_2_models' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0080_add_batch_size_to_scd_type_2_models.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0081_update_partitioned_by' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0081_update_partitioned_by.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0082_warn_if_incorrectly_duplicated_statements' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0082_warn_if_incorrectly_duplicated_statements.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0083_use_sql_for_scd_time_data_type_data_hash' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0083_use_sql_for_scd_time_data_type_data_hash.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0084_normalize_quote_when_matched_and_merge_filter' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0084_normalize_quote_when_matched_and_merge_filter.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0085_deterministic_repr' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0085_deterministic_repr.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0086_check_deterministic_bug' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0086_check_deterministic_bug.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0087_normalize_blueprint_variables' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0087_normalize_blueprint_variables.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0088_warn_about_variable_python_env_diffs' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0088_warn_about_variable_python_env_diffs.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0089_add_virtual_environment_mode' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0089_add_virtual_environment_mode.py'> (migrator.py:185)
+2026-03-11 10:23:35,504 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0090_add_forward_only_column' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0090_add_forward_only_column.py'> (migrator.py:185)
+2026-03-11 10:23:35,505 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0091_on_additive_change' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0091_on_additive_change.py'> (migrator.py:185)
+2026-03-11 10:23:35,505 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0092_warn_about_dbt_data_type_diff' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0092_warn_about_dbt_data_type_diff.py'> (migrator.py:185)
+2026-03-11 10:23:35,505 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0093_use_raw_sql_in_fingerprint' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0093_use_raw_sql_in_fingerprint.py'> (migrator.py:185)
+2026-03-11 10:23:35,505 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0094_add_dev_version_and_fingerprint_columns' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0094_add_dev_version_and_fingerprint_columns.py'> (migrator.py:185)
+2026-03-11 10:23:35,505 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0095_warn_about_dbt_raw_sql_diff' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0095_warn_about_dbt_raw_sql_diff.py'> (migrator.py:185)
+2026-03-11 10:23:35,505 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0096_remove_plan_dags_table' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0096_remove_plan_dags_table.py'> (migrator.py:185)
+2026-03-11 10:23:35,506 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0097_add_dbt_name_in_node' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0097_add_dbt_name_in_node.py'> (migrator.py:185)
+2026-03-11 10:23:35,506 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0098_add_dbt_node_info_in_node' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0098_add_dbt_node_info_in_node.py'> (migrator.py:185)
+2026-03-11 10:23:35,506 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0099_add_last_altered_to_intervals' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0099_add_last_altered_to_intervals.py'> (migrator.py:185)
+2026-03-11 10:23:35,506 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0100_add_grants_and_grants_target_layer' from '/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/migrations/v0100_add_grants_and_grants_target_layer.py'> (migrator.py:185)
+2026-03-11 10:23:35,506 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Fetching environments (migrator.py:207)
+2026-03-11 10:23:35,507 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Migrating snapshot rows... (migrator.py:224)
+2026-03-11 10:23:35,507 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - No changes to snapshots detected (migrator.py:217)
+2026-03-11 10:23:35,516 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,516 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,517 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,518 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,518 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,519 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,520 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,521 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,521 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,522 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,523 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,524 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,525 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,526 - MainThread - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,759 - MainThread - sqlmesh.core.plan.evaluator - INFO - Evaluating plan stage CreateSnapshotRecordsStage (evaluator.py:123)
+2026-03-11 10:23:35,766 - MainThread - sqlmesh.core.plan.evaluator - INFO - Evaluating plan stage PhysicalLayerSchemaCreationStage (evaluator.py:123)
+2026-03-11 10:23:35,767 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Creating schema '"ciq-bp_dummy-dev".sqlmesh__suggestions' (evaluator.py:1449)
+2026-03-11 10:23:35,767 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ CREATE SCHEMA IF NOT EXISTS `ciq-bp_dummy-dev`.`sqlmesh__suggestions` (base.py:2626)
+2026-03-11 10:23:35,810 - MainThread - databricks.sql.session - WARNING - [WARN] Parameter '_user_agent_entry' is deprecated; use 'user_agent_entry' instead. This parameter will be removed in the upcoming releases. (session.py:55)
+2026-03-11 10:23:35,940 - Thread-1 - py4j.clientserver - INFO - Error while sending or receiving. (clientserver.py:529)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+2026-03-11 10:23:35,941 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:35,941 - Thread-1 - root - INFO - Exception while sending command. (java_gateway.py:1056)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 527, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/py4j/clientserver.py", line 530, in send_command
+    raise Py4JNetworkError(
+        "Error while sending", e, proto.ERROR_ON_SEND)
+py4j.protocol.Py4JNetworkError: Error while sending
+2026-03-11 10:23:35,943 - Thread-1 - py4j.clientserver - INFO - Closing down clientserver connection (clientserver.py:570)
+2026-03-11 10:23:36,359 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:36,359 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:23:36,359 - MainThread - databricks.sql.session - INFO - Successfully opened session 01f11d5e-45f9-17ef-bb3e-003558745cf6 (session.py:143)
+2026-03-11 10:23:36,759 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for GET request (retry.py:355)
+2026-03-11 10:23:37,188 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:37,188 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:23:37,189 - MainThread - sqlmesh.core.plan.evaluator - INFO - Evaluating plan stage BackfillStage (evaluator.py:123)
+2026-03-11 10:23:37,192 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Listing data objects in schema "ciq-bp_dummy-dev".sqlmesh__suggestions (evaluator.py:1616)
+2026-03-11 10:23:37,193 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ SELECT `table_name` AS `name`, `table_schema` AS `schema`, `table_catalog` AS `catalog`, CASE `table_type` WHEN 'VIEW' THEN 'view' WHEN 'MATERIALIZED_VIEW' THEN 'materialized_view' ELSE 'table' END AS `type` FROM `system`.`information_schema`.`tables` WHERE (`table_catalog` = 'ciq-bp_dummy-dev' AND `table_schema` = 'sqlmesh__suggestions') AND `table_name` IN ('suggestions__product_mapping__4221368022') (base.py:2626)
+2026-03-11 10:23:37,747 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:37,747 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:23:37,751 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Evaluating snapshot SnapshotId<"ciq-bp_dummy-dev"."suggestions"."product_mapping": 805122896> (evaluator.py:711)
+2026-03-11 10:23:37,752 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ USE CATALOG `ciq-bp_dummy-dev` (base.py:2626)
+2026-03-11 10:23:38,067 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:38,068 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:23:38,070 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Creating table '"ciq-bp_dummy-dev".sqlmesh__suggestions.suggestions__product_mapping__4221368022' (evaluator.py:2042)
+2026-03-11 10:23:38,071 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ SELECT CURRENT_CATALOG() (base.py:2626)
+2026-03-11 10:23:38,395 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:38,395 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:23:38,403 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ CREATE TABLE IF NOT EXISTS `ciq-bp_dummy-dev`.`sqlmesh__suggestions`.`suggestions__product_mapping__4221368022` (`prod_product_type_id` STRING, `prod_line_of_business` STRING, `prod_product_category` STRING, `prod_product_type` STRING, `prod_product_name` STRING, `prod_product_code` STRING, `prod_status` STRING, `prod_core_system_mapping` STRING, `prod_balance_requires_abs` BOOLEAN, `prod_created_date` TIMESTAMP, `prod_modified_date` TIMESTAMP, `processing_timestamp` TIMESTAMP, `review_status` STRING, `confidence` DECIMAL(10, 6), `ai_model` STRING, `prompt_version` STRING, `description_samples` STRING, `volume` BIGINT) COMMENT 'AI-generated product code classification suggestions using Claude via ai_query(). Reads ProductInstanceReference and ProductInstanceDescription from silver.account_history, builds a product catalog, and classifies into the StrategyCorp product taxonomy aligned with product_type_configuration_master.' (base.py:2626)
+2026-03-11 10:23:39,775 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:39,776 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:23:39,778 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Inserting data for snapshot SnapshotId<"ciq-bp_dummy-dev"."suggestions"."product_mapping": 805122896> (evaluator.py:952)
+2026-03-11 10:23:39,782 - MainThread - models.suggestions.product_mapping - INFO - Loading uncategorized product codes from `ciq-bp_dummy-dev`.`silver`.account_history (excluding codes in `ciq-bp_dummy-dev`.`silver`.product_type_configuration_master) (<string>:9)
+2026-03-11 10:23:39,782 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ 
+        SELECT
+            ah.ProductInstanceReference AS product_code,
+            ah.ProductInstanceDescription AS product_description,
+            ah.AccountStatus AS account_status
+        FROM `ciq-bp_dummy-dev`.`silver`.account_history ah
+        LEFT JOIN `ciq-bp_dummy-dev`.`silver`.product_type_configuration_master m
+          ON UPPER(TRIM(CAST(ah.ProductInstanceReference AS STRING)))
+             = UPPER(TRIM(m.PROD_core_system_mapping))
+        WHERE m.PROD_product_type_id IS NULL
+          AND ah.ProductInstanceReference IS NOT NULL
+          AND TRIM(ah.ProductInstanceReference) <> ''
+     (base.py:2626)
+2026-03-11 10:23:40,441 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:40,442 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:23:40,748 - MainThread - models.suggestions.product_mapping - INFO - Built catalog: 134 unique product codes (<string>:47)
+2026-03-11 10:23:40,748 - MainThread - models.suggestions.product_mapping - INFO - Classifying 134 codes in 5 batches (batch_size=30) (<string>:55)
+2026-03-11 10:23:40,748 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ SELECT ai_query('databricks-claude-sonnet-4-5', 'You are a product categorization engine for US community banks and financial institutions.
+Given a list of product codes with descriptions, classify each into the StrategyCorp product taxonomy below.
+
+# Product Categorization Taxonomy
+
+**Source:** [Product Categories (Notion)](https://www.notion.so/Product-Categories-2a9ee9c7060580cb86dffe5fa46d9980)  
+**Target Table:** `product_type_configuration_master`  
+**Last Updated:** 2026-02-26
+
+---
+
+## Purpose
+
+When a new financial institution (FI) is onboarded onto CheckingIQ / MonetizeIQ, their raw product codes must be normalized into StrategyCorp''s canonical product taxonomy. This taxonomy drives:
+
+- **Dashboard reporting** — product mix analysis, balance composition, growth metrics
+- **Customer scoring** — relationship depth indicators, cross-sell opportunity identification
+- **Revenue analysis** — fee income attribution by product line
+- **Scalability** — a single classification structure that works across all FIs regardless of core banking system
+
+### AI Model Goal
+
+The AI model should **pre-map ~80% of a bank''s product codes** into this taxonomy, leaving the remainder flagged for manual review. A typical FI has ~80 deposit/DDA codes and ~60 loan codes. If the model maps the majority automatically, it dramatically reduces onboarding effort.
+
+When the model **cannot confidently categorize** a product code, it must be flagged for manual review — never force-fitted into a wrong category.
+
+---
+
+## Hierarchy Overview
+
+The taxonomy has **5 levels**. Levels 1–3 are **StrategyCorp-defined** (canonical across all FIs). Levels 4–5 are **FI-configurable** (each bank customizes to match their internal nomenclature).
+
+| Level | Name | Configuration | Silver Model Field | Description |
+|-------|------|---------------|-------------------|-------------|
+| **Level 1** | Line of Business | StrategyCorp-defined | `PROD_line_of_business` | Retail, Business, or Wealth Management |
+| **Level 2** | Type | StrategyCorp-defined | `PROD_product_type` | Deposits, Loans, Services, Securities, Cash Management |
+| **Level 3** | Category | StrategyCorp-defined | `PROD_product_category` | Checking, Savings, CDs, Mortgage, HELOC, etc. |
+| **Level 4** | Sub-category | FI-configurable | `PROD_product_name` | Basic, Premium, Jumbo, Small Business, etc. |
+| **Level 5** | Special | FI-configurable | `PROD_product_code` | ARM, Fixed, Custodial, <$1M, >$1M, etc. |
+
+All level names are **dynamic** — the FI can rename them in the UI to mirror their internal terminology (e.g., rename "Line of Business" to "Division" or "Category" to "Product Family").
+
+```
+Level 1: Line of Business          (StrategyCorp-defined)
+  └─ Level 2: Type                 (StrategyCorp-defined)
+       └─ Level 3: Category        (StrategyCorp-defined)
+            └─ Level 4: Sub-category   (FI-configurable)
+                 └─ Level 5: Special    (FI-configurable)
+```
+
+---
+
+## Level 1 — Line of Business
+
+| Value | Description |
+|-------|-------------|
+| **Retail** | Consumer/individual banking products and services |
+| **Business** | Commercial/business banking products, services, and treasury management |
+| **Wealth Management** | Trust, fiduciary, investment, and securities products |
+
+---
+
+## Retail
+
+The Retail line of business covers all consumer/individual banking products.
+
+### Retail > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Checking |
+| **Premium** | — | Premium Checking |
+| **BaZing** | — | Good Checking, Better Checking, Best Checking |
+| — | **Custodial** | UGMA, UTMA |
+
+#### Category: Savings
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Savings |
+| **Premium** | — | Premium Savings, Money Market |
+| — | **Government** | Health Savings Accounts (HSAs), Educational Savings Accounts |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Retail > Loans
+
+#### Category: Mortgage Loans
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Jumbo** | ARM | 1-year ARM |
+| **Jumbo** | Fixed | 15-year fixed |
+| **Jumbo** | Fixed-to-ARM | 5-year FTA |
+| **Conforming** | ARM | 1-year ARM |
+| **Conforming** | Fixed | 15-year fixed |
+| **Conforming** | Fixed-to-ARM | 5-year FTA |
+
+#### Category: HELOCs (Home Equity Lines of Credit)
+
+**Example Products:** 30-year HELOC, 30-year SHELOC (Segmented HELOC)
+
+#### Category: Credit Card
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Cash Back** | Gold, Platinum |
+| **Travel** | Gold, Platinum |
+
+#### Category: Personal Loans
+
+**Example Products:** 3 year, 5 year
+
+#### Category: Auto Loans
+
+**Example Products:** 3 year, 5 year, 7 year
+
+#### Category: Student Loans
+
+**Example Products:** 30-year
+
+---
+
+### Retail > Services
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Internet banking platform access |
+| **Mobile Banking** | Mobile app banking access |
+| **Bill Pay** | Online bill payment service |
+| **Overdraft** | Overdraft protection service |
+| **Mobile Deposits** | Mobile check deposit capability |
+| **Person-to-Person Payments (P2P)** | Peer-to-peer payment services (e.g., Zelle) |
+| **Debit Cards** | Debit card issuance and management |
+| **Safe Deposit Boxes** | Physical safe deposit box rental |
+
+---
+
+## Business
+
+The Business line of business covers commercial/business banking products, including Cash Management Services (Treasury Management).
+
+### Business > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Checking |
+| **Corporate** | Corporate Checking |
+| **Analyzed** | Business Analysis Checking |
+| **Non-Profit** | Non-profit Checking |
+
+#### Category: Savings
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Savings |
+| **Corporate** | Business Money Market |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Business > Loans
+
+| Category | Special | Example Products |
+|----------|---------|-----------------|
+| **Real Estate** | ARM | 1-year ARM |
+| **Real Estate** | Fixed | 15-year fixed |
+| **Real Estate** | Fixed-to-ARM | 5-year FTA |
+| **Receivables-Based** | ARM | 6-month ARM, 1-year ARM |
+| **Line of Credit** | ARM | 6-month ARM, 1-year ARM |
+| **Equipment Financing** | ARM | 6-month ARM, 1-year ARM |
+| **Credit Card** | — | Gold, Platinum |
+
+---
+
+### Business > Cash Management Services (Treasury Management)
+
+Cash Management Services (AKA Treasury Management) is a specialized Product Type available only under the Business line of business. These are operational banking services — not deposit or loan products — that businesses use to manage their cash flow, payments, and receivables.
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Business internet banking platform |
+| **Mobile Banking** | Business mobile banking app |
+| **ACH** | Automated Clearing House origination and receipt |
+| **Wire (Domestic)** | Domestic wire transfer services |
+| **SWIFT Wires (International)** | International wire transfer services |
+| **Overdraft** | Business overdraft protection |
+| **Remote Deposit Capture** | Scanning and depositing checks remotely |
+| **Debit Cards** | Business debit card issuance |
+| **Positive Pay** | Check fraud prevention — verifying checks against issued list |
+| **Account Reconciliation** | Automated reconciliation of bank and book records |
+| **Target Balance Accounts** | AKA Zero Balance Accounts — auto-sweep to maintain target balance |
+| **Sweeps** | Automated sweep of excess funds to investment or interest-bearing accounts |
+| **Controlled Disbursement Accounts** | Early notification of daily check presentment for cash planning |
+| **Payroll** | Payroll processing and distribution |
+| **Collections** | Receivables collection services |
+| **Lockbox** | Mail-based payment processing at a bank facility |
+| **Armored Car** | Secure cash pickup and delivery |
+| **Cash Vault** | Cash management and coin/currency ordering |
+| **Merchant Services** | Card point-of-sale processing services |
+| **Transaction Monitoring** | Real-time or batch monitoring of account transactions |
+| **Foreign Currency Exchange (FX)** | Foreign exchange transaction services |
+
+---
+
+## Wealth Management
+
+The Wealth Management line of business covers trust, fiduciary, investment, and securities products.
+
+### Wealth Management > Securities
+
+#### Category: Transaction
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Trading** | Cash Management Account |
+| **Retirement** | Traditional IRA, Roth IRA, 401k |
+
+#### Category: Loans
+
+**Example Products:** Margin
+
+---
+
+## Raw Data Input Fields
+
+The AI model uses these fields from the raw data files as inputs for product classification:
+
+| Data Source | File | Key Field | Context Fields | Description |
+|------------|------|-----------|---------------|-------------|
+| **Deposits** | `CheckingIQ_Deposit_ALL` | `ACTYPE` | `SCCODE`, `DDPSCOD` | Product type code (CK, MM, SV, etc.) |
+| **Loans** | `CheckingIQ_Loan_13Month_All` | `ACTYPE` | `PURCOD`, `PurposeDescription`, `type`, `LoanTypeDesc` | Loan type code + purpose code for consumer/business distinction |
+| **CDs** | `CheckingIQ_CD_All` | `ACTYPE` | `ARGPRDCOD`, `CDTERM`, `Term_Code` | CD type code + term information |
+| **Customers** | `CheckingIQ_CI_All` | `CFCLAS` | — | Customer class code (Individual, Business, Corporation, etc.) |
+
+### Purpose Codes (PURCOD) — Consumer vs Business Indicator
+
+| Code | Description | Maps to LoB |
+|------|-------------|-------------|
+| 01 | Personal/Household | Retail |
+| 02 | Real Estate — Residential | Retail |
+| 03 | Real Estate — Commercial | Business |
+| 04 | Business — Commercial | Business |
+| 05 | Farm — Real Estate | Business |
+| 06 | Farm — Non-Real Estate | Business |
+| 07 | Government | Context-dependent |
+| 08 | Foreign | Context-dependent |
+| 09 | Financial Institution | Business |
+| 10 | Tax Exempt / Non-Profit | Context-dependent |
+| 11 | Other | Context-dependent |
+
+---
+
+## Classification Rules for the AI Model
+
+1. **First determine Line of Business** (Retail, Business, or Wealth Management):
+   - Use customer class codes (`CFCLAS`): I = Individual → Retail; B, C, P = Business → Business; T, E, F = Wealth Management
+   - Use loan purpose codes (`PURCOD`): 01–02 → Retail; 03–06, 09 → Business
+   - Public Funds and Government accounts are ambiguous — flag for manual review if uncertain
+
+2. **Then classify the Product Type** (Level 2):
+   - Deposits: ACTYPE codes indicating DDA, savings, money market, or CD products
+   - Loans: ACTYPE codes indicating mortgage, HELOC, credit card, personal, auto, student, or commercial loan products
+   - Services: Non-deposit, non-loan products and capabilities (Retail only)
+   - Cash Management Services: Treasury/operational services (Business only)
+   - Securities: Investment and brokerage products (Wealth Management only)
+
+3. **Then determine the Category** (Level 3) within the Product Type based on the specific ACTYPE and its description.
+
+4. **Sub-category and Special** (Levels 4–5) are FI-configurable:
+   - Propose when the raw data provides enough context (e.g., product description contains "Jumbo", "Premium", "HSA")
+   - Leave blank when insufficient information — the FI user will fill these in
+
+5. **Each product code maps to exactly one path** in the taxonomy tree. There is no multi-label classification.
+
+6. **Retail and Business share some Categories** (Checking, Savings, CDs) but have different Sub-categories and different Loan structures. The LoB distinction must be made before Category assignment.
+
+7. **Wealth Management** has its own unique structure (Securities > Transaction/Loans) that does not overlap with Retail/Business patterns.
+
+---
+
+## Output Schema
+
+For each product code, the model should produce:
+
+| Field | Description | Example (Retail Deposit) | Example (Business Loan) |
+|-------|-------------|--------------------------|------------------------|
+| `PROD_line_of_business` (Level 1) | Line of Business | Retail | Business |
+| `PROD_product_type` (Level 2) | Product Type | Deposits | Loans |
+| `PROD_product_category` (Level 3) | Category | Checking | Real Estate |
+| `PROD_product_name` (Level 4) | Sub-category | Premium | — |
+| `PROD_product_code` (Level 5) | Special | — | Fixed |
+| `PROD_core_system_mapping` | Raw bank code (input) | CK | BG |
+
+---
+
+## Key Differences from Transaction Taxonomy
+
+| Aspect | Product Taxonomy | Transaction Taxonomy |
+|--------|-----------------|---------------------|
+| **Levels** | 5 levels (all active) | 4 active levels (Level 5 descoped) |
+| **Structure** | Single tree with 3 LoB branches | Two independent blocks (Block A / Block B) |
+| **Canonical levels** | 1–3 (StrategyCorp-defined) | All 4 levels are StrategyCorp-defined |
+| **FI-configurable** | Levels 4–5 (Sub-category, Special) | None (all canonical) |
+| **Dynamic labels** | All level names can be renamed by FI | Fixed level names |
+| **Scoring** | No include_in_scoring equivalent | include_in_scoring is a key derived field |
+| **Input fields** | ACTYPE, PURCOD, CFCLAS | TRANCD, EFHDS1, EFHDS2 |
+| **Target table** | `product_type_configuration_master` | `transaction_code_mapping_master` |
+
+
+### Classification Rules
+
+1. **Line of Business (Level 1) — `PROD_line_of_business`:**
+   Determine whether the product belongs to Retail, Business, or Wealth Management.
+   - **RETAIL** — consumer/individual banking products (personal checking, savings,
+     consumer loans, mortgages, HELOCs, auto loans, etc.)
+   - **BUSINESS** — commercial/business banking products (business checking, commercial
+     loans, treasury management, commercial real estate, agricultural loans, etc.)
+   - **WEALTH MANAGEMENT** — trust, fiduciary, investment, and securities products.
+     Classify as WEALTH MANAGEMENT ONLY when the product name or code explicitly
+     indicates fiduciary, trust, or securities management (keywords: FIDUCIARY, TRUST,
+     UTMA, UGMA, IRA, ESTATE).
+
+2. **Product Category (Level 2) — `PROD_product_category`:**
+   One of: DEPOSITS, LOANS, SERVICES.
+   Determined by the product nature (checking/savings/MM = DEPOSITS, mortgage/HELOC/personal/auto = LOANS).
+
+3. **Product Type (Level 3) — `PROD_product_type`:**
+   The specific product type within the category. Use these strings:
+   - Deposits: CHECKING, SAVINGS, MONEY MARKET
+   - Loans: MORTGAGE, HOME EQUITY, LINE OF CREDIT, PERSONAL, AUTO,
+     COMMERCIAL, COMMERCIAL REAL ESTATE, AGRICULTURAL, REAL ESTATE,
+     RECEIVABLES-BASED, EQUIPMENT FINANCING
+
+4. **Product Name (Level 4) — `PROD_product_name`:**
+   Derive from the product description — the distinguishing feature within its
+   Level 3 type (e.g., "PREMIUM", "BASIC", "INTEREST BEARING", "PLATINUM").
+   Use null if no meaningful distinction can be made.
+
+5. **Product Code (Level 5) — `PROD_product_code`:**
+   Special designation evident from the product name (e.g., HSA, UTMA, ARM, FIXED).
+   Use null for most products.
+
+6. **Output values MUST be UPPERCASED** (e.g., "RETAIL" not "Retail", "DEPOSITS" not "Deposits").
+
+7. Use null for any level if no mapping fits. Do not guess.
+
+8. `confidence`: 0.0 to 1.0 — your certainty in the classification.
+
+### Few-Shot Examples
+
+Input: product_code=CK, SAMPLES="Personal Checking (15,000)"
+Output: {{
+  "PROD_core_system_mapping": "CK",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "PERSONAL CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.95
+}}
+
+Input: product_code=R1, SAMPLES="Residential RE Fixed (55,577)"
+Output: {{
+  "PROD_core_system_mapping": "R1",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "MORTGAGE",
+  "PROD_product_name": "RESIDENTIAL RE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.93
+}}
+
+Input: product_code=B1, SAMPLES="Business Checking (17,978)"
+Output: {{
+  "PROD_core_system_mapping": "B1",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "BUSINESS CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.92
+}}
+
+Input: product_code=MM, SAMPLES="Money Market Savings (1,132)"
+Output: {{
+  "PROD_core_system_mapping": "MM",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "MONEY MARKET",
+  "PROD_product_name": "MONEY MARKET SAVINGS",
+  "PROD_product_code": null,
+  "confidence": 0.94
+}}
+
+Input: product_code=BC, SAMPLES="CRE Fixed (14,402)"
+Output: {{
+  "PROD_core_system_mapping": "BC",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "COMMERCIAL REAL ESTATE",
+  "PROD_product_name": "CRE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.91
+}}
+
+Input: product_code=F1, SAMPLES="Fiduciary Bus Int Ck (9)"
+Output: {{
+  "PROD_core_system_mapping": "F1",
+  "PROD_line_of_business": "WEALTH MANAGEMENT",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "FIDUCIARY BUSINESS INTEREST CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.88
+}}
+
+Classify these 30 product codes:
+
+  - product_code=01, SAMPLES="PERSONAL CHECKING (50)", VOLUME=50
+  - product_code=02, SAMPLES="STUDENT CHECKING (50)", VOLUME=50
+  - product_code=04, SAMPLES="PUBLIC FUNDS OTHER (50)", VOLUME=50
+  - product_code=07, SAMPLES="INVESTMENTPLUS CK (50)", VOLUME=50
+  - product_code=08, SAMPLES="BUSINESS MONEY MKT (50)", VOLUME=50
+  - product_code=09, SAMPLES="PERSONAL MM (50)", VOLUME=50
+  - product_code=10, SAMPLES="EMPLOYEE INVESTMENT (50)", VOLUME=50
+  - product_code=11, SAMPLES="NISSAN CHECKING (50)", VOLUME=50
+  - product_code=12, SAMPLES="NISSAN INVESTMENT CK (43)", VOLUME=43
+  - product_code=13, SAMPLES="HSA - FAMILY (50)", VOLUME=50
+  - product_code=14, SAMPLES="HSA - INDIVIDUAL (50)", VOLUME=50
+  - product_code=15, SAMPLES="OFFICIAL CHECKS (38)", VOLUME=38
+  - product_code=16, SAMPLES="BANKPLUS/ BANCPLUS (11)", VOLUME=11
+  - product_code=20, SAMPLES="VALUEPLUS BUSINESS (50)", VOLUME=50
+  - product_code=21, SAMPLES="FREE BUSINESS CKING (50)", VOLUME=50
+  - product_code=22, SAMPLES="BUSINESS CHECKING (9)", VOLUME=9
+  - product_code=23, SAMPLES="MSB CHECKING (19)", VOLUME=19
+  - product_code=24, SAMPLES="SMALL BUSINESS CKG (13)", VOLUME=13
+  - product_code=25, SAMPLES="MS IOLTA CHECKING (50)", VOLUME=50
+  - product_code=26, SAMPLES="BUSINESS INTEREST CK (50)", VOLUME=50
+  - product_code=28, SAMPLES="ATM CHECKING (18)", VOLUME=18
+  - product_code=29, SAMPLES="MS LOTTERY BUS CKG (50)", VOLUME=50
+  - product_code=30, SAMPLES="LA IOLTA CHECKING (50)", VOLUME=50
+  - product_code=31, SAMPLES="WMG MMDA INTEREST CK (1)", VOLUME=1
+  - product_code=32, SAMPLES="WMG MMDA RETIREMENT (1)", VOLUME=1
+  - product_code=36, SAMPLES="PUBLIC FUNDS INT CK (50)", VOLUME=50
+  - product_code=38, SAMPLES="PF MONEY MARKET (31)", VOLUME=31
+  - product_code=39, SAMPLES="AL IOLTA CHECKING (10)", VOLUME=10
+  - product_code=41, SAMPLES="LA LOTTERY BUS CKG (5)", VOLUME=5
+  - product_code=50, SAMPLES="PRIMEPLUS CLUB (50)", VOLUME=50
+
+Return a JSON object with a "classifications" array containing one entry per product code. Use the EXACT output schema specified.', responseFormat => '{"type": "json_schema", "json_schema": {"name": "product_classifications", "schema": {"type": "object", "properties": {"classifications": {"type": "array", "items": {"type": "object", "properties": {"PROD_core_system_mapping": {"type": "string"}, "PROD_line_of_business": {"type": "string"}, "PROD_product_category": {"type": "string"}, "PROD_product_type": {"type": "string"}, "PROD_product_name": {"type": ["string", "null"]}, "PROD_product_code": {"type": ["string", "null"]}, "confidence": {"type": "number"}}, "required": ["PROD_core_system_mapping", "PROD_line_of_business", "PROD_product_category", "PROD_product_type", "PROD_product_name", "PROD_product_code", "confidence"]}}}, "required": ["classifications"]}, "strict": true}}') as result (base.py:2626)
+2026-03-11 10:23:46,086 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:46,087 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:23:51,319 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:51,319 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:23:56,525 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:23:56,526 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:01,716 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:01,716 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:06,885 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:06,885 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:07,735 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:07,735 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:07,899 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:07,899 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:08,071 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:08,072 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:08,080 - MainThread - models.suggestions.product_mapping - INFO - Batch 1/5: classified 30 codes (<string>:63)
+2026-03-11 10:24:08,082 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ SELECT ai_query('databricks-claude-sonnet-4-5', 'You are a product categorization engine for US community banks and financial institutions.
+Given a list of product codes with descriptions, classify each into the StrategyCorp product taxonomy below.
+
+# Product Categorization Taxonomy
+
+**Source:** [Product Categories (Notion)](https://www.notion.so/Product-Categories-2a9ee9c7060580cb86dffe5fa46d9980)  
+**Target Table:** `product_type_configuration_master`  
+**Last Updated:** 2026-02-26
+
+---
+
+## Purpose
+
+When a new financial institution (FI) is onboarded onto CheckingIQ / MonetizeIQ, their raw product codes must be normalized into StrategyCorp''s canonical product taxonomy. This taxonomy drives:
+
+- **Dashboard reporting** — product mix analysis, balance composition, growth metrics
+- **Customer scoring** — relationship depth indicators, cross-sell opportunity identification
+- **Revenue analysis** — fee income attribution by product line
+- **Scalability** — a single classification structure that works across all FIs regardless of core banking system
+
+### AI Model Goal
+
+The AI model should **pre-map ~80% of a bank''s product codes** into this taxonomy, leaving the remainder flagged for manual review. A typical FI has ~80 deposit/DDA codes and ~60 loan codes. If the model maps the majority automatically, it dramatically reduces onboarding effort.
+
+When the model **cannot confidently categorize** a product code, it must be flagged for manual review — never force-fitted into a wrong category.
+
+---
+
+## Hierarchy Overview
+
+The taxonomy has **5 levels**. Levels 1–3 are **StrategyCorp-defined** (canonical across all FIs). Levels 4–5 are **FI-configurable** (each bank customizes to match their internal nomenclature).
+
+| Level | Name | Configuration | Silver Model Field | Description |
+|-------|------|---------------|-------------------|-------------|
+| **Level 1** | Line of Business | StrategyCorp-defined | `PROD_line_of_business` | Retail, Business, or Wealth Management |
+| **Level 2** | Type | StrategyCorp-defined | `PROD_product_type` | Deposits, Loans, Services, Securities, Cash Management |
+| **Level 3** | Category | StrategyCorp-defined | `PROD_product_category` | Checking, Savings, CDs, Mortgage, HELOC, etc. |
+| **Level 4** | Sub-category | FI-configurable | `PROD_product_name` | Basic, Premium, Jumbo, Small Business, etc. |
+| **Level 5** | Special | FI-configurable | `PROD_product_code` | ARM, Fixed, Custodial, <$1M, >$1M, etc. |
+
+All level names are **dynamic** — the FI can rename them in the UI to mirror their internal terminology (e.g., rename "Line of Business" to "Division" or "Category" to "Product Family").
+
+```
+Level 1: Line of Business          (StrategyCorp-defined)
+  └─ Level 2: Type                 (StrategyCorp-defined)
+       └─ Level 3: Category        (StrategyCorp-defined)
+            └─ Level 4: Sub-category   (FI-configurable)
+                 └─ Level 5: Special    (FI-configurable)
+```
+
+---
+
+## Level 1 — Line of Business
+
+| Value | Description |
+|-------|-------------|
+| **Retail** | Consumer/individual banking products and services |
+| **Business** | Commercial/business banking products, services, and treasury management |
+| **Wealth Management** | Trust, fiduciary, investment, and securities products |
+
+---
+
+## Retail
+
+The Retail line of business covers all consumer/individual banking products.
+
+### Retail > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Checking |
+| **Premium** | — | Premium Checking |
+| **BaZing** | — | Good Checking, Better Checking, Best Checking |
+| — | **Custodial** | UGMA, UTMA |
+
+#### Category: Savings
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Savings |
+| **Premium** | — | Premium Savings, Money Market |
+| — | **Government** | Health Savings Accounts (HSAs), Educational Savings Accounts |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Retail > Loans
+
+#### Category: Mortgage Loans
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Jumbo** | ARM | 1-year ARM |
+| **Jumbo** | Fixed | 15-year fixed |
+| **Jumbo** | Fixed-to-ARM | 5-year FTA |
+| **Conforming** | ARM | 1-year ARM |
+| **Conforming** | Fixed | 15-year fixed |
+| **Conforming** | Fixed-to-ARM | 5-year FTA |
+
+#### Category: HELOCs (Home Equity Lines of Credit)
+
+**Example Products:** 30-year HELOC, 30-year SHELOC (Segmented HELOC)
+
+#### Category: Credit Card
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Cash Back** | Gold, Platinum |
+| **Travel** | Gold, Platinum |
+
+#### Category: Personal Loans
+
+**Example Products:** 3 year, 5 year
+
+#### Category: Auto Loans
+
+**Example Products:** 3 year, 5 year, 7 year
+
+#### Category: Student Loans
+
+**Example Products:** 30-year
+
+---
+
+### Retail > Services
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Internet banking platform access |
+| **Mobile Banking** | Mobile app banking access |
+| **Bill Pay** | Online bill payment service |
+| **Overdraft** | Overdraft protection service |
+| **Mobile Deposits** | Mobile check deposit capability |
+| **Person-to-Person Payments (P2P)** | Peer-to-peer payment services (e.g., Zelle) |
+| **Debit Cards** | Debit card issuance and management |
+| **Safe Deposit Boxes** | Physical safe deposit box rental |
+
+---
+
+## Business
+
+The Business line of business covers commercial/business banking products, including Cash Management Services (Treasury Management).
+
+### Business > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Checking |
+| **Corporate** | Corporate Checking |
+| **Analyzed** | Business Analysis Checking |
+| **Non-Profit** | Non-profit Checking |
+
+#### Category: Savings
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Savings |
+| **Corporate** | Business Money Market |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Business > Loans
+
+| Category | Special | Example Products |
+|----------|---------|-----------------|
+| **Real Estate** | ARM | 1-year ARM |
+| **Real Estate** | Fixed | 15-year fixed |
+| **Real Estate** | Fixed-to-ARM | 5-year FTA |
+| **Receivables-Based** | ARM | 6-month ARM, 1-year ARM |
+| **Line of Credit** | ARM | 6-month ARM, 1-year ARM |
+| **Equipment Financing** | ARM | 6-month ARM, 1-year ARM |
+| **Credit Card** | — | Gold, Platinum |
+
+---
+
+### Business > Cash Management Services (Treasury Management)
+
+Cash Management Services (AKA Treasury Management) is a specialized Product Type available only under the Business line of business. These are operational banking services — not deposit or loan products — that businesses use to manage their cash flow, payments, and receivables.
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Business internet banking platform |
+| **Mobile Banking** | Business mobile banking app |
+| **ACH** | Automated Clearing House origination and receipt |
+| **Wire (Domestic)** | Domestic wire transfer services |
+| **SWIFT Wires (International)** | International wire transfer services |
+| **Overdraft** | Business overdraft protection |
+| **Remote Deposit Capture** | Scanning and depositing checks remotely |
+| **Debit Cards** | Business debit card issuance |
+| **Positive Pay** | Check fraud prevention — verifying checks against issued list |
+| **Account Reconciliation** | Automated reconciliation of bank and book records |
+| **Target Balance Accounts** | AKA Zero Balance Accounts — auto-sweep to maintain target balance |
+| **Sweeps** | Automated sweep of excess funds to investment or interest-bearing accounts |
+| **Controlled Disbursement Accounts** | Early notification of daily check presentment for cash planning |
+| **Payroll** | Payroll processing and distribution |
+| **Collections** | Receivables collection services |
+| **Lockbox** | Mail-based payment processing at a bank facility |
+| **Armored Car** | Secure cash pickup and delivery |
+| **Cash Vault** | Cash management and coin/currency ordering |
+| **Merchant Services** | Card point-of-sale processing services |
+| **Transaction Monitoring** | Real-time or batch monitoring of account transactions |
+| **Foreign Currency Exchange (FX)** | Foreign exchange transaction services |
+
+---
+
+## Wealth Management
+
+The Wealth Management line of business covers trust, fiduciary, investment, and securities products.
+
+### Wealth Management > Securities
+
+#### Category: Transaction
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Trading** | Cash Management Account |
+| **Retirement** | Traditional IRA, Roth IRA, 401k |
+
+#### Category: Loans
+
+**Example Products:** Margin
+
+---
+
+## Raw Data Input Fields
+
+The AI model uses these fields from the raw data files as inputs for product classification:
+
+| Data Source | File | Key Field | Context Fields | Description |
+|------------|------|-----------|---------------|-------------|
+| **Deposits** | `CheckingIQ_Deposit_ALL` | `ACTYPE` | `SCCODE`, `DDPSCOD` | Product type code (CK, MM, SV, etc.) |
+| **Loans** | `CheckingIQ_Loan_13Month_All` | `ACTYPE` | `PURCOD`, `PurposeDescription`, `type`, `LoanTypeDesc` | Loan type code + purpose code for consumer/business distinction |
+| **CDs** | `CheckingIQ_CD_All` | `ACTYPE` | `ARGPRDCOD`, `CDTERM`, `Term_Code` | CD type code + term information |
+| **Customers** | `CheckingIQ_CI_All` | `CFCLAS` | — | Customer class code (Individual, Business, Corporation, etc.) |
+
+### Purpose Codes (PURCOD) — Consumer vs Business Indicator
+
+| Code | Description | Maps to LoB |
+|------|-------------|-------------|
+| 01 | Personal/Household | Retail |
+| 02 | Real Estate — Residential | Retail |
+| 03 | Real Estate — Commercial | Business |
+| 04 | Business — Commercial | Business |
+| 05 | Farm — Real Estate | Business |
+| 06 | Farm — Non-Real Estate | Business |
+| 07 | Government | Context-dependent |
+| 08 | Foreign | Context-dependent |
+| 09 | Financial Institution | Business |
+| 10 | Tax Exempt / Non-Profit | Context-dependent |
+| 11 | Other | Context-dependent |
+
+---
+
+## Classification Rules for the AI Model
+
+1. **First determine Line of Business** (Retail, Business, or Wealth Management):
+   - Use customer class codes (`CFCLAS`): I = Individual → Retail; B, C, P = Business → Business; T, E, F = Wealth Management
+   - Use loan purpose codes (`PURCOD`): 01–02 → Retail; 03–06, 09 → Business
+   - Public Funds and Government accounts are ambiguous — flag for manual review if uncertain
+
+2. **Then classify the Product Type** (Level 2):
+   - Deposits: ACTYPE codes indicating DDA, savings, money market, or CD products
+   - Loans: ACTYPE codes indicating mortgage, HELOC, credit card, personal, auto, student, or commercial loan products
+   - Services: Non-deposit, non-loan products and capabilities (Retail only)
+   - Cash Management Services: Treasury/operational services (Business only)
+   - Securities: Investment and brokerage products (Wealth Management only)
+
+3. **Then determine the Category** (Level 3) within the Product Type based on the specific ACTYPE and its description.
+
+4. **Sub-category and Special** (Levels 4–5) are FI-configurable:
+   - Propose when the raw data provides enough context (e.g., product description contains "Jumbo", "Premium", "HSA")
+   - Leave blank when insufficient information — the FI user will fill these in
+
+5. **Each product code maps to exactly one path** in the taxonomy tree. There is no multi-label classification.
+
+6. **Retail and Business share some Categories** (Checking, Savings, CDs) but have different Sub-categories and different Loan structures. The LoB distinction must be made before Category assignment.
+
+7. **Wealth Management** has its own unique structure (Securities > Transaction/Loans) that does not overlap with Retail/Business patterns.
+
+---
+
+## Output Schema
+
+For each product code, the model should produce:
+
+| Field | Description | Example (Retail Deposit) | Example (Business Loan) |
+|-------|-------------|--------------------------|------------------------|
+| `PROD_line_of_business` (Level 1) | Line of Business | Retail | Business |
+| `PROD_product_type` (Level 2) | Product Type | Deposits | Loans |
+| `PROD_product_category` (Level 3) | Category | Checking | Real Estate |
+| `PROD_product_name` (Level 4) | Sub-category | Premium | — |
+| `PROD_product_code` (Level 5) | Special | — | Fixed |
+| `PROD_core_system_mapping` | Raw bank code (input) | CK | BG |
+
+---
+
+## Key Differences from Transaction Taxonomy
+
+| Aspect | Product Taxonomy | Transaction Taxonomy |
+|--------|-----------------|---------------------|
+| **Levels** | 5 levels (all active) | 4 active levels (Level 5 descoped) |
+| **Structure** | Single tree with 3 LoB branches | Two independent blocks (Block A / Block B) |
+| **Canonical levels** | 1–3 (StrategyCorp-defined) | All 4 levels are StrategyCorp-defined |
+| **FI-configurable** | Levels 4–5 (Sub-category, Special) | None (all canonical) |
+| **Dynamic labels** | All level names can be renamed by FI | Fixed level names |
+| **Scoring** | No include_in_scoring equivalent | include_in_scoring is a key derived field |
+| **Input fields** | ACTYPE, PURCOD, CFCLAS | TRANCD, EFHDS1, EFHDS2 |
+| **Target table** | `product_type_configuration_master` | `transaction_code_mapping_master` |
+
+
+### Classification Rules
+
+1. **Line of Business (Level 1) — `PROD_line_of_business`:**
+   Determine whether the product belongs to Retail, Business, or Wealth Management.
+   - **RETAIL** — consumer/individual banking products (personal checking, savings,
+     consumer loans, mortgages, HELOCs, auto loans, etc.)
+   - **BUSINESS** — commercial/business banking products (business checking, commercial
+     loans, treasury management, commercial real estate, agricultural loans, etc.)
+   - **WEALTH MANAGEMENT** — trust, fiduciary, investment, and securities products.
+     Classify as WEALTH MANAGEMENT ONLY when the product name or code explicitly
+     indicates fiduciary, trust, or securities management (keywords: FIDUCIARY, TRUST,
+     UTMA, UGMA, IRA, ESTATE).
+
+2. **Product Category (Level 2) — `PROD_product_category`:**
+   One of: DEPOSITS, LOANS, SERVICES.
+   Determined by the product nature (checking/savings/MM = DEPOSITS, mortgage/HELOC/personal/auto = LOANS).
+
+3. **Product Type (Level 3) — `PROD_product_type`:**
+   The specific product type within the category. Use these strings:
+   - Deposits: CHECKING, SAVINGS, MONEY MARKET
+   - Loans: MORTGAGE, HOME EQUITY, LINE OF CREDIT, PERSONAL, AUTO,
+     COMMERCIAL, COMMERCIAL REAL ESTATE, AGRICULTURAL, REAL ESTATE,
+     RECEIVABLES-BASED, EQUIPMENT FINANCING
+
+4. **Product Name (Level 4) — `PROD_product_name`:**
+   Derive from the product description — the distinguishing feature within its
+   Level 3 type (e.g., "PREMIUM", "BASIC", "INTEREST BEARING", "PLATINUM").
+   Use null if no meaningful distinction can be made.
+
+5. **Product Code (Level 5) — `PROD_product_code`:**
+   Special designation evident from the product name (e.g., HSA, UTMA, ARM, FIXED).
+   Use null for most products.
+
+6. **Output values MUST be UPPERCASED** (e.g., "RETAIL" not "Retail", "DEPOSITS" not "Deposits").
+
+7. Use null for any level if no mapping fits. Do not guess.
+
+8. `confidence`: 0.0 to 1.0 — your certainty in the classification.
+
+### Few-Shot Examples
+
+Input: product_code=CK, SAMPLES="Personal Checking (15,000)"
+Output: {{
+  "PROD_core_system_mapping": "CK",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "PERSONAL CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.95
+}}
+
+Input: product_code=R1, SAMPLES="Residential RE Fixed (55,577)"
+Output: {{
+  "PROD_core_system_mapping": "R1",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "MORTGAGE",
+  "PROD_product_name": "RESIDENTIAL RE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.93
+}}
+
+Input: product_code=B1, SAMPLES="Business Checking (17,978)"
+Output: {{
+  "PROD_core_system_mapping": "B1",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "BUSINESS CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.92
+}}
+
+Input: product_code=MM, SAMPLES="Money Market Savings (1,132)"
+Output: {{
+  "PROD_core_system_mapping": "MM",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "MONEY MARKET",
+  "PROD_product_name": "MONEY MARKET SAVINGS",
+  "PROD_product_code": null,
+  "confidence": 0.94
+}}
+
+Input: product_code=BC, SAMPLES="CRE Fixed (14,402)"
+Output: {{
+  "PROD_core_system_mapping": "BC",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "COMMERCIAL REAL ESTATE",
+  "PROD_product_name": "CRE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.91
+}}
+
+Input: product_code=F1, SAMPLES="Fiduciary Bus Int Ck (9)"
+Output: {{
+  "PROD_core_system_mapping": "F1",
+  "PROD_line_of_business": "WEALTH MANAGEMENT",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "FIDUCIARY BUSINESS INTEREST CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.88
+}}
+
+Classify these 30 product codes:
+
+  - product_code=76, SAMPLES="CREDITPLUS CHECKING (50)", VOLUME=50
+  - product_code=89, SAMPLES="PUBLIC FUNDS SPECIAL (43)", VOLUME=43
+  - product_code=95, SAMPLES="COMMERCIAL CHECKING (31)", VOLUME=31
+  - product_code=A1, SAMPLES="AG RE - Fixed (50)", VOLUME=50
+  - product_code=A2, SAMPLES="AG RE - Var (50)", VOLUME=50
+  - product_code=A5, SAMPLES="AG - Fixed (50)", VOLUME=50
+  - product_code=A6, SAMPLES="AG - Var (50)", VOLUME=50
+  - product_code=B0, SAMPLES="NF NR Var (50)", VOLUME=50
+  - product_code=B1, SAMPLES="LEGACY BUSINESS CK (50)", VOLUME=50
+  - product_code=B2, SAMPLES="BUSINESS BASICS CK (50)", VOLUME=50
+  - product_code=B3, SAMPLES="BUSINESS PREMIER CK (50)", VOLUME=50
+  - product_code=B4, SAMPLES="BUSINESS ELITE CK (50)", VOLUME=50
+  - product_code=B5, SAMPLES="COMMERCIAL ANALYSIS (50)", VOLUME=50
+  - product_code=B6, SAMPLES="MFR - Var (50)", VOLUME=50
+  - product_code=B9, SAMPLES="NF NR Fixed (50)", VOLUME=50
+  - product_code=BC, SAMPLES="CRE - Fixed (50)", VOLUME=50
+  - product_code=BD, SAMPLES="CRE - Var (50)", VOLUME=50
+  - product_code=BG, SAMPLES="Taxable Loan SCM (1)", VOLUME=1
+  - product_code=BH, SAMPLES="Non Taxable Ln SCM (6)", VOLUME=6
+  - product_code=BJ, SAMPLES="Non Dep FI Var (13)", VOLUME=13
+  - product_code=BN, SAMPLES="P or C Sec Fixed (20)", VOLUME=20
+  - product_code=BO, SAMPLES="P or C Sec Var (2)", VOLUME=2
+  - product_code=BR, SAMPLES="Oth NCL Fixed (1)", VOLUME=1
+  - product_code=BV, SAMPLES="Comm Wealth Mgmt Var (9)", VOLUME=9
+  - product_code=BW, SAMPLES="Deficiency Notes (21)", VOLUME=21
+  - product_code=C0, SAMPLES="PLOC PlatinumPlus (50)", VOLUME=50
+  - product_code=C1, SAMPLES="HIGH YIELD CHECKING (50)", VOLUME=50
+  - product_code=C3, SAMPLES="VALUEPLUS CHECKING (50)", VOLUME=50
+  - product_code=C4, SAMPLES="CAREFREE CHECKING (50)", VOLUME=50
+  - product_code=C5, SAMPLES="VALUEPLUS INTEREST (50)", VOLUME=50
+
+Return a JSON object with a "classifications" array containing one entry per product code. Use the EXACT output schema specified.', responseFormat => '{"type": "json_schema", "json_schema": {"name": "product_classifications", "schema": {"type": "object", "properties": {"classifications": {"type": "array", "items": {"type": "object", "properties": {"PROD_core_system_mapping": {"type": "string"}, "PROD_line_of_business": {"type": "string"}, "PROD_product_category": {"type": "string"}, "PROD_product_type": {"type": "string"}, "PROD_product_name": {"type": ["string", "null"]}, "PROD_product_code": {"type": ["string", "null"]}, "confidence": {"type": "number"}}, "required": ["PROD_core_system_mapping", "PROD_line_of_business", "PROD_product_category", "PROD_product_type", "PROD_product_name", "PROD_product_code", "confidence"]}}}, "required": ["classifications"]}, "strict": true}}') as result (base.py:2626)
+2026-03-11 10:24:08,253 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:08,253 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:13,521 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:13,522 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:18,708 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:18,708 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:23,924 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:23,925 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:29,072 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:29,072 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:32,407 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:32,408 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:32,580 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:32,581 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:32,727 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:32,727 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:32,735 - MainThread - models.suggestions.product_mapping - INFO - Batch 2/5: classified 30 codes (<string>:63)
+2026-03-11 10:24:32,737 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ SELECT ai_query('databricks-claude-sonnet-4-5', 'You are a product categorization engine for US community banks and financial institutions.
+Given a list of product codes with descriptions, classify each into the StrategyCorp product taxonomy below.
+
+# Product Categorization Taxonomy
+
+**Source:** [Product Categories (Notion)](https://www.notion.so/Product-Categories-2a9ee9c7060580cb86dffe5fa46d9980)  
+**Target Table:** `product_type_configuration_master`  
+**Last Updated:** 2026-02-26
+
+---
+
+## Purpose
+
+When a new financial institution (FI) is onboarded onto CheckingIQ / MonetizeIQ, their raw product codes must be normalized into StrategyCorp''s canonical product taxonomy. This taxonomy drives:
+
+- **Dashboard reporting** — product mix analysis, balance composition, growth metrics
+- **Customer scoring** — relationship depth indicators, cross-sell opportunity identification
+- **Revenue analysis** — fee income attribution by product line
+- **Scalability** — a single classification structure that works across all FIs regardless of core banking system
+
+### AI Model Goal
+
+The AI model should **pre-map ~80% of a bank''s product codes** into this taxonomy, leaving the remainder flagged for manual review. A typical FI has ~80 deposit/DDA codes and ~60 loan codes. If the model maps the majority automatically, it dramatically reduces onboarding effort.
+
+When the model **cannot confidently categorize** a product code, it must be flagged for manual review — never force-fitted into a wrong category.
+
+---
+
+## Hierarchy Overview
+
+The taxonomy has **5 levels**. Levels 1–3 are **StrategyCorp-defined** (canonical across all FIs). Levels 4–5 are **FI-configurable** (each bank customizes to match their internal nomenclature).
+
+| Level | Name | Configuration | Silver Model Field | Description |
+|-------|------|---------------|-------------------|-------------|
+| **Level 1** | Line of Business | StrategyCorp-defined | `PROD_line_of_business` | Retail, Business, or Wealth Management |
+| **Level 2** | Type | StrategyCorp-defined | `PROD_product_type` | Deposits, Loans, Services, Securities, Cash Management |
+| **Level 3** | Category | StrategyCorp-defined | `PROD_product_category` | Checking, Savings, CDs, Mortgage, HELOC, etc. |
+| **Level 4** | Sub-category | FI-configurable | `PROD_product_name` | Basic, Premium, Jumbo, Small Business, etc. |
+| **Level 5** | Special | FI-configurable | `PROD_product_code` | ARM, Fixed, Custodial, <$1M, >$1M, etc. |
+
+All level names are **dynamic** — the FI can rename them in the UI to mirror their internal terminology (e.g., rename "Line of Business" to "Division" or "Category" to "Product Family").
+
+```
+Level 1: Line of Business          (StrategyCorp-defined)
+  └─ Level 2: Type                 (StrategyCorp-defined)
+       └─ Level 3: Category        (StrategyCorp-defined)
+            └─ Level 4: Sub-category   (FI-configurable)
+                 └─ Level 5: Special    (FI-configurable)
+```
+
+---
+
+## Level 1 — Line of Business
+
+| Value | Description |
+|-------|-------------|
+| **Retail** | Consumer/individual banking products and services |
+| **Business** | Commercial/business banking products, services, and treasury management |
+| **Wealth Management** | Trust, fiduciary, investment, and securities products |
+
+---
+
+## Retail
+
+The Retail line of business covers all consumer/individual banking products.
+
+### Retail > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Checking |
+| **Premium** | — | Premium Checking |
+| **BaZing** | — | Good Checking, Better Checking, Best Checking |
+| — | **Custodial** | UGMA, UTMA |
+
+#### Category: Savings
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Savings |
+| **Premium** | — | Premium Savings, Money Market |
+| — | **Government** | Health Savings Accounts (HSAs), Educational Savings Accounts |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Retail > Loans
+
+#### Category: Mortgage Loans
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Jumbo** | ARM | 1-year ARM |
+| **Jumbo** | Fixed | 15-year fixed |
+| **Jumbo** | Fixed-to-ARM | 5-year FTA |
+| **Conforming** | ARM | 1-year ARM |
+| **Conforming** | Fixed | 15-year fixed |
+| **Conforming** | Fixed-to-ARM | 5-year FTA |
+
+#### Category: HELOCs (Home Equity Lines of Credit)
+
+**Example Products:** 30-year HELOC, 30-year SHELOC (Segmented HELOC)
+
+#### Category: Credit Card
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Cash Back** | Gold, Platinum |
+| **Travel** | Gold, Platinum |
+
+#### Category: Personal Loans
+
+**Example Products:** 3 year, 5 year
+
+#### Category: Auto Loans
+
+**Example Products:** 3 year, 5 year, 7 year
+
+#### Category: Student Loans
+
+**Example Products:** 30-year
+
+---
+
+### Retail > Services
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Internet banking platform access |
+| **Mobile Banking** | Mobile app banking access |
+| **Bill Pay** | Online bill payment service |
+| **Overdraft** | Overdraft protection service |
+| **Mobile Deposits** | Mobile check deposit capability |
+| **Person-to-Person Payments (P2P)** | Peer-to-peer payment services (e.g., Zelle) |
+| **Debit Cards** | Debit card issuance and management |
+| **Safe Deposit Boxes** | Physical safe deposit box rental |
+
+---
+
+## Business
+
+The Business line of business covers commercial/business banking products, including Cash Management Services (Treasury Management).
+
+### Business > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Checking |
+| **Corporate** | Corporate Checking |
+| **Analyzed** | Business Analysis Checking |
+| **Non-Profit** | Non-profit Checking |
+
+#### Category: Savings
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Savings |
+| **Corporate** | Business Money Market |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Business > Loans
+
+| Category | Special | Example Products |
+|----------|---------|-----------------|
+| **Real Estate** | ARM | 1-year ARM |
+| **Real Estate** | Fixed | 15-year fixed |
+| **Real Estate** | Fixed-to-ARM | 5-year FTA |
+| **Receivables-Based** | ARM | 6-month ARM, 1-year ARM |
+| **Line of Credit** | ARM | 6-month ARM, 1-year ARM |
+| **Equipment Financing** | ARM | 6-month ARM, 1-year ARM |
+| **Credit Card** | — | Gold, Platinum |
+
+---
+
+### Business > Cash Management Services (Treasury Management)
+
+Cash Management Services (AKA Treasury Management) is a specialized Product Type available only under the Business line of business. These are operational banking services — not deposit or loan products — that businesses use to manage their cash flow, payments, and receivables.
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Business internet banking platform |
+| **Mobile Banking** | Business mobile banking app |
+| **ACH** | Automated Clearing House origination and receipt |
+| **Wire (Domestic)** | Domestic wire transfer services |
+| **SWIFT Wires (International)** | International wire transfer services |
+| **Overdraft** | Business overdraft protection |
+| **Remote Deposit Capture** | Scanning and depositing checks remotely |
+| **Debit Cards** | Business debit card issuance |
+| **Positive Pay** | Check fraud prevention — verifying checks against issued list |
+| **Account Reconciliation** | Automated reconciliation of bank and book records |
+| **Target Balance Accounts** | AKA Zero Balance Accounts — auto-sweep to maintain target balance |
+| **Sweeps** | Automated sweep of excess funds to investment or interest-bearing accounts |
+| **Controlled Disbursement Accounts** | Early notification of daily check presentment for cash planning |
+| **Payroll** | Payroll processing and distribution |
+| **Collections** | Receivables collection services |
+| **Lockbox** | Mail-based payment processing at a bank facility |
+| **Armored Car** | Secure cash pickup and delivery |
+| **Cash Vault** | Cash management and coin/currency ordering |
+| **Merchant Services** | Card point-of-sale processing services |
+| **Transaction Monitoring** | Real-time or batch monitoring of account transactions |
+| **Foreign Currency Exchange (FX)** | Foreign exchange transaction services |
+
+---
+
+## Wealth Management
+
+The Wealth Management line of business covers trust, fiduciary, investment, and securities products.
+
+### Wealth Management > Securities
+
+#### Category: Transaction
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Trading** | Cash Management Account |
+| **Retirement** | Traditional IRA, Roth IRA, 401k |
+
+#### Category: Loans
+
+**Example Products:** Margin
+
+---
+
+## Raw Data Input Fields
+
+The AI model uses these fields from the raw data files as inputs for product classification:
+
+| Data Source | File | Key Field | Context Fields | Description |
+|------------|------|-----------|---------------|-------------|
+| **Deposits** | `CheckingIQ_Deposit_ALL` | `ACTYPE` | `SCCODE`, `DDPSCOD` | Product type code (CK, MM, SV, etc.) |
+| **Loans** | `CheckingIQ_Loan_13Month_All` | `ACTYPE` | `PURCOD`, `PurposeDescription`, `type`, `LoanTypeDesc` | Loan type code + purpose code for consumer/business distinction |
+| **CDs** | `CheckingIQ_CD_All` | `ACTYPE` | `ARGPRDCOD`, `CDTERM`, `Term_Code` | CD type code + term information |
+| **Customers** | `CheckingIQ_CI_All` | `CFCLAS` | — | Customer class code (Individual, Business, Corporation, etc.) |
+
+### Purpose Codes (PURCOD) — Consumer vs Business Indicator
+
+| Code | Description | Maps to LoB |
+|------|-------------|-------------|
+| 01 | Personal/Household | Retail |
+| 02 | Real Estate — Residential | Retail |
+| 03 | Real Estate — Commercial | Business |
+| 04 | Business — Commercial | Business |
+| 05 | Farm — Real Estate | Business |
+| 06 | Farm — Non-Real Estate | Business |
+| 07 | Government | Context-dependent |
+| 08 | Foreign | Context-dependent |
+| 09 | Financial Institution | Business |
+| 10 | Tax Exempt / Non-Profit | Context-dependent |
+| 11 | Other | Context-dependent |
+
+---
+
+## Classification Rules for the AI Model
+
+1. **First determine Line of Business** (Retail, Business, or Wealth Management):
+   - Use customer class codes (`CFCLAS`): I = Individual → Retail; B, C, P = Business → Business; T, E, F = Wealth Management
+   - Use loan purpose codes (`PURCOD`): 01–02 → Retail; 03–06, 09 → Business
+   - Public Funds and Government accounts are ambiguous — flag for manual review if uncertain
+
+2. **Then classify the Product Type** (Level 2):
+   - Deposits: ACTYPE codes indicating DDA, savings, money market, or CD products
+   - Loans: ACTYPE codes indicating mortgage, HELOC, credit card, personal, auto, student, or commercial loan products
+   - Services: Non-deposit, non-loan products and capabilities (Retail only)
+   - Cash Management Services: Treasury/operational services (Business only)
+   - Securities: Investment and brokerage products (Wealth Management only)
+
+3. **Then determine the Category** (Level 3) within the Product Type based on the specific ACTYPE and its description.
+
+4. **Sub-category and Special** (Levels 4–5) are FI-configurable:
+   - Propose when the raw data provides enough context (e.g., product description contains "Jumbo", "Premium", "HSA")
+   - Leave blank when insufficient information — the FI user will fill these in
+
+5. **Each product code maps to exactly one path** in the taxonomy tree. There is no multi-label classification.
+
+6. **Retail and Business share some Categories** (Checking, Savings, CDs) but have different Sub-categories and different Loan structures. The LoB distinction must be made before Category assignment.
+
+7. **Wealth Management** has its own unique structure (Securities > Transaction/Loans) that does not overlap with Retail/Business patterns.
+
+---
+
+## Output Schema
+
+For each product code, the model should produce:
+
+| Field | Description | Example (Retail Deposit) | Example (Business Loan) |
+|-------|-------------|--------------------------|------------------------|
+| `PROD_line_of_business` (Level 1) | Line of Business | Retail | Business |
+| `PROD_product_type` (Level 2) | Product Type | Deposits | Loans |
+| `PROD_product_category` (Level 3) | Category | Checking | Real Estate |
+| `PROD_product_name` (Level 4) | Sub-category | Premium | — |
+| `PROD_product_code` (Level 5) | Special | — | Fixed |
+| `PROD_core_system_mapping` | Raw bank code (input) | CK | BG |
+
+---
+
+## Key Differences from Transaction Taxonomy
+
+| Aspect | Product Taxonomy | Transaction Taxonomy |
+|--------|-----------------|---------------------|
+| **Levels** | 5 levels (all active) | 4 active levels (Level 5 descoped) |
+| **Structure** | Single tree with 3 LoB branches | Two independent blocks (Block A / Block B) |
+| **Canonical levels** | 1–3 (StrategyCorp-defined) | All 4 levels are StrategyCorp-defined |
+| **FI-configurable** | Levels 4–5 (Sub-category, Special) | None (all canonical) |
+| **Dynamic labels** | All level names can be renamed by FI | Fixed level names |
+| **Scoring** | No include_in_scoring equivalent | include_in_scoring is a key derived field |
+| **Input fields** | ACTYPE, PURCOD, CFCLAS | TRANCD, EFHDS1, EFHDS2 |
+| **Target table** | `product_type_configuration_master` | `transaction_code_mapping_master` |
+
+
+### Classification Rules
+
+1. **Line of Business (Level 1) — `PROD_line_of_business`:**
+   Determine whether the product belongs to Retail, Business, or Wealth Management.
+   - **RETAIL** — consumer/individual banking products (personal checking, savings,
+     consumer loans, mortgages, HELOCs, auto loans, etc.)
+   - **BUSINESS** — commercial/business banking products (business checking, commercial
+     loans, treasury management, commercial real estate, agricultural loans, etc.)
+   - **WEALTH MANAGEMENT** — trust, fiduciary, investment, and securities products.
+     Classify as WEALTH MANAGEMENT ONLY when the product name or code explicitly
+     indicates fiduciary, trust, or securities management (keywords: FIDUCIARY, TRUST,
+     UTMA, UGMA, IRA, ESTATE).
+
+2. **Product Category (Level 2) — `PROD_product_category`:**
+   One of: DEPOSITS, LOANS, SERVICES.
+   Determined by the product nature (checking/savings/MM = DEPOSITS, mortgage/HELOC/personal/auto = LOANS).
+
+3. **Product Type (Level 3) — `PROD_product_type`:**
+   The specific product type within the category. Use these strings:
+   - Deposits: CHECKING, SAVINGS, MONEY MARKET
+   - Loans: MORTGAGE, HOME EQUITY, LINE OF CREDIT, PERSONAL, AUTO,
+     COMMERCIAL, COMMERCIAL REAL ESTATE, AGRICULTURAL, REAL ESTATE,
+     RECEIVABLES-BASED, EQUIPMENT FINANCING
+
+4. **Product Name (Level 4) — `PROD_product_name`:**
+   Derive from the product description — the distinguishing feature within its
+   Level 3 type (e.g., "PREMIUM", "BASIC", "INTEREST BEARING", "PLATINUM").
+   Use null if no meaningful distinction can be made.
+
+5. **Product Code (Level 5) — `PROD_product_code`:**
+   Special designation evident from the product name (e.g., HSA, UTMA, ARM, FIXED).
+   Use null for most products.
+
+6. **Output values MUST be UPPERCASED** (e.g., "RETAIL" not "Retail", "DEPOSITS" not "Deposits").
+
+7. Use null for any level if no mapping fits. Do not guess.
+
+8. `confidence`: 0.0 to 1.0 — your certainty in the classification.
+
+### Few-Shot Examples
+
+Input: product_code=CK, SAMPLES="Personal Checking (15,000)"
+Output: {{
+  "PROD_core_system_mapping": "CK",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "PERSONAL CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.95
+}}
+
+Input: product_code=R1, SAMPLES="Residential RE Fixed (55,577)"
+Output: {{
+  "PROD_core_system_mapping": "R1",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "MORTGAGE",
+  "PROD_product_name": "RESIDENTIAL RE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.93
+}}
+
+Input: product_code=B1, SAMPLES="Business Checking (17,978)"
+Output: {{
+  "PROD_core_system_mapping": "B1",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "BUSINESS CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.92
+}}
+
+Input: product_code=MM, SAMPLES="Money Market Savings (1,132)"
+Output: {{
+  "PROD_core_system_mapping": "MM",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "MONEY MARKET",
+  "PROD_product_name": "MONEY MARKET SAVINGS",
+  "PROD_product_code": null,
+  "confidence": 0.94
+}}
+
+Input: product_code=BC, SAMPLES="CRE Fixed (14,402)"
+Output: {{
+  "PROD_core_system_mapping": "BC",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "COMMERCIAL REAL ESTATE",
+  "PROD_product_name": "CRE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.91
+}}
+
+Input: product_code=F1, SAMPLES="Fiduciary Bus Int Ck (9)"
+Output: {{
+  "PROD_core_system_mapping": "F1",
+  "PROD_line_of_business": "WEALTH MANAGEMENT",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "FIDUCIARY BUSINESS INTEREST CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.88
+}}
+
+Classify these 30 product codes:
+
+  - product_code=C6, SAMPLES="VALUEPLUS STUDENT CK (50)", VOLUME=50
+  - product_code=C7, SAMPLES="HY MM PLUS (50)", VOLUME=50
+  - product_code=C8, SAMPLES="HY BUS MM PLUS (50)", VOLUME=50
+  - product_code=C9, SAMPLES="CONTINENTAL TIRE CK (50)", VOLUME=50
+  - product_code=CC, SAMPLES="PLOC Medical Res (50)", VOLUME=50
+  - product_code=CF, SAMPLES="Chargeoff Ckig Fraud (50)", VOLUME=50
+  - product_code=CG, SAMPLES="Consumer Wealth Mgmt (38) | Chargeoff Sav Fraud (12)", VOLUME=50
+  - product_code=CI, SAMPLES="AL PLOC Special (1)", VOLUME=1
+  - product_code=CJ, SAMPLES="LA PLOC Special (50)", VOLUME=50
+  - product_code=CO, SAMPLES="Chargeoff Ckig Bkway (50)", VOLUME=50
+  - product_code=CS, SAMPLES="Chargeoff Sav Bkway (50)", VOLUME=50
+  - product_code=D1, SAMPLES="1-4 FRC Fixed (46) | CT INVESTMENT CK (4)", VOLUME=50
+  - product_code=D2, SAMPLES="1-4 FRC Var (50)", VOLUME=50
+  - product_code=D3, SAMPLES="CAREFREE CHK GF (50)", VOLUME=50
+  - product_code=D4, SAMPLES="PREMIER MM (50)", VOLUME=50
+  - product_code=D5, SAMPLES="PREMIER BUSINESS MM (31) | Oth CLD Fixed (19)", VOLUME=50
+  - product_code=D6, SAMPLES="HY MM EMERALD (50)", VOLUME=50
+  - product_code=D7, SAMPLES="HY BUS MM EMERALD (22)", VOLUME=22
+  - product_code=D8, SAMPLES="HY MM DIAMOND (50)", VOLUME=50
+  - product_code=D9, SAMPLES="HY BUS MM DIAMOND (50)", VOLUME=50
+  - product_code=E2, SAMPLES="TUITION MONEY MGR (3)", VOLUME=3
+  - product_code=E3, SAMPLES="BANKPLUS TUITION (50)", VOLUME=50
+  - product_code=F1, SAMPLES="FIDUCIARY BUS INT CK (9)", VOLUME=9
+  - product_code=F2, SAMPLES="FIDUCIARY PER INT CK (50)", VOLUME=50
+  - product_code=F3, SAMPLES="FIDUCIARY SAVINGS (32)", VOLUME=32
+  - product_code=F4, SAMPLES="UTMA SAVINGS (50)", VOLUME=50
+  - product_code=H1, SAMPLES="HY HYBRID INVESTMENT (50)", VOLUME=50
+  - product_code=H2, SAMPLES="BUS HY HYBRID INVEST (50)", VOLUME=50
+  - product_code=H3, SAMPLES="HY HYBRID INVESTMENT (50)", VOLUME=50
+  - product_code=H4, SAMPLES="BUS HY HYBRID INVEST (50)", VOLUME=50
+
+Return a JSON object with a "classifications" array containing one entry per product code. Use the EXACT output schema specified.', responseFormat => '{"type": "json_schema", "json_schema": {"name": "product_classifications", "schema": {"type": "object", "properties": {"classifications": {"type": "array", "items": {"type": "object", "properties": {"PROD_core_system_mapping": {"type": "string"}, "PROD_line_of_business": {"type": "string"}, "PROD_product_category": {"type": "string"}, "PROD_product_type": {"type": "string"}, "PROD_product_name": {"type": ["string", "null"]}, "PROD_product_code": {"type": ["string", "null"]}, "confidence": {"type": "number"}}, "required": ["PROD_core_system_mapping", "PROD_line_of_business", "PROD_product_category", "PROD_product_type", "PROD_product_name", "PROD_product_code", "confidence"]}}}, "required": ["classifications"]}, "strict": true}}') as result (base.py:2626)
+2026-03-11 10:24:32,945 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:32,945 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:38,191 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:38,191 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:43,352 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:43,353 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:48,554 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:48,555 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:53,714 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:53,714 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:58,896 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:58,897 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:24:59,918 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:24:59,919 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:00,106 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:00,107 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:00,280 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:00,281 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:00,285 - MainThread - models.suggestions.product_mapping - INFO - Batch 3/5: classified 30 codes (<string>:63)
+2026-03-11 10:25:00,287 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ SELECT ai_query('databricks-claude-sonnet-4-5', 'You are a product categorization engine for US community banks and financial institutions.
+Given a list of product codes with descriptions, classify each into the StrategyCorp product taxonomy below.
+
+# Product Categorization Taxonomy
+
+**Source:** [Product Categories (Notion)](https://www.notion.so/Product-Categories-2a9ee9c7060580cb86dffe5fa46d9980)  
+**Target Table:** `product_type_configuration_master`  
+**Last Updated:** 2026-02-26
+
+---
+
+## Purpose
+
+When a new financial institution (FI) is onboarded onto CheckingIQ / MonetizeIQ, their raw product codes must be normalized into StrategyCorp''s canonical product taxonomy. This taxonomy drives:
+
+- **Dashboard reporting** — product mix analysis, balance composition, growth metrics
+- **Customer scoring** — relationship depth indicators, cross-sell opportunity identification
+- **Revenue analysis** — fee income attribution by product line
+- **Scalability** — a single classification structure that works across all FIs regardless of core banking system
+
+### AI Model Goal
+
+The AI model should **pre-map ~80% of a bank''s product codes** into this taxonomy, leaving the remainder flagged for manual review. A typical FI has ~80 deposit/DDA codes and ~60 loan codes. If the model maps the majority automatically, it dramatically reduces onboarding effort.
+
+When the model **cannot confidently categorize** a product code, it must be flagged for manual review — never force-fitted into a wrong category.
+
+---
+
+## Hierarchy Overview
+
+The taxonomy has **5 levels**. Levels 1–3 are **StrategyCorp-defined** (canonical across all FIs). Levels 4–5 are **FI-configurable** (each bank customizes to match their internal nomenclature).
+
+| Level | Name | Configuration | Silver Model Field | Description |
+|-------|------|---------------|-------------------|-------------|
+| **Level 1** | Line of Business | StrategyCorp-defined | `PROD_line_of_business` | Retail, Business, or Wealth Management |
+| **Level 2** | Type | StrategyCorp-defined | `PROD_product_type` | Deposits, Loans, Services, Securities, Cash Management |
+| **Level 3** | Category | StrategyCorp-defined | `PROD_product_category` | Checking, Savings, CDs, Mortgage, HELOC, etc. |
+| **Level 4** | Sub-category | FI-configurable | `PROD_product_name` | Basic, Premium, Jumbo, Small Business, etc. |
+| **Level 5** | Special | FI-configurable | `PROD_product_code` | ARM, Fixed, Custodial, <$1M, >$1M, etc. |
+
+All level names are **dynamic** — the FI can rename them in the UI to mirror their internal terminology (e.g., rename "Line of Business" to "Division" or "Category" to "Product Family").
+
+```
+Level 1: Line of Business          (StrategyCorp-defined)
+  └─ Level 2: Type                 (StrategyCorp-defined)
+       └─ Level 3: Category        (StrategyCorp-defined)
+            └─ Level 4: Sub-category   (FI-configurable)
+                 └─ Level 5: Special    (FI-configurable)
+```
+
+---
+
+## Level 1 — Line of Business
+
+| Value | Description |
+|-------|-------------|
+| **Retail** | Consumer/individual banking products and services |
+| **Business** | Commercial/business banking products, services, and treasury management |
+| **Wealth Management** | Trust, fiduciary, investment, and securities products |
+
+---
+
+## Retail
+
+The Retail line of business covers all consumer/individual banking products.
+
+### Retail > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Checking |
+| **Premium** | — | Premium Checking |
+| **BaZing** | — | Good Checking, Better Checking, Best Checking |
+| — | **Custodial** | UGMA, UTMA |
+
+#### Category: Savings
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Savings |
+| **Premium** | — | Premium Savings, Money Market |
+| — | **Government** | Health Savings Accounts (HSAs), Educational Savings Accounts |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Retail > Loans
+
+#### Category: Mortgage Loans
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Jumbo** | ARM | 1-year ARM |
+| **Jumbo** | Fixed | 15-year fixed |
+| **Jumbo** | Fixed-to-ARM | 5-year FTA |
+| **Conforming** | ARM | 1-year ARM |
+| **Conforming** | Fixed | 15-year fixed |
+| **Conforming** | Fixed-to-ARM | 5-year FTA |
+
+#### Category: HELOCs (Home Equity Lines of Credit)
+
+**Example Products:** 30-year HELOC, 30-year SHELOC (Segmented HELOC)
+
+#### Category: Credit Card
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Cash Back** | Gold, Platinum |
+| **Travel** | Gold, Platinum |
+
+#### Category: Personal Loans
+
+**Example Products:** 3 year, 5 year
+
+#### Category: Auto Loans
+
+**Example Products:** 3 year, 5 year, 7 year
+
+#### Category: Student Loans
+
+**Example Products:** 30-year
+
+---
+
+### Retail > Services
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Internet banking platform access |
+| **Mobile Banking** | Mobile app banking access |
+| **Bill Pay** | Online bill payment service |
+| **Overdraft** | Overdraft protection service |
+| **Mobile Deposits** | Mobile check deposit capability |
+| **Person-to-Person Payments (P2P)** | Peer-to-peer payment services (e.g., Zelle) |
+| **Debit Cards** | Debit card issuance and management |
+| **Safe Deposit Boxes** | Physical safe deposit box rental |
+
+---
+
+## Business
+
+The Business line of business covers commercial/business banking products, including Cash Management Services (Treasury Management).
+
+### Business > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Checking |
+| **Corporate** | Corporate Checking |
+| **Analyzed** | Business Analysis Checking |
+| **Non-Profit** | Non-profit Checking |
+
+#### Category: Savings
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Savings |
+| **Corporate** | Business Money Market |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Business > Loans
+
+| Category | Special | Example Products |
+|----------|---------|-----------------|
+| **Real Estate** | ARM | 1-year ARM |
+| **Real Estate** | Fixed | 15-year fixed |
+| **Real Estate** | Fixed-to-ARM | 5-year FTA |
+| **Receivables-Based** | ARM | 6-month ARM, 1-year ARM |
+| **Line of Credit** | ARM | 6-month ARM, 1-year ARM |
+| **Equipment Financing** | ARM | 6-month ARM, 1-year ARM |
+| **Credit Card** | — | Gold, Platinum |
+
+---
+
+### Business > Cash Management Services (Treasury Management)
+
+Cash Management Services (AKA Treasury Management) is a specialized Product Type available only under the Business line of business. These are operational banking services — not deposit or loan products — that businesses use to manage their cash flow, payments, and receivables.
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Business internet banking platform |
+| **Mobile Banking** | Business mobile banking app |
+| **ACH** | Automated Clearing House origination and receipt |
+| **Wire (Domestic)** | Domestic wire transfer services |
+| **SWIFT Wires (International)** | International wire transfer services |
+| **Overdraft** | Business overdraft protection |
+| **Remote Deposit Capture** | Scanning and depositing checks remotely |
+| **Debit Cards** | Business debit card issuance |
+| **Positive Pay** | Check fraud prevention — verifying checks against issued list |
+| **Account Reconciliation** | Automated reconciliation of bank and book records |
+| **Target Balance Accounts** | AKA Zero Balance Accounts — auto-sweep to maintain target balance |
+| **Sweeps** | Automated sweep of excess funds to investment or interest-bearing accounts |
+| **Controlled Disbursement Accounts** | Early notification of daily check presentment for cash planning |
+| **Payroll** | Payroll processing and distribution |
+| **Collections** | Receivables collection services |
+| **Lockbox** | Mail-based payment processing at a bank facility |
+| **Armored Car** | Secure cash pickup and delivery |
+| **Cash Vault** | Cash management and coin/currency ordering |
+| **Merchant Services** | Card point-of-sale processing services |
+| **Transaction Monitoring** | Real-time or batch monitoring of account transactions |
+| **Foreign Currency Exchange (FX)** | Foreign exchange transaction services |
+
+---
+
+## Wealth Management
+
+The Wealth Management line of business covers trust, fiduciary, investment, and securities products.
+
+### Wealth Management > Securities
+
+#### Category: Transaction
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Trading** | Cash Management Account |
+| **Retirement** | Traditional IRA, Roth IRA, 401k |
+
+#### Category: Loans
+
+**Example Products:** Margin
+
+---
+
+## Raw Data Input Fields
+
+The AI model uses these fields from the raw data files as inputs for product classification:
+
+| Data Source | File | Key Field | Context Fields | Description |
+|------------|------|-----------|---------------|-------------|
+| **Deposits** | `CheckingIQ_Deposit_ALL` | `ACTYPE` | `SCCODE`, `DDPSCOD` | Product type code (CK, MM, SV, etc.) |
+| **Loans** | `CheckingIQ_Loan_13Month_All` | `ACTYPE` | `PURCOD`, `PurposeDescription`, `type`, `LoanTypeDesc` | Loan type code + purpose code for consumer/business distinction |
+| **CDs** | `CheckingIQ_CD_All` | `ACTYPE` | `ARGPRDCOD`, `CDTERM`, `Term_Code` | CD type code + term information |
+| **Customers** | `CheckingIQ_CI_All` | `CFCLAS` | — | Customer class code (Individual, Business, Corporation, etc.) |
+
+### Purpose Codes (PURCOD) — Consumer vs Business Indicator
+
+| Code | Description | Maps to LoB |
+|------|-------------|-------------|
+| 01 | Personal/Household | Retail |
+| 02 | Real Estate — Residential | Retail |
+| 03 | Real Estate — Commercial | Business |
+| 04 | Business — Commercial | Business |
+| 05 | Farm — Real Estate | Business |
+| 06 | Farm — Non-Real Estate | Business |
+| 07 | Government | Context-dependent |
+| 08 | Foreign | Context-dependent |
+| 09 | Financial Institution | Business |
+| 10 | Tax Exempt / Non-Profit | Context-dependent |
+| 11 | Other | Context-dependent |
+
+---
+
+## Classification Rules for the AI Model
+
+1. **First determine Line of Business** (Retail, Business, or Wealth Management):
+   - Use customer class codes (`CFCLAS`): I = Individual → Retail; B, C, P = Business → Business; T, E, F = Wealth Management
+   - Use loan purpose codes (`PURCOD`): 01–02 → Retail; 03–06, 09 → Business
+   - Public Funds and Government accounts are ambiguous — flag for manual review if uncertain
+
+2. **Then classify the Product Type** (Level 2):
+   - Deposits: ACTYPE codes indicating DDA, savings, money market, or CD products
+   - Loans: ACTYPE codes indicating mortgage, HELOC, credit card, personal, auto, student, or commercial loan products
+   - Services: Non-deposit, non-loan products and capabilities (Retail only)
+   - Cash Management Services: Treasury/operational services (Business only)
+   - Securities: Investment and brokerage products (Wealth Management only)
+
+3. **Then determine the Category** (Level 3) within the Product Type based on the specific ACTYPE and its description.
+
+4. **Sub-category and Special** (Levels 4–5) are FI-configurable:
+   - Propose when the raw data provides enough context (e.g., product description contains "Jumbo", "Premium", "HSA")
+   - Leave blank when insufficient information — the FI user will fill these in
+
+5. **Each product code maps to exactly one path** in the taxonomy tree. There is no multi-label classification.
+
+6. **Retail and Business share some Categories** (Checking, Savings, CDs) but have different Sub-categories and different Loan structures. The LoB distinction must be made before Category assignment.
+
+7. **Wealth Management** has its own unique structure (Securities > Transaction/Loans) that does not overlap with Retail/Business patterns.
+
+---
+
+## Output Schema
+
+For each product code, the model should produce:
+
+| Field | Description | Example (Retail Deposit) | Example (Business Loan) |
+|-------|-------------|--------------------------|------------------------|
+| `PROD_line_of_business` (Level 1) | Line of Business | Retail | Business |
+| `PROD_product_type` (Level 2) | Product Type | Deposits | Loans |
+| `PROD_product_category` (Level 3) | Category | Checking | Real Estate |
+| `PROD_product_name` (Level 4) | Sub-category | Premium | — |
+| `PROD_product_code` (Level 5) | Special | — | Fixed |
+| `PROD_core_system_mapping` | Raw bank code (input) | CK | BG |
+
+---
+
+## Key Differences from Transaction Taxonomy
+
+| Aspect | Product Taxonomy | Transaction Taxonomy |
+|--------|-----------------|---------------------|
+| **Levels** | 5 levels (all active) | 4 active levels (Level 5 descoped) |
+| **Structure** | Single tree with 3 LoB branches | Two independent blocks (Block A / Block B) |
+| **Canonical levels** | 1–3 (StrategyCorp-defined) | All 4 levels are StrategyCorp-defined |
+| **FI-configurable** | Levels 4–5 (Sub-category, Special) | None (all canonical) |
+| **Dynamic labels** | All level names can be renamed by FI | Fixed level names |
+| **Scoring** | No include_in_scoring equivalent | include_in_scoring is a key derived field |
+| **Input fields** | ACTYPE, PURCOD, CFCLAS | TRANCD, EFHDS1, EFHDS2 |
+| **Target table** | `product_type_configuration_master` | `transaction_code_mapping_master` |
+
+
+### Classification Rules
+
+1. **Line of Business (Level 1) — `PROD_line_of_business`:**
+   Determine whether the product belongs to Retail, Business, or Wealth Management.
+   - **RETAIL** — consumer/individual banking products (personal checking, savings,
+     consumer loans, mortgages, HELOCs, auto loans, etc.)
+   - **BUSINESS** — commercial/business banking products (business checking, commercial
+     loans, treasury management, commercial real estate, agricultural loans, etc.)
+   - **WEALTH MANAGEMENT** — trust, fiduciary, investment, and securities products.
+     Classify as WEALTH MANAGEMENT ONLY when the product name or code explicitly
+     indicates fiduciary, trust, or securities management (keywords: FIDUCIARY, TRUST,
+     UTMA, UGMA, IRA, ESTATE).
+
+2. **Product Category (Level 2) — `PROD_product_category`:**
+   One of: DEPOSITS, LOANS, SERVICES.
+   Determined by the product nature (checking/savings/MM = DEPOSITS, mortgage/HELOC/personal/auto = LOANS).
+
+3. **Product Type (Level 3) — `PROD_product_type`:**
+   The specific product type within the category. Use these strings:
+   - Deposits: CHECKING, SAVINGS, MONEY MARKET
+   - Loans: MORTGAGE, HOME EQUITY, LINE OF CREDIT, PERSONAL, AUTO,
+     COMMERCIAL, COMMERCIAL REAL ESTATE, AGRICULTURAL, REAL ESTATE,
+     RECEIVABLES-BASED, EQUIPMENT FINANCING
+
+4. **Product Name (Level 4) — `PROD_product_name`:**
+   Derive from the product description — the distinguishing feature within its
+   Level 3 type (e.g., "PREMIUM", "BASIC", "INTEREST BEARING", "PLATINUM").
+   Use null if no meaningful distinction can be made.
+
+5. **Product Code (Level 5) — `PROD_product_code`:**
+   Special designation evident from the product name (e.g., HSA, UTMA, ARM, FIXED).
+   Use null for most products.
+
+6. **Output values MUST be UPPERCASED** (e.g., "RETAIL" not "Retail", "DEPOSITS" not "Deposits").
+
+7. Use null for any level if no mapping fits. Do not guess.
+
+8. `confidence`: 0.0 to 1.0 — your certainty in the classification.
+
+### Few-Shot Examples
+
+Input: product_code=CK, SAMPLES="Personal Checking (15,000)"
+Output: {{
+  "PROD_core_system_mapping": "CK",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "PERSONAL CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.95
+}}
+
+Input: product_code=R1, SAMPLES="Residential RE Fixed (55,577)"
+Output: {{
+  "PROD_core_system_mapping": "R1",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "MORTGAGE",
+  "PROD_product_name": "RESIDENTIAL RE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.93
+}}
+
+Input: product_code=B1, SAMPLES="Business Checking (17,978)"
+Output: {{
+  "PROD_core_system_mapping": "B1",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "BUSINESS CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.92
+}}
+
+Input: product_code=MM, SAMPLES="Money Market Savings (1,132)"
+Output: {{
+  "PROD_core_system_mapping": "MM",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "MONEY MARKET",
+  "PROD_product_name": "MONEY MARKET SAVINGS",
+  "PROD_product_code": null,
+  "confidence": 0.94
+}}
+
+Input: product_code=BC, SAMPLES="CRE Fixed (14,402)"
+Output: {{
+  "PROD_core_system_mapping": "BC",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "COMMERCIAL REAL ESTATE",
+  "PROD_product_name": "CRE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.91
+}}
+
+Input: product_code=F1, SAMPLES="Fiduciary Bus Int Ck (9)"
+Output: {{
+  "PROD_core_system_mapping": "F1",
+  "PROD_line_of_business": "WEALTH MANAGEMENT",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "FIDUCIARY BUSINESS INTEREST CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.88
+}}
+
+Classify these 30 product codes:
+
+  - product_code=H5, SAMPLES="HELOC Gold (50)", VOLUME=50
+  - product_code=H7, SAMPLES="HELOC Pr Gold (50)", VOLUME=50
+  - product_code=H9, SAMPLES="HELOC Platinum (50)", VOLUME=50
+  - product_code=HA, SAMPLES="HELOC Pr Platinum (50)", VOLUME=50
+  - product_code=HC, SAMPLES="HELOC Plat+ (50)", VOLUME=50
+  - product_code=HE, SAMPLES="HELOC Pr Plat+ (50)", VOLUME=50
+  - product_code=HG, SAMPLES="BP PTR No Pr (50)", VOLUME=50
+  - product_code=HI, SAMPLES="BP PTR Pr (50)", VOLUME=50
+  - product_code=HK, SAMPLES="MS HELOC 365 Int (50)", VOLUME=50
+  - product_code=HL, SAMPLES="AL HELOC 365 Int (10)", VOLUME=10
+  - product_code=HM, SAMPLES="LA HELOC 365 Int (18)", VOLUME=18
+  - product_code=HN, SAMPLES="MS HELOC 365 Special (17)", VOLUME=17
+  - product_code=HO, SAMPLES="LA HELOC 365 Special (1)", VOLUME=1
+  - product_code=HQ, SAMPLES="FBT HELOC IM1.9 (50)", VOLUME=50
+  - product_code=HR, SAMPLES="FBT HELOC IM2.9 (35)", VOLUME=35
+  - product_code=IC, SAMPLES="INSURED CASH SW CK (30)", VOLUME=30
+  - product_code=L1, SAMPLES="LOC - Fixed (50)", VOLUME=50
+  - product_code=L2, SAMPLES="LOC - Var (50)", VOLUME=50
+  - product_code=O1, SAMPLES="ODP (50)", VOLUME=50
+  - product_code=P0, SAMPLES="Credit Builder (50)", VOLUME=50
+  - product_code=P1, SAMPLES="PLATINUM CHECKING (50)", VOLUME=50
+  - product_code=P2, SAMPLES="HY MM TURQUOISE (50)", VOLUME=50
+  - product_code=P3, SAMPLES="HY BUS MM TURQUOISE (50)", VOLUME=50
+  - product_code=P4, SAMPLES="DEBTOR IN POSSESSION (6)", VOLUME=6
+  - product_code=P5, SAMPLES="Ind Auto Fixed (50)", VOLUME=50
+  - product_code=P9, SAMPLES="CreditPlus (50)", VOLUME=50
+  - product_code=PB, SAMPLES="Cont Tire Credit Bld (1)", VOLUME=1
+  - product_code=R1, SAMPLES="Res RE - Fixed (50)", VOLUME=50
+  - product_code=R2, SAMPLES="Res RE - Var (50)", VOLUME=50
+  - product_code=R5, SAMPLES="Res RE Jr Lien Fixed (50)", VOLUME=50
+
+Return a JSON object with a "classifications" array containing one entry per product code. Use the EXACT output schema specified.', responseFormat => '{"type": "json_schema", "json_schema": {"name": "product_classifications", "schema": {"type": "object", "properties": {"classifications": {"type": "array", "items": {"type": "object", "properties": {"PROD_core_system_mapping": {"type": "string"}, "PROD_line_of_business": {"type": "string"}, "PROD_product_category": {"type": "string"}, "PROD_product_type": {"type": "string"}, "PROD_product_name": {"type": ["string", "null"]}, "PROD_product_code": {"type": ["string", "null"]}, "confidence": {"type": "number"}}, "required": ["PROD_core_system_mapping", "PROD_line_of_business", "PROD_product_category", "PROD_product_type", "PROD_product_name", "PROD_product_code", "confidence"]}}}, "required": ["classifications"]}, "strict": true}}') as result (base.py:2626)
+2026-03-11 10:25:00,495 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:00,496 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:05,758 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:05,758 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:10,966 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:10,966 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:16,115 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:16,116 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:21,323 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:21,323 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:24,291 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:24,292 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:24,477 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:24,477 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:24,649 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:24,649 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:24,655 - MainThread - models.suggestions.product_mapping - INFO - Batch 4/5: classified 30 codes (<string>:63)
+2026-03-11 10:25:24,656 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ SELECT ai_query('databricks-claude-sonnet-4-5', 'You are a product categorization engine for US community banks and financial institutions.
+Given a list of product codes with descriptions, classify each into the StrategyCorp product taxonomy below.
+
+# Product Categorization Taxonomy
+
+**Source:** [Product Categories (Notion)](https://www.notion.so/Product-Categories-2a9ee9c7060580cb86dffe5fa46d9980)  
+**Target Table:** `product_type_configuration_master`  
+**Last Updated:** 2026-02-26
+
+---
+
+## Purpose
+
+When a new financial institution (FI) is onboarded onto CheckingIQ / MonetizeIQ, their raw product codes must be normalized into StrategyCorp''s canonical product taxonomy. This taxonomy drives:
+
+- **Dashboard reporting** — product mix analysis, balance composition, growth metrics
+- **Customer scoring** — relationship depth indicators, cross-sell opportunity identification
+- **Revenue analysis** — fee income attribution by product line
+- **Scalability** — a single classification structure that works across all FIs regardless of core banking system
+
+### AI Model Goal
+
+The AI model should **pre-map ~80% of a bank''s product codes** into this taxonomy, leaving the remainder flagged for manual review. A typical FI has ~80 deposit/DDA codes and ~60 loan codes. If the model maps the majority automatically, it dramatically reduces onboarding effort.
+
+When the model **cannot confidently categorize** a product code, it must be flagged for manual review — never force-fitted into a wrong category.
+
+---
+
+## Hierarchy Overview
+
+The taxonomy has **5 levels**. Levels 1–3 are **StrategyCorp-defined** (canonical across all FIs). Levels 4–5 are **FI-configurable** (each bank customizes to match their internal nomenclature).
+
+| Level | Name | Configuration | Silver Model Field | Description |
+|-------|------|---------------|-------------------|-------------|
+| **Level 1** | Line of Business | StrategyCorp-defined | `PROD_line_of_business` | Retail, Business, or Wealth Management |
+| **Level 2** | Type | StrategyCorp-defined | `PROD_product_type` | Deposits, Loans, Services, Securities, Cash Management |
+| **Level 3** | Category | StrategyCorp-defined | `PROD_product_category` | Checking, Savings, CDs, Mortgage, HELOC, etc. |
+| **Level 4** | Sub-category | FI-configurable | `PROD_product_name` | Basic, Premium, Jumbo, Small Business, etc. |
+| **Level 5** | Special | FI-configurable | `PROD_product_code` | ARM, Fixed, Custodial, <$1M, >$1M, etc. |
+
+All level names are **dynamic** — the FI can rename them in the UI to mirror their internal terminology (e.g., rename "Line of Business" to "Division" or "Category" to "Product Family").
+
+```
+Level 1: Line of Business          (StrategyCorp-defined)
+  └─ Level 2: Type                 (StrategyCorp-defined)
+       └─ Level 3: Category        (StrategyCorp-defined)
+            └─ Level 4: Sub-category   (FI-configurable)
+                 └─ Level 5: Special    (FI-configurable)
+```
+
+---
+
+## Level 1 — Line of Business
+
+| Value | Description |
+|-------|-------------|
+| **Retail** | Consumer/individual banking products and services |
+| **Business** | Commercial/business banking products, services, and treasury management |
+| **Wealth Management** | Trust, fiduciary, investment, and securities products |
+
+---
+
+## Retail
+
+The Retail line of business covers all consumer/individual banking products.
+
+### Retail > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Checking |
+| **Premium** | — | Premium Checking |
+| **BaZing** | — | Good Checking, Better Checking, Best Checking |
+| — | **Custodial** | UGMA, UTMA |
+
+#### Category: Savings
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Basic** | — | Basic Savings |
+| **Premium** | — | Premium Savings, Money Market |
+| — | **Government** | Health Savings Accounts (HSAs), Educational Savings Accounts |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Retail > Loans
+
+#### Category: Mortgage Loans
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| **Jumbo** | ARM | 1-year ARM |
+| **Jumbo** | Fixed | 15-year fixed |
+| **Jumbo** | Fixed-to-ARM | 5-year FTA |
+| **Conforming** | ARM | 1-year ARM |
+| **Conforming** | Fixed | 15-year fixed |
+| **Conforming** | Fixed-to-ARM | 5-year FTA |
+
+#### Category: HELOCs (Home Equity Lines of Credit)
+
+**Example Products:** 30-year HELOC, 30-year SHELOC (Segmented HELOC)
+
+#### Category: Credit Card
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Cash Back** | Gold, Platinum |
+| **Travel** | Gold, Platinum |
+
+#### Category: Personal Loans
+
+**Example Products:** 3 year, 5 year
+
+#### Category: Auto Loans
+
+**Example Products:** 3 year, 5 year, 7 year
+
+#### Category: Student Loans
+
+**Example Products:** 30-year
+
+---
+
+### Retail > Services
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Internet banking platform access |
+| **Mobile Banking** | Mobile app banking access |
+| **Bill Pay** | Online bill payment service |
+| **Overdraft** | Overdraft protection service |
+| **Mobile Deposits** | Mobile check deposit capability |
+| **Person-to-Person Payments (P2P)** | Peer-to-peer payment services (e.g., Zelle) |
+| **Debit Cards** | Debit card issuance and management |
+| **Safe Deposit Boxes** | Physical safe deposit box rental |
+
+---
+
+## Business
+
+The Business line of business covers commercial/business banking products, including Cash Management Services (Treasury Management).
+
+### Business > Deposits
+
+#### Category: Checking (DDA)
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Checking |
+| **Corporate** | Corporate Checking |
+| **Analyzed** | Business Analysis Checking |
+| **Non-Profit** | Non-profit Checking |
+
+#### Category: Savings
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Small Business** | Small Business Savings |
+| **Corporate** | Business Money Market |
+
+#### Category: Certificates of Deposit (CDs)
+
+| Sub-category | Special | Example Products |
+|-------------|---------|-----------------|
+| — | **<$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+| — | **>$1M** | 6 month, 1 year, 18 month, 2 year, 3 year, 4 year, 5 year |
+
+---
+
+### Business > Loans
+
+| Category | Special | Example Products |
+|----------|---------|-----------------|
+| **Real Estate** | ARM | 1-year ARM |
+| **Real Estate** | Fixed | 15-year fixed |
+| **Real Estate** | Fixed-to-ARM | 5-year FTA |
+| **Receivables-Based** | ARM | 6-month ARM, 1-year ARM |
+| **Line of Credit** | ARM | 6-month ARM, 1-year ARM |
+| **Equipment Financing** | ARM | 6-month ARM, 1-year ARM |
+| **Credit Card** | — | Gold, Platinum |
+
+---
+
+### Business > Cash Management Services (Treasury Management)
+
+Cash Management Services (AKA Treasury Management) is a specialized Product Type available only under the Business line of business. These are operational banking services — not deposit or loan products — that businesses use to manage their cash flow, payments, and receivables.
+
+| Category | Description |
+|----------|-------------|
+| **Online Banking** | Business internet banking platform |
+| **Mobile Banking** | Business mobile banking app |
+| **ACH** | Automated Clearing House origination and receipt |
+| **Wire (Domestic)** | Domestic wire transfer services |
+| **SWIFT Wires (International)** | International wire transfer services |
+| **Overdraft** | Business overdraft protection |
+| **Remote Deposit Capture** | Scanning and depositing checks remotely |
+| **Debit Cards** | Business debit card issuance |
+| **Positive Pay** | Check fraud prevention — verifying checks against issued list |
+| **Account Reconciliation** | Automated reconciliation of bank and book records |
+| **Target Balance Accounts** | AKA Zero Balance Accounts — auto-sweep to maintain target balance |
+| **Sweeps** | Automated sweep of excess funds to investment or interest-bearing accounts |
+| **Controlled Disbursement Accounts** | Early notification of daily check presentment for cash planning |
+| **Payroll** | Payroll processing and distribution |
+| **Collections** | Receivables collection services |
+| **Lockbox** | Mail-based payment processing at a bank facility |
+| **Armored Car** | Secure cash pickup and delivery |
+| **Cash Vault** | Cash management and coin/currency ordering |
+| **Merchant Services** | Card point-of-sale processing services |
+| **Transaction Monitoring** | Real-time or batch monitoring of account transactions |
+| **Foreign Currency Exchange (FX)** | Foreign exchange transaction services |
+
+---
+
+## Wealth Management
+
+The Wealth Management line of business covers trust, fiduciary, investment, and securities products.
+
+### Wealth Management > Securities
+
+#### Category: Transaction
+
+| Sub-category | Example Products |
+|-------------|-----------------|
+| **Trading** | Cash Management Account |
+| **Retirement** | Traditional IRA, Roth IRA, 401k |
+
+#### Category: Loans
+
+**Example Products:** Margin
+
+---
+
+## Raw Data Input Fields
+
+The AI model uses these fields from the raw data files as inputs for product classification:
+
+| Data Source | File | Key Field | Context Fields | Description |
+|------------|------|-----------|---------------|-------------|
+| **Deposits** | `CheckingIQ_Deposit_ALL` | `ACTYPE` | `SCCODE`, `DDPSCOD` | Product type code (CK, MM, SV, etc.) |
+| **Loans** | `CheckingIQ_Loan_13Month_All` | `ACTYPE` | `PURCOD`, `PurposeDescription`, `type`, `LoanTypeDesc` | Loan type code + purpose code for consumer/business distinction |
+| **CDs** | `CheckingIQ_CD_All` | `ACTYPE` | `ARGPRDCOD`, `CDTERM`, `Term_Code` | CD type code + term information |
+| **Customers** | `CheckingIQ_CI_All` | `CFCLAS` | — | Customer class code (Individual, Business, Corporation, etc.) |
+
+### Purpose Codes (PURCOD) — Consumer vs Business Indicator
+
+| Code | Description | Maps to LoB |
+|------|-------------|-------------|
+| 01 | Personal/Household | Retail |
+| 02 | Real Estate — Residential | Retail |
+| 03 | Real Estate — Commercial | Business |
+| 04 | Business — Commercial | Business |
+| 05 | Farm — Real Estate | Business |
+| 06 | Farm — Non-Real Estate | Business |
+| 07 | Government | Context-dependent |
+| 08 | Foreign | Context-dependent |
+| 09 | Financial Institution | Business |
+| 10 | Tax Exempt / Non-Profit | Context-dependent |
+| 11 | Other | Context-dependent |
+
+---
+
+## Classification Rules for the AI Model
+
+1. **First determine Line of Business** (Retail, Business, or Wealth Management):
+   - Use customer class codes (`CFCLAS`): I = Individual → Retail; B, C, P = Business → Business; T, E, F = Wealth Management
+   - Use loan purpose codes (`PURCOD`): 01–02 → Retail; 03–06, 09 → Business
+   - Public Funds and Government accounts are ambiguous — flag for manual review if uncertain
+
+2. **Then classify the Product Type** (Level 2):
+   - Deposits: ACTYPE codes indicating DDA, savings, money market, or CD products
+   - Loans: ACTYPE codes indicating mortgage, HELOC, credit card, personal, auto, student, or commercial loan products
+   - Services: Non-deposit, non-loan products and capabilities (Retail only)
+   - Cash Management Services: Treasury/operational services (Business only)
+   - Securities: Investment and brokerage products (Wealth Management only)
+
+3. **Then determine the Category** (Level 3) within the Product Type based on the specific ACTYPE and its description.
+
+4. **Sub-category and Special** (Levels 4–5) are FI-configurable:
+   - Propose when the raw data provides enough context (e.g., product description contains "Jumbo", "Premium", "HSA")
+   - Leave blank when insufficient information — the FI user will fill these in
+
+5. **Each product code maps to exactly one path** in the taxonomy tree. There is no multi-label classification.
+
+6. **Retail and Business share some Categories** (Checking, Savings, CDs) but have different Sub-categories and different Loan structures. The LoB distinction must be made before Category assignment.
+
+7. **Wealth Management** has its own unique structure (Securities > Transaction/Loans) that does not overlap with Retail/Business patterns.
+
+---
+
+## Output Schema
+
+For each product code, the model should produce:
+
+| Field | Description | Example (Retail Deposit) | Example (Business Loan) |
+|-------|-------------|--------------------------|------------------------|
+| `PROD_line_of_business` (Level 1) | Line of Business | Retail | Business |
+| `PROD_product_type` (Level 2) | Product Type | Deposits | Loans |
+| `PROD_product_category` (Level 3) | Category | Checking | Real Estate |
+| `PROD_product_name` (Level 4) | Sub-category | Premium | — |
+| `PROD_product_code` (Level 5) | Special | — | Fixed |
+| `PROD_core_system_mapping` | Raw bank code (input) | CK | BG |
+
+---
+
+## Key Differences from Transaction Taxonomy
+
+| Aspect | Product Taxonomy | Transaction Taxonomy |
+|--------|-----------------|---------------------|
+| **Levels** | 5 levels (all active) | 4 active levels (Level 5 descoped) |
+| **Structure** | Single tree with 3 LoB branches | Two independent blocks (Block A / Block B) |
+| **Canonical levels** | 1–3 (StrategyCorp-defined) | All 4 levels are StrategyCorp-defined |
+| **FI-configurable** | Levels 4–5 (Sub-category, Special) | None (all canonical) |
+| **Dynamic labels** | All level names can be renamed by FI | Fixed level names |
+| **Scoring** | No include_in_scoring equivalent | include_in_scoring is a key derived field |
+| **Input fields** | ACTYPE, PURCOD, CFCLAS | TRANCD, EFHDS1, EFHDS2 |
+| **Target table** | `product_type_configuration_master` | `transaction_code_mapping_master` |
+
+
+### Classification Rules
+
+1. **Line of Business (Level 1) — `PROD_line_of_business`:**
+   Determine whether the product belongs to Retail, Business, or Wealth Management.
+   - **RETAIL** — consumer/individual banking products (personal checking, savings,
+     consumer loans, mortgages, HELOCs, auto loans, etc.)
+   - **BUSINESS** — commercial/business banking products (business checking, commercial
+     loans, treasury management, commercial real estate, agricultural loans, etc.)
+   - **WEALTH MANAGEMENT** — trust, fiduciary, investment, and securities products.
+     Classify as WEALTH MANAGEMENT ONLY when the product name or code explicitly
+     indicates fiduciary, trust, or securities management (keywords: FIDUCIARY, TRUST,
+     UTMA, UGMA, IRA, ESTATE).
+
+2. **Product Category (Level 2) — `PROD_product_category`:**
+   One of: DEPOSITS, LOANS, SERVICES.
+   Determined by the product nature (checking/savings/MM = DEPOSITS, mortgage/HELOC/personal/auto = LOANS).
+
+3. **Product Type (Level 3) — `PROD_product_type`:**
+   The specific product type within the category. Use these strings:
+   - Deposits: CHECKING, SAVINGS, MONEY MARKET
+   - Loans: MORTGAGE, HOME EQUITY, LINE OF CREDIT, PERSONAL, AUTO,
+     COMMERCIAL, COMMERCIAL REAL ESTATE, AGRICULTURAL, REAL ESTATE,
+     RECEIVABLES-BASED, EQUIPMENT FINANCING
+
+4. **Product Name (Level 4) — `PROD_product_name`:**
+   Derive from the product description — the distinguishing feature within its
+   Level 3 type (e.g., "PREMIUM", "BASIC", "INTEREST BEARING", "PLATINUM").
+   Use null if no meaningful distinction can be made.
+
+5. **Product Code (Level 5) — `PROD_product_code`:**
+   Special designation evident from the product name (e.g., HSA, UTMA, ARM, FIXED).
+   Use null for most products.
+
+6. **Output values MUST be UPPERCASED** (e.g., "RETAIL" not "Retail", "DEPOSITS" not "Deposits").
+
+7. Use null for any level if no mapping fits. Do not guess.
+
+8. `confidence`: 0.0 to 1.0 — your certainty in the classification.
+
+### Few-Shot Examples
+
+Input: product_code=CK, SAMPLES="Personal Checking (15,000)"
+Output: {{
+  "PROD_core_system_mapping": "CK",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "PERSONAL CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.95
+}}
+
+Input: product_code=R1, SAMPLES="Residential RE Fixed (55,577)"
+Output: {{
+  "PROD_core_system_mapping": "R1",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "MORTGAGE",
+  "PROD_product_name": "RESIDENTIAL RE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.93
+}}
+
+Input: product_code=B1, SAMPLES="Business Checking (17,978)"
+Output: {{
+  "PROD_core_system_mapping": "B1",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "BUSINESS CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.92
+}}
+
+Input: product_code=MM, SAMPLES="Money Market Savings (1,132)"
+Output: {{
+  "PROD_core_system_mapping": "MM",
+  "PROD_line_of_business": "RETAIL",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "MONEY MARKET",
+  "PROD_product_name": "MONEY MARKET SAVINGS",
+  "PROD_product_code": null,
+  "confidence": 0.94
+}}
+
+Input: product_code=BC, SAMPLES="CRE Fixed (14,402)"
+Output: {{
+  "PROD_core_system_mapping": "BC",
+  "PROD_line_of_business": "BUSINESS",
+  "PROD_product_category": "LOANS",
+  "PROD_product_type": "COMMERCIAL REAL ESTATE",
+  "PROD_product_name": "CRE FIXED",
+  "PROD_product_code": "FIXED",
+  "confidence": 0.91
+}}
+
+Input: product_code=F1, SAMPLES="Fiduciary Bus Int Ck (9)"
+Output: {{
+  "PROD_core_system_mapping": "F1",
+  "PROD_line_of_business": "WEALTH MANAGEMENT",
+  "PROD_product_category": "DEPOSITS",
+  "PROD_product_type": "CHECKING",
+  "PROD_product_name": "FIDUCIARY BUSINESS INTEREST CHECKING",
+  "PROD_product_code": null,
+  "confidence": 0.88
+}}
+
+Classify these 14 product codes:
+
+  - product_code=R6, SAMPLES="Res RE Jr Lien Var (50)", VOLUME=50
+  - product_code=R7, SAMPLES="Mortgage Ctr RE Var (50)", VOLUME=50
+  - product_code=R9, SAMPLES="Mortgage Ctr RE 1st (50)", VOLUME=50
+  - product_code=RA, SAMPLES="Consumer ARM RE Var (21)", VOLUME=21
+  - product_code=S1, SAMPLES="PERSONAL SAVINGS (50)", VOLUME=50
+  - product_code=S3, SAMPLES="CHRISTMAS CLUB - CK (4)", VOLUME=4
+  - product_code=S4, SAMPLES="EMPLOYEE CHRISTMAS (50)", VOLUME=50
+  - product_code=S5, SAMPLES="CHRISTMAS CLUB (50)", VOLUME=50
+  - product_code=S6, SAMPLES="NISSAN CHRISTMAS CLU (50)", VOLUME=50
+  - product_code=S9, SAMPLES="COURT ORDERED SAVING (50)", VOLUME=50
+  - product_code=T1, SAMPLES="PER SAV FOR CP $250 (50)", VOLUME=50
+  - product_code=T2, SAMPLES="PER SAV FOR CP $500 (50)", VOLUME=50
+  - product_code=T3, SAMPLES="EMPLOYEE SAVINGS (50)", VOLUME=50
+  - product_code=T4, SAMPLES="SECURED CC SAVINGS (36)", VOLUME=36
+
+Return a JSON object with a "classifications" array containing one entry per product code. Use the EXACT output schema specified.', responseFormat => '{"type": "json_schema", "json_schema": {"name": "product_classifications", "schema": {"type": "object", "properties": {"classifications": {"type": "array", "items": {"type": "object", "properties": {"PROD_core_system_mapping": {"type": "string"}, "PROD_line_of_business": {"type": "string"}, "PROD_product_category": {"type": "string"}, "PROD_product_type": {"type": "string"}, "PROD_product_name": {"type": ["string", "null"]}, "PROD_product_code": {"type": ["string", "null"]}, "confidence": {"type": "number"}}, "required": ["PROD_core_system_mapping", "PROD_line_of_business", "PROD_product_category", "PROD_product_type", "PROD_product_name", "PROD_product_code", "confidence"]}}}, "required": ["classifications"]}, "strict": true}}') as result (base.py:2626)
+2026-03-11 10:25:24,857 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:24,858 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:30,075 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:30,075 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:35,255 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:35,255 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:37,799 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:37,800 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:38,011 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:38,011 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:38,183 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:38,184 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:38,188 - MainThread - models.suggestions.product_mapping - INFO - Batch 5/5: classified 14 codes (<string>:63)
+2026-03-11 10:25:38,193 - MainThread - models.suggestions.product_mapping - INFO - Classification complete: 134 total codes, 0 errors (<string>:70)
+2026-03-11 10:25:38,193 - MainThread - sqlmesh.core.snapshot.evaluator - INFO - Inserting batch (2025-06-30 00:00:00, 2026-03-11 00:00:00) into "ciq-bp_dummy-dev".sqlmesh__suggestions.suggestions__product_mapping__4221368022' (evaluator.py:984)
+2026-03-11 10:25:38,194 - MainThread - sqlmesh.core.engine_adapter.base - INFO - Executing SQL: /* SQLMESH_PLAN: 12c1b92a05894b7fb57b74a157aa8c6e */ SELECT `table_name` AS `name`, `table_schema` AS `schema`, `table_catalog` AS `catalog`, CASE `table_type` WHEN 'VIEW' THEN 'view' WHEN 'MATERIALIZED_VIEW' THEN 'materialized_view' ELSE 'table' END AS `type` FROM `system`.`information_schema`.`tables` WHERE (`table_catalog` = 'ciq-bp_dummy-dev' AND `table_schema` = 'sqlmesh__suggestions') AND `table_name` IN ('suggestions__product_mapping__4221368022') (base.py:2626)
+2026-03-11 10:25:38,420 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:38,421 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:39,098 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:39,099 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:39,112 - MainThread - sqlmesh.core.scheduler - INFO - Execution failed for node EvaluateNode(snapshot_name='"ciq-bp_dummy-dev"."suggestions"."product_mapping"', interval=(1751241600000, 1773187200000), batch_index=0) (scheduler.py:618)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/utils/concurrency.py", line 234, in sequential_apply_to_dag
+    fn(node)
+    ~~^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/scheduler.py", line 554, in run_node
+    audit_results = self.evaluate(
+        snapshot=snapshot,
+    ...<9 lines>...
+        selected_models=selected_models,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/scheduler.py", line 229, in evaluate
+    wap_id = self.snapshot_evaluator.evaluate(
+        snapshot,
+    ...<9 lines>...
+        **kwargs,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 186, in evaluate
+    result = self._evaluate_snapshot(
+        start=start,
+    ...<9 lines>...
+        **kwargs,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 821, in _evaluate_snapshot
+    self._render_and_insert_snapshot(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        start=start,
+        ^^^^^^^^^^^^
+    ...<10 lines>...
+        batch_index=batch_index,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 1041, in _render_and_insert_snapshot
+    apply(query_or_df, index)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 990, in apply
+    evaluation_strategy.insert(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        table_name=target_table_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        is_snapshot_deployable=is_snapshot_deployable,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 2418, in insert
+    self._replace_query_for_model(model, table_name, query_or_df, render_kwargs, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/snapshot/evaluator.py", line 2155, in _replace_query_for_model
+    self.adapter.replace_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        name,
+        ^^^^^
+    ...<10 lines>...
+        source_columns=source_columns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/shared.py", line 318, in internal_wrapper
+    return func(*list_args, **kwargs)
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/base.py", line 488, in replace_query
+    source_queries, target_columns_to_types = self._get_source_queries_and_columns_to_types(
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        query_or_df,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        source_columns=source_columns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/base.py", line 370, in _get_source_queries_and_columns_to_types
+    source_queries = self._get_source_queries(
+        query_or_df,
+    ...<3 lines>...
+        source_columns=source_columns,
+    )
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/base.py", line 317, in _get_source_queries
+    return self._df_to_source_queries(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        query_or_df,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        source_columns=source_columns,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/databricks.py", line 197, in _df_to_source_queries
+    return super(SparkEngineAdapter, self)._df_to_source_queries(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        df, target_columns_to_types, batch_size, target_table, source_columns=source_columns
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/engine_adapter/base.py", line 341, in _df_to_source_queries
+    df = df[list(source_columns or target_columns_to_types)]
+         ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/pandas/core/frame.py", line 4119, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['prod_product_type_id', 'prod_line_of_business', 'prod_product_category', 'prod_product_type', 'prod_product_name', 'prod_product_code', 'prod_status', 'prod_core_system_mapping', 'prod_balance_requires_abs', 'prod_created_date', 'prod_modified_date'] not in index"
+
+The above exception was the direct cause of the following exception:
+
+sqlmesh.utils.concurrency.NodeExecutionFailedError: Execution failed for node EvaluateNode(snapshot_name='"ciq-bp_dummy-dev"."suggestions"."product_mapping"', interval=(1751241600000, 1773187200000), batch_index=0)
+2026-03-11 10:25:39,125 - MainThread - sqlmesh.core.context - INFO - Plan application failed. (context.py:1798)
+Traceback (most recent call last):
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/context.py", line 1790, in apply
+    self._apply(plan, circuit_breaker)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/context.py", line 2583, in _apply
+    self._scheduler.create_plan_evaluator(self).evaluate(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        plan.to_evaluatable(), circuit_breaker=circuit_breaker
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/plan/evaluator.py", line 105, in evaluate
+    self._evaluate_stages(plan_stages, plan)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/plan/evaluator.py", line 125, in _evaluate_stages
+    handler(stage, plan)
+    ~~~~~~~^^^^^^^^^^^^^
+  File "/Users/whiz/.pyenv/versions/3.13.11/lib/python3.13/site-packages/sqlmesh/core/plan/evaluator.py", line 264, in visit_backfill_stage
+    raise PlanError("Plan application failed.")
+sqlmesh.utils.errors.PlanError: Plan application failed.
+2026-03-11 10:25:39,126 - MainThread - databricks.sql.session - INFO - Closing session 01f11d5e-45f9-17ef-bb3e-003558745cf6 (session.py:194)
+2026-03-11 10:25:39,379 - MainThread - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:39,379 - MainThread - databricks.sql.auth.thrift_http_client - INFO - HTTP Response with status code 200, message: OK (thrift_http_client.py:208)
+2026-03-11 10:25:39,915 - ThreadPoolExecutor-1_0 - databricks.sql.auth.retry - INFO - Received status code 200 for POST request (retry.py:355)
+2026-03-11 10:25:39,922 - MainThread - root - INFO - Shutting down the event dispatcher (dispatcher.py:159)
